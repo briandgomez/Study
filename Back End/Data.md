@@ -25,7 +25,7 @@ Ex:
 @import "Inheritance.png" {width=300px}
 
 # Unit Testing
-The process of testing the smallest possible units of an application. Unit tests are part of the TDD (Test Driven Development) cycle.
+The process of testing the smallest possible units of an application. Unit tests are part of the TDD (Test Driven Development) cycle
 
 **TDD** - the process of writing failing tests (Red) BEFORE writing code. After writing tests, the minimal amount of code is written in order to pass the tests (Green). Developers can then refactor the code to keep it DRY (Refactor).
 **TDD also makes it easier to write code since you know /have an idea of what to write thus the code itself is simple*
@@ -42,3 +42,20 @@ Ex:
 @import "Node.png"
 
 # React
+
+# Data
+## SQL
+A language that can access and manipulate data from RELATIONAL databases. It allows users to perform CRUD (Create, Read, Update, Delete,) operations.
+**relational databases** - stores data in tables which are made of rows and columns similar to a spreadsheet. These tables are linked to other tables through keys.
+
+**primary key** - a unique number used to identify each record(row) in a table     
+**foreign key** - the number that is used to link 2 tables together (The column name for a primary key and foreign key are same).  
+![image](https://user-images.githubusercontent.com/69539559/163200338-7ac15836-eb19-4ff3-aacb-884de0dfed21.png)  
+(The table with the primary key is called the *Parent Table* and the other table is called the *Child Table*)  
+**unique key** - a number that ensures that each row in a particular column is unique  
+**schema** - a list of commands that defines the structure of a database  
+**query** - a list of commands that retrieve information from a database or performs other CRUD operations on that database
+
+**MySQL** - an open source program that allows users to create relational databases. By using MySQL and SQL users can find and store data based on its relationship with other data  
+**MySQL2** - a npm package that allows users to connect to the MySQL database  
+ Additonal help:  [10 Basic SQL Concepts](https://www.programming-hero.com/blog/10-sql-concepts-that-every-developer-should-know.html)
