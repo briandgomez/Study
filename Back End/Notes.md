@@ -23,7 +23,12 @@ A function that performs order of operations (PEMDAS)
 *The only thing that is shown/seen are the input(s) and output(s)*
 
 **Inheritance** - the ability for a class to inherit attributes and methods from another class  
-Ex:  
+Ex 1:  
+![image](https://user-images.githubusercontent.com/69539559/163586932-96f21a80-cfff-4902-a9a9-feece9444a18.png)  
+Ex 2:  
+![image](https://user-images.githubusercontent.com/69539559/163588494-0811d546-0f55-4c33-8939-f2baba50bc3e.png)  
+
+**Instance** - a specific example of a object  
 <img width="313" alt="image" src="https://user-images.githubusercontent.com/69539559/163294558-928cc18a-a55b-4401-aa3b-a21debbb2757.png">  
 
 # Unit Testing
