@@ -4,7 +4,9 @@ A software model that uses objects instead of functions to manipulate data
 **class** - a blueprint or template for creating object
 (Refer to inheritance definition for an example of a class)
 
-<img width="322" alt="image" src="https://user-images.githubusercontent.com/69539559/163294445-90295f5e-d683-4467-b622-e639755fabaa.png">
+<img width="322" alt="image" src="https://user-images.githubusercontent.com/69539559/163294445-90295f5e-d683-4467-b622-e639755fabaa.png">  
+
+**constructor** - a method that is used to create and initialize a instance of a class(predefines properties of the class)   
 
 ## The 4 Principles:
 **Encapsulation** - the bundling of data, along with the methods that act on that data, into a single unit  
