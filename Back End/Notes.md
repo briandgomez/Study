@@ -12,8 +12,9 @@ A software model that uses objects instead of functions to manipulate data
 **Encapsulation** - the bundling of data, along with the methods that act on that data, into a single unit  
 Ex: A class  
 
-**Polymorphism** - the ability (usually a class) to take on multiple forms  
-Ex:  
+**Polymorphism** - ability to call the same method on different objects and each object responds in different way (take on multiple forms).  
+Ex 1:  
+![image](https://user-images.githubusercontent.com/69539559/163598826-44277a26-8a07-436e-ad64-c910ee1095f3.png))
 <img width="764" alt="image" src="https://user-images.githubusercontent.com/69539559/163294725-bbf310cb-da0a-4224-bf8e-6d2ed0ad77a4.png">  
 The output of 'speak' will vary depending on the input
 
