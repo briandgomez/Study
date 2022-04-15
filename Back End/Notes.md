@@ -16,7 +16,7 @@ Ex:
 The output of 'speak' will vary depending on the input
 
 **Abstraction** - the concept that says only 'necessary' information is shown
-Ex:
+Ex:  
 A function that performs order of operations (PEMDAS)
 *The only thing that is shown/seen are the input(s) and output(s)*
 
