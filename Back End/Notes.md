@@ -15,7 +15,7 @@ Ex:
 <img width="764" alt="image" src="https://user-images.githubusercontent.com/69539559/163294725-bbf310cb-da0a-4224-bf8e-6d2ed0ad77a4.png">  
 The output of 'speak' will vary depending on the input
 
-**Abstraction** - the concept that says only 'necessary' information is shown
+**Abstraction** - the concept that says only 'necessary' information is shown  
 Ex:  
 A function that performs order of operations (PEMDAS)
 *The only thing that is shown/seen are the input(s) and output(s)*
