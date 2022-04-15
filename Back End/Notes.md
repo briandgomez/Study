@@ -36,10 +36,33 @@ The process of testing the smallest possible units of an application. Unit tests
 Git is a version control management system that tracks all the changes and history made to a repository
 
 # Node
-An environment that makes it easier to create web applications because it grants us access to features on a computer. This allows us to write programs on both browser and computers using 1 language.
+A Javascript environment that allows developers to execute Javascript code on a local computer. It also gives developers access to features on a local computer such as the filesystem. (It is basically Chromes V8 Engine on a local computer).  
 
-Ex:  
-<img width="749" alt="image" src="https://user-images.githubusercontent.com/69539559/163294663-30dec22e-8ab4-4c06-b055-2d18599d4352.png">  
+## Node.js in Depth  
+Node.js processes events in a single thread operation. A single thread operation is when a new event appears and it is added to the end of a queue to be executed. Node will continuously execute event after event from the queue without stopping. This is called event looping. These events are asynchronous meaning after one event is executed the next event will be executed with the first event pending its response (there is no stopping or blocking of code being executed).  
+
+Node also runs on the idea of callbacks. Callbacks are functions that execute after the first event has been executed (callbacks *link* lines of code together if necessary).  
+Example of asynchronity and callbacks being used together:    
+<img width="455" alt="image" src="https://user-images.githubusercontent.com/69539559/163501291-3ad3c561-c877-4a3d-a3e0-3cae7ae86818.png">
+
+## When and When NOT to use Node.js  
+**When:**  
+1. Non-blocking is wanted
+2. Event-driven
+3. Data-intensive
+4. I/O intensive  
+Examples: Web servers, APIs fronting NoSQL databases  
+
+**When Not:**  
+1. Data calculations
+2. Processor intensive
+3. Blocking operations  
+
+Useful Videos:  
+[What is Node.js](https://www.youtube.com/watch?v=_RSL3S3Anxg)  
+[When and when NOT to use Node.js](https://www.youtube.com/watch?v=UCd6LorxpkY&list=PLqq-6Pq4lTTa-d0iZg41U2RDqECol9C5B&index=7)  
+[Callbacks in Node.js](https://www.youtube.com/watch?v=KYktOkdzAHw&list=PLqq-6Pq4lTTa-d0iZg41U2RDqECol9C5B&index=16)  
+
 # Data
 ## SQL
 A language that can access and manipulate data from RELATIONAL databases. It allows users to perform CRUD (Create, Read, Update, Delete,) operations.
@@ -65,7 +88,7 @@ Databases that store information that is NOT relational. The information is one 
 ![image](https://user-images.githubusercontent.com/69539559/163215350-c9a50eea-8382-4530-a8fe-b320cd16f3ab.png)
 3. Column-oriented database - data stored in tables, rows, and dynamic columns  
 ![image](https://user-images.githubusercontent.com/69539559/163231059-33b9f2dd-4b77-4f17-ab8f-ae3f591e7099.png)
-4. Graph database - stores data in nodes and edges where nodes are information about people, places, or things and edges store information about the relationships between the nodes  
+4. Graph database - stores data in `s and edges where nodes are information about people, places, or things and edges store information about the relationships between the nodes  
 ![image](https://user-images.githubusercontent.com/69539559/163231448-b97dad40-f442-452d-b4e7-e85d6bf85715.png)
 
 ## API
