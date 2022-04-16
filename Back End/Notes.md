@@ -108,5 +108,18 @@ A Application Programming Interface is the middleman between a client and a serv
 Ex:  
 <img width="889" alt="image" src="https://user-images.githubusercontent.com/69539559/163685202-44b8fae9-71b1-4b0d-9ffb-189819fbea36.png">  
 *A route can have multiple endpoints*  
-**Header** - 
-[What is a API w/ Examples](https://www.bigcommerce.com/blog/what-is-an-api/#what-is-an-api-request)
+**Header** - extra source of information whenever a API call is made. The most common information in a header are:  
+1.Authorization(Ex: For logging into a account)  
+2.WWW-Authenticate  
+3.Accept-Charset  
+4.Content-type  
+5.Cache control  
+
+Ex 1: Authorization  
+<img width="490" alt="image" src="https://user-images.githubusercontent.com/69539559/163689654-4104e76f-4fee-4e7e-b8c4-1831b9751c85.png">  
+
+Ex 2: Response  
+<img width="529" alt="image" src="https://user-images.githubusercontent.com/69539559/163689703-68eac723-a555-41be-9ac0-c373cee7e503.png">
+
+[What is a API w/ Examples](https://www.bigcommerce.com/blog/what-is-an-api/#what-is-an-api-request)  
+[What is a Header](https://apipheny.io/api-headers/#examples)  
