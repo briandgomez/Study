@@ -101,9 +101,12 @@ Databases that store information that is NOT relational. The information is one 
 
 ## API
 A Application Programming Interface is the middleman between a client and a server. It takes the request from a client and retrieves the data based on the request. The server then responds with the information in JSON format.  
-**REST** - Representational State Transfer is a software architecture style that creates constraints on the communication between clients and servers.
+**REST** - Representational State Transfer is a software architecture style that creates constraints on the communication between clients and servers.  
 **JSON**  - Javascript Object Notation is a format used for transporting and storing data.  
 **Endpoint**  - the point where the API and another program meet (the end of a communication channel).   
-**Header**  
-**Route**  
+**Route** - the name used to access a endpoint.  
+Ex:  
+<img width="889" alt="image" src="https://user-images.githubusercontent.com/69539559/163685202-44b8fae9-71b1-4b0d-9ffb-189819fbea36.png">  
+*A route can have multiple endpoints*  
+**Header** - 
 [What is a API w/ Examples](https://www.bigcommerce.com/blog/what-is-an-api/#what-is-an-api-request)
