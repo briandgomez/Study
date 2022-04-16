@@ -96,14 +96,14 @@ Databases that store information that is NOT relational. The information is one 
 ![image](https://user-images.githubusercontent.com/69539559/163215350-c9a50eea-8382-4530-a8fe-b320cd16f3ab.png)
 3. Column-oriented database - data stored in tables, rows, and dynamic columns  
 ![image](https://user-images.githubusercontent.com/69539559/163231059-33b9f2dd-4b77-4f17-ab8f-ae3f591e7099.png)
-4. Graph database - stores data in `s and edges where nodes are information about people, places, or things and edges store information about the relationships between the nodes  
+4. Graph database - stores data in nodes and edges where nodes are information about people, places, or things and edges store information about the relationships between the nodes  
 ![image](https://user-images.githubusercontent.com/69539559/163231448-b97dad40-f442-452d-b4e7-e85d6bf85715.png)
 
 ## API
 A Application Programming Interface is the middleman between a client and a server. It takes the request from a client and retrieves the data based on the request. The server then responds with the information in JSON format.  
-**REST**  
-**JSON**  
-**Endpoint**  
+**REST** - Representational State Transfer is a software architecture style that creates constraints on the communication between clients and servers.
+**JSON**  - Javascript Object Notation is a format used for transporting and storing data.  
+**Endpoint**  - the point where the API and another program meet (the end of a communication channel).   
 **Header**  
 **Route**  
 [What is a API w/ Examples](https://www.bigcommerce.com/blog/what-is-an-api/#what-is-an-api-request)
