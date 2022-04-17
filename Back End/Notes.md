@@ -12,7 +12,8 @@ A software model that uses objects instead of functions to manipulate data
 **Encapsulation** - the bundling of data, along with the methods that act on that data, into a single unit  
 Ex: A class  
 
-**Polymorphism** - ability to call the same method on different objects and each object responds in different way (take on multiple forms).  
+**Polymorphism** - ability to call the 
+method on different objects and each object responds in different way (take on multiple forms).  
 Ex 1:  
 ![image](https://user-images.githubusercontent.com/69539559/163598826-44277a26-8a07-436e-ad64-c910ee1095f3.png))
 <img width="764" alt="image" src="https://user-images.githubusercontent.com/69539559/163294725-bbf310cb-da0a-4224-bf8e-6d2ed0ad77a4.png">  
@@ -77,7 +78,7 @@ A language that can access and manipulate data from RELATIONAL databases. It all
 **relational databases** - stores data in tables which are made of rows and columns similar to a spreadsheet. These tables are linked to other tables through keys.
 
 **primary key** - a unique number used to identify each record(row) in a table     
-**foreign key** - the number that is used to link 2 tables together (The column name for a primary key and foreign key are same).  
+**foreign key** - the number that is used to link 2 tables together  
 ![image](https://user-images.githubusercontent.com/69539559/163200338-7ac15836-eb19-4ff3-aacb-884de0dfed21.png)  
 (The table with the primary key is called the *Parent Table* and the other table is called the *Child Table*)  
 **unique key** - a number that ensures that each row in a particular column is unique  
@@ -86,7 +87,8 @@ A language that can access and manipulate data from RELATIONAL databases. It all
 
 **MySQL** - an open source program that allows users to create relational databases. By using MySQL and SQL users can find and store data based on its relationship with other data  
 **MySQL2** - a npm package that allows users to connect to the MySQL database  
- Additonal help:  [10 Basic SQL Concepts](https://www.programming-hero.com/blog/10-sql-concepts-that-every-developer-should-know.html)  
+ Additonal help:  
+ [10 Basic SQL Concepts](https://www.programming-hero.com/blog/10-sql-concepts-that-every-developer-should-know.html)  
  
  ## NoSQL
 Databases that store information that is NOT relational. The information is one of the following:  
