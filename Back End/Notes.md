@@ -58,7 +58,7 @@ A language that can access and manipulate data from RELATIONAL databases. It all
  Additonal help:  [10 Basic SQL Concepts](https://www.programming-hero.com/blog/10-sql-concepts-that-every-developer-should-know.html)  
  
  ## NoSQL
-Databases that store information that is NOT relational. The information is one of the following:  
+Databases that store information that is NOT ONLY relational. The information is one of the following:  
 1. Key-Value - database where each data element is stored as a key-value  pair  
 ![image](https://user-images.githubusercontent.com/69539559/163230340-c9a66a68-1ab9-4778-bac3-cd69cb0b3b66.png)
 2. Document database - information that is stored in document(JSON) objects. The documents store information in field-value pairs. The values can be strings, integers, arrays, booleans or objects  
@@ -76,3 +76,13 @@ A Application Programming Interface is the middleman between a client and a serv
 **Header**  
 **Route**  
 [What is a API w/ Examples](https://www.bigcommerce.com/blog/what-is-an-api/#what-is-an-api-request)
+
+# MongoDB
+ A document oriented program used to store data from NoSQL databases.
+
+ **mongoose** - a ODM library used to manipulate non-relational data, validate schemas, and translates code to the apropriate format in MongoDB.  
+
+ **ODM (Object Data Modeling)** - a technique that maps(organizes) data between a object Model and document database.  
+
+ **ORM (Object Relational Mapping)** - a technique that maps(organizes) data between a object model and a relational database.  
+ Ex: A Excel Spreadsheet
