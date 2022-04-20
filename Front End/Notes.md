@@ -6,5 +6,6 @@ A JS framework used to create single page web applications and UIs by using comp
 
 **single page web application**  - a app that does NOT reload the entire page when a change is made. Instead it only reloads the particular section of the app where the change was made (It makes apps more efficient).  
 Ex:  
+<img width="383" alt="image" src="https://user-images.githubusercontent.com/69539559/164130166-588bf7bb-c6a8-4a4f-a922-fc2aba643b20.png">
 
 **component** - independent pieces of code that can be reused throughout a app (Similar to functions but instead they return HTML).
