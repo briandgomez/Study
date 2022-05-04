@@ -35,5 +35,7 @@ A document oriented program used to store data from NoSQL databases.
 
 **ODM (Object Data Modeling)** - a technique that maps(organizes) data between a object Model and document database.  
 
-**ORM (Object Relational Mapping)** - a technique that maps(organizes) data between a object model and a relational database.  
-Ex: A Excel Spreadsheet
+**ORM (Object Relational Mapping)** - a technique that maps(organizes) data between a object model and a relational database (It makes it easier to manipulate objects and store them in a database).    
+Ex:  
+<img width="373" alt="image" src="https://user-images.githubusercontent.com/69539559/166617707-ac5bbb72-1a47-4751-aaae-1ae90a5200b2.png">  
+In the example above from the 'E-Commerce' API, 'findOne' makes it easier to manipulate the objects(user inputs) and store it in the MySQL database. 
