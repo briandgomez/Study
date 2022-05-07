@@ -6,12 +6,32 @@ A programmning language that is used for front end and back end development to c
 # React.js
 A JS framework used to create single page web applications and UIs by using components.
 
+**seperation of concerns** - the idea of seperating an application into sections or parts where each section has a specific role. It makes code easier to read and resusable.
+
 **single page web application**  - a app that does NOT reload the entire page when a change is made. Instead it only reloads the particular section of the app where the change was made (It makes apps more efficient).  
 Ex:  
 <img width="383" alt="image" src="https://user-images.githubusercontent.com/69539559/164130166-588bf7bb-c6a8-4a4f-a922-fc2aba643b20.png">
 
 **component** - independent pieces of code that can be reused throughout a app (Similar to functions but instead they return HTML).  
-**JSX (Javascript XML)** - syntax that allows use to write HTML in Javascript (It converts HTML to react elements).  
+**JSX (Javascript XML)** - syntax that allows you to use HTML with Javascript (It converts HTML to react elements).  
 Ex:  
 <img width="406" alt="image" src="https://user-images.githubusercontent.com/69539559/166856320-1b5ecc4a-1aa0-49f6-92b8-d492c1eee656.png">  
-In the example above from Y.E.R, HTML tags are used to create a search input structure while the functions are inserted inside the tags as values for the attributes. This code allows to search for movies and tv shows thanks to the functions inside these attributes.
+In the example above from Y.E.R, HTML tags are used to create a search input structure while the functions are inserted inside the tags as values for the attributes. This code allows to search for movies and tv shows thanks to the functions inside these attributes.  
+
+**props** - custom attributes used to pass data to components (The equivalent of a prop in vanilla Javascript are arguements).    
+Ex:  
+<img width="554" alt="image" src="https://user-images.githubusercontent.com/69539559/167235489-1c099985-dd43-495a-9ea3-08e9c8a22b7a.png">  
+
+In the image above, 'TodoList' has a prop called 'todos' which takes the data from the array of objects called 'todos'.  
+
+**key** - a prop that is used to keep track of each element inside a array that has changed. It notifies React which elements have changed and updates accordingly.  
+
+**destructuring** - a expression that unpacks data from arrays & objects and assign them to distinct variables.  
+
+**prevenDefault** - prevents page from executing default behavior(prevent page from refreshing).  
+
+## Rules of React  
+### Components
+1. Every component must begin with a capital letter  
+2. A component can consist of 1 or 2 tags. If it contains 2 tags and has no children(nothing in between the tags) then it should be switched to 1 tag.  
+3. A 1 tag component must be self closing(end in a forward slash)
