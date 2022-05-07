@@ -32,8 +32,21 @@ In the image above, 'TodoList' has a prop called 'todos' which takes the data fr
 
 **state** - a object that is used to manage data and update a UI whenever the data has changed.  
 
-**useState** - 
+**useState** - a hook used to track the state of a component.  
+
+**ref** - a hook that gives access to a given DOM element.  
+Ex:  
+<img width="722" alt="image" src="https://user-images.githubusercontent.com/69539559/167272180-9c0a45e0-32c4-41f5-9978-3f30a2ba5e28.png">
+
+In the image above, `inputRef` gives us access to the current input. By setting `inputRef.current.value = "" ` erases the current input when the submit button is clicked.   
+
 ## Rules of React  
+
+### Hooks  
+1. Hooks must be called at the very top of functions  
+2. Hooks can NOT be used inside class components  
+3. Hooks can be used within conditional statements  
+
 ### Components
 1. Every component must begin with a capital letter  
 2. A component can consist of 1 or 2 tags. If it contains 2 tags and has no children(nothing in between the tags) then it should be switched to 1 tag.  
