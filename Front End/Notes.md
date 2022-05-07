@@ -26,10 +26,13 @@ In the image above, 'TodoList' has a prop called 'todos' which takes the data fr
 
 **key** - a prop that is used to keep track of each element inside a array that has changed. It notifies React which elements have changed and updates accordingly.  
 
-**destructuring** - a expression that unpacks data from arrays & objects and assign them to distinct variables.  
+**destructuring** - a expression that unpacks data from arrays & objects and assigns it to distinct variables.  
 
-**prevenDefault** - prevents page from executing default behavior(prevent page from refreshing).  
+**.prevenDefault()** - prevents a page from executing default behavior(prevents a page from refreshing).  
 
+**state** - a object that is used to manage data and update a UI whenever the data has changed.  
+
+**useState** - 
 ## Rules of React  
 ### Components
 1. Every component must begin with a capital letter  
