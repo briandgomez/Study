@@ -10,7 +10,14 @@ A language that can access and manipulate data from RELATIONAL databases. It all
 
 **unique key** - a number that ensures that each row in a particular column is unique  
 **schema** - a list of commands that defines the structure of a database  
-**query** - a list of commands that retrieve information from a database or performs other CRUD operations on that database
+**query** - a list of commands that retrieve information from a database or performs other CRUD operations on that database  
+
+### Rules for SQL Schemas  
+1. Only use lowercase letters, numbers, and underscores 
+2. Use simple and descriptive names for columns  
+3. Use simple and descriptive table names 
+4. Use a integer primary key for the standard `id` column  
+5. Have consistent names for foreign keys (primary key = foo, foreign key = foo_id)
 
 **MySQL** - an open source program that allows users to create relational databases. By using MySQL and SQL users can find and store data based on its relationship with other data  
 **MySQL2** - a npm package that allows users to connect to the MySQL database  
