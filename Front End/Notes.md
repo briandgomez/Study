@@ -4,7 +4,7 @@ A programmning language that is used for front end and back end development to c
 **CSS** - the styling of a website
 
 # React.js
-A JS framework used to create single page web applications and UIs by using components.
+A JS library used to create single page web applications and UIs by using components.
 
 **seperation of concerns** - the idea of seperating an application into sections or parts where each section has a specific role. It makes code easier to read and resusable.
 
