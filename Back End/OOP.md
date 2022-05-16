@@ -1,7 +1,7 @@
 # OOP (Object Oriented Programming)
 A software model that uses objects instead of functions to manipulate data
 
-**class** - a blueprint or template for creating object
+**class** - a blueprint or template for creating a object
 (Refer to inheritance definition for an example of a class)
 
 <img width="322" alt="image" src="https://user-images.githubusercontent.com/69539559/163294445-90295f5e-d683-4467-b622-e639755fabaa.png">  
@@ -15,8 +15,7 @@ Ex: A class
 **Polymorphism** - ability to call the 
 method on different objects and each object responds in different way (take on multiple forms).  
 Ex 1:  
-![image](https://user-images.githubusercontent.com/69539559/163598826-44277a26-8a07-436e-ad64-c910ee1095f3.png))
-<img width="764" alt="image" src="https://user-images.githubusercontent.com/69539559/163294725-bbf310cb-da0a-4224-bf8e-6d2ed0ad77a4.png">  
+![image](https://user-images.githubusercontent.com/69539559/168661791-c43c89c2-de70-4bb8-ad7a-287e2f380548.png)  
 The output of 'speak' will vary depending on the input
 
 **Abstraction** - the concept that says only 'necessary' information is shown  
