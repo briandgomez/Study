@@ -29,5 +29,10 @@ Ex 1:
 Ex 2:  
 ![image](https://user-images.githubusercontent.com/69539559/163588494-0811d546-0f55-4c33-8939-f2baba50bc3e.png)  
 
+**super** - a keyword used to call the constructor of a parent class in order to access the properties and methods  
+Ex:  
+<img width="810" alt="image" src="https://user-images.githubusercontent.com/69539559/169442615-334ae6c5-0ea6-4145-b60a-92c58d928df9.png">  
+  
+  
 **Instance** - a specific example of a object  
 <img width="313" alt="image" src="https://user-images.githubusercontent.com/69539559/163294558-928cc18a-a55b-4401-aa3b-a21debbb2757.png"> 
