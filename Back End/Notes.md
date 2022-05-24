@@ -64,3 +64,9 @@ Ex 2: Response
 
 [What is a API w/ Examples](https://www.bigcommerce.com/blog/what-is-an-api/#what-is-an-api-request)  
 [What is a Header](https://apipheny.io/api-headers/#examples)  
+
+## MVV Paradigm (Model-View-Controller)  
+**model** - stores the data and its related logic
+**view** - displays the data or deals with user interaction
+**controller** - the middleman between the view and the model  
+<img width="443" alt="image" src="https://user-images.githubusercontent.com/69539559/169930729-b8897c9f-98e7-4fbe-bc00-3bd85411c6e0.png">
