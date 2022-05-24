@@ -38,7 +38,9 @@ Useful Videos:
 [Callbacks in Node.js](https://www.youtube.com/watch?v=KYktOkdzAHw&list=PLqq-6Pq4lTTa-d0iZg41U2RDqECol9C5B&index=16)  
 
 # Express
-A backend framework that makes it easier to create web servers
+A backend framework that allows you to respond to requests by making it easier to create routes. With routes in place it makes it easier to write responses for specific URLS.  
+
+
 # API
 A Application Programming Interface is the middleman between a client and a server. It takes the request from a client and retrieves the data based on the request. The server then responds with the information in JSON format.  
 **REST** - Representational State Transfer is a software architecture style that creates constraints on the communication between clients and servers.  
