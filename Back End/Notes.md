@@ -40,6 +40,8 @@ Useful Videos:
 # Express
 A backend framework that allows you to respond to requests by making it easier to create routes. With routes in place it makes it easier to write responses for specific URLS.  
 
+[Difference between Express and Node](https://www.geeksforgeeks.org/node-js-vs-express-js/)
+
 
 # API
 A Application Programming Interface is the middleman between a client and a server. It takes the request from a client and retrieves the data based on the request. The server then responds with the information in JSON format.  
