@@ -45,7 +45,8 @@ A backend framework that allows you to respond to requests by making it easier t
 
 # API
 A Application Programming Interface is the middleman between a client and a server. It takes the request from a client and retrieves the data based on the request. The server then responds with the information in JSON format.  
-**REST** - Representational State Transfer is a software architecture style that creates constraints on the communication between clients and servers.  
+**REST** - Representational State Transfer is a software architecture style used as a standard for all inetractions between computers through the web  
+
 **JSON**  - Javascript Object Notation is a format used for transporting and storing data.  
 **Endpoint**  - the point where the API and another program meet (the end of a communication channel).   
 **Route** - the name used to access a endpoint.  
