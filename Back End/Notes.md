@@ -38,7 +38,9 @@ Useful Videos:
 [Callbacks in Node.js](https://www.youtube.com/watch?v=KYktOkdzAHw&list=PLqq-6Pq4lTTa-d0iZg41U2RDqECol9C5B&index=16)  
 
 # Express
-A backend framework that allows you to respond to requests by making it easier to create routes. With routes in place it makes it easier to write responses for specific URLS.  
+A backend framework that makes it easier to organize a application 's functionality with middleware and routing.  
+Ex:  
+Express allows you to respond to requests by making it easier to create routes. With routes in place it makes it easier to write code for specific URLS.  
 
 [Difference between Express and Node](https://www.geeksforgeeks.org/node-js-vs-express-js/)
 
