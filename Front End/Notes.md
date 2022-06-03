@@ -1,7 +1,7 @@
-**Javascript**
-A programmning language that is used for front end and back end development to create interacive and appealing web applications.  
-**HTML** - the structure(skeleton) of a website  
-**CSS** - the styling of a website
+**Javascript**  
+A programmning language that is used for front end and back end development to create interacive and appealing web applications. It controls the functionality of the application.    
+**HTML (Hypertext Markup Language)** - the structure(skeleton) of a website. It consists of pieces of code called 'elements' that represent what the application will look like such as having a header, image, link, etc.  
+**CSS (Cascading Style Sheets)** - the styling of a website. It controls the UI/UX of a website such as the colors, animation, and 'feel' of a application.   
 
 # React.js
 A JS library used to create single page web applications and UIs by using components.
