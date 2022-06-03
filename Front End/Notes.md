@@ -52,3 +52,6 @@ In the image above, `inputRef` gives us access to the current input. By setting 
 1. Every component must begin with a capital letter  
 2. A component can consist of 1 or 2 tags. If it contains 2 tags and has no children(nothing in between the tags) then it should be switched to 1 tag.  
 3. A 1 tag component must be self closing(end in a forward slash)
+
+# Bootstrap  
+A CSS framework mainly used to create mobile and responsive apps.  
