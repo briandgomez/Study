@@ -38,11 +38,29 @@ Databases that store information that is NOT ONLY relational. The information is
 ## MongoDB
 A document oriented program used to store data from NoSQL databases.
 
-**mongoose** - a ODM library used to manipulate non-relational data, validate schemas, and translates code to the apropriate format in MongoDB.  
+**mongoose** - a ODM library used to manipulate `non-relational data`, validate schemas, and translates code to the apropriate format in MongoDB.  
+**sequelize** - a ORM tool used to manipulate `relational data` 
 
 **ODM (Object Data Modeling)** - a technique that maps(organizes) data between a object Model and document database.  
+Ex:  
+<img width="479" alt="image" src="https://user-images.githubusercontent.com/69539559/172074838-77d62544-57b2-4d1d-8fd5-2de9e80b6e1d.png">   
+In the image above 'findOneAndUpdate' makes it easier to search for the requested user  
+
+Schema Ex:  
+<img width="376" alt="image" src="https://user-images.githubusercontent.com/69539559/172074759-bc9d428b-6a2b-4bc3-8a16-c0064e365ab0.png">  
+
 
 **ORM (Object Relational Mapping)** - a technique that maps(organizes) data between a object model and a relational database (It makes it easier to manipulate objects and store them in a database).    
 Ex:  
 <img width="373" alt="image" src="https://user-images.githubusercontent.com/69539559/166617707-ac5bbb72-1a47-4751-aaae-1ae90a5200b2.png">  
-In the example above from the 'E-Commerce' API, 'findOne' makes it easier to manipulate the objects(user inputs) and store it in the MySQL database. 
+In the example above from the 'E-Commerce' API, 'findOne' makes it easier to manipulate the objects(user inputs) and store it in the MySQL database.  
+
+Schema Ex:  
+<img width="246" alt="image" src="https://user-images.githubusercontent.com/69539559/172074721-13fe032c-ad62-467d-96bd-92e104a64720.png">  
+
+
+## When to use SQL vs NoSQL databases  
+### NoSQL:  
+When working with large amounts of data, data that is not sensitive, and structure is not a priority NoSQL is the better choice  
+### SQL:  
+When the data is sensitive, structure is a priority and does not change often then SQL database is the better choice
