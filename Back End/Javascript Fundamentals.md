@@ -38,4 +38,11 @@ Ex:
 ### Functions vs Objects  
 The difference between functions and objects is that functions can be called. Functions are usually used to perform the same task mutliple times while objects are usually used to store and transport data.
 
-**loops** - executes block of code repeatedly until a certain condition is met
+**loops** - executes block of code repeatedly until a certain condition is met  
+
+#### For vs While
+A `for` loop is used when the numbers of times the loop should run is known while a `while` loop is used when the number of times is NOT known  
+
+Ex:   
+Iterating through an array - for  
+Asking for user input - while
