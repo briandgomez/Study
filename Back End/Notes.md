@@ -12,12 +12,24 @@ Git is a version control management system that tracks all the changes and histo
 # Node
 A Javascript environment that allows developers to execute Javascript code on a local computer. It also gives developers access to features on a local computer such as the filesystem. (It is basically Chromes V8 Engine on a local computer).  
 
+**JavaScript Engine** - a software tool used to interpret and execute javascript code on a web page  
+
 ## Node.js in Depth  
 Node.js processes events in a single thread operation. A single thread operation is when a new event appears and it is added to the end of a queue to be executed. Node will continuously execute event after event from the queue without stopping. This is called event looping. These events are asynchronous meaning after one event is executed the next event will be executed with the first event pending its response (there is no stopping or blocking of code being executed).  
 
-Node also runs on the idea of callbacks. Callbacks are functions that execute after the first event has been executed (callbacks *link* lines of code together if necessary).  
+Node also runs on the idea of callbacks. `Callback`s are functions that execute after the first event has been executed (callbacks *link* lines of code together if necessary)  
+
+Example of asynchronity:  
+When loading Instagram on a phone you have access to all the features ONCE they're loaded. If Instagram used synchronous you couldn't use it until every single feature was loaded on the page 
+
 Example of asynchronity and callbacks being used together:    
-<img width="455" alt="image" src="https://user-images.githubusercontent.com/69539559/163501291-3ad3c561-c877-4a3d-a3e0-3cae7ae86818.png">
+<img width="455" alt="image" src="https://user-images.githubusercontent.com/69539559/163501291-3ad3c561-c877-4a3d-a3e0-3cae7ae86818.png">  
+The console.log on line 8 is the callback  
+
+**promise** - a object that will return a value in the future
+
+### Differene between a Callback Function and Promise (both being asynchronous)  
+<img width="335" alt="image" src="https://user-images.githubusercontent.com/69539559/172521674-d2b7d837-afe3-4592-a9b7-a1f1df5228c0.png">  
 
 ## When and When NOT to use Node.js  
 **When:**  
