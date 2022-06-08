@@ -49,11 +49,16 @@ Useful Videos:
 [When and when NOT to use Node.js](https://www.youtube.com/watch?v=UCd6LorxpkY&list=PLqq-6Pq4lTTa-d0iZg41U2RDqECol9C5B&index=7)  
 [Callbacks in Node.js](https://www.youtube.com/watch?v=KYktOkdzAHw&list=PLqq-6Pq4lTTa-d0iZg41U2RDqECol9C5B&index=16)  
 
-# Express
-A backend framework that makes it easier to organize a application 's functionality with middleware and routing.  
+**modules** - blocks of encapsulated code used to communicate with external files  
 Ex:  
-Express allows you to respond to requests by making it easier to create routes. With routes in place it makes it easier to write code for specific URLS.  
+Accessing the HTTp module  
+![image](https://user-images.githubusercontent.com/69539559/172695172-175790cf-2392-4309-820c-9edfb380ced5.png)  
 
+# Express 
+A backend framework mostly used to create APIs and web applications through the use of modules and other built in features. These features reduce the amount of code that needs to be repeated  
+Ex:  
+Code used to create a API WITHOUT express(left) and WITH express(right)
+![image](https://user-images.githubusercontent.com/69539559/172693606-8b60a0b5-b27d-4b25-81a2-5a947b75d00a.png)   
 [Difference between Express and Node](https://www.geeksforgeeks.org/node-js-vs-express-js/)
 
 
