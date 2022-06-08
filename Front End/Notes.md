@@ -1,7 +1,21 @@
 **Javascript**  
-A programmning language that is used for front end and back end development to create interacive and appealing web applications. It controls the functionality of the application.    
+A programmning language that is used for front end and back end development to create interacive and appealing web applications. It controls the functionality of the application  
+
 **HTML (Hypertext Markup Language)** - the structure(skeleton) of a website. It consists of pieces of code called 'elements' that represent what the application will look like such as having a header, image, link, etc.  
+<img width="300" alt="image" src="https://user-images.githubusercontent.com/69539559/172500268-61b9824e-c059-4072-b4bf-700a9739072b.png">  
+Elements such as header, main, and list item are all used in the image above to structure the website  
+
 **CSS (Cascading Style Sheets)** - the styling of a website. It controls the UI/UX of a website such as the colors, animation, and 'feel' of a application.   
+Ex:  
+<img width="400" alt="image" src="https://user-images.githubusercontent.com/69539559/172500717-7f4d5831-a393-40b1-b6ec-5586617864f6.png">  
+The CSS code above is referring to the class `search-engine-optimization` that is a part of the section element. It adds styles to that element such as increasing the 
+height, adding padding, color, etc.  
+#### ID vs Class  
+A ID is used to identify only 1 element and a class is used to identify MORE than 1 element  
+#### Box Model  
+The CSS Box model is the technique of converting HTML elements into 'boxes'. These 'boxes' refer to adding spacing for a HTML element. Examples of this are margins,
+border, and padding  
+<img width="323" alt="image" src="https://user-images.githubusercontent.com/69539559/172502860-17f221cd-4672-4ae2-a886-2a8cb72963f6.png">
 
 # React.js
 A JS library used to create single page web applications and UIs by using components.
