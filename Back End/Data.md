@@ -12,12 +12,25 @@ A language that can access and manipulate data from RELATIONAL databases. It all
 **schema** - a list of commands that defines the structure of a database  
 **query** - a list of commands that retrieve information from a database or performs other CRUD operations on that database  
 
-### Rules for SQL Schemas  
+#### Rules for SQL Schemas  
 1. Only use lowercase letters, numbers, and underscores 
 2. Use simple and descriptive names for columns  
 3. Use simple and descriptive table names 
 4. Use a integer primary key for the standard `id` column  
-5. Have consistent names for foreign keys (primary key = foo, foreign key = foo_id)
+5. Have consistent names for foreign keys (primary key = foo, foreign key = foo_id)  
+
+#### SQL Command Order  
+1. SELECT - select statement from a database(*column_name(s)*)  
+2. FROM - select table(*table_name*)  
+3. JOIN - combine rows from different tables where they have a common column(*table_name*)  
+4. WHERE - filter records(*condition*)   
+5. GROUP BY - groups rows that have the same value(*column_name(s)*)  
+6. HAVING - same as *WHERE* clause execpt can be used with agregate functions(*condition*)  
+7. ORDER BY - organize data in `ASC` or `DESC` order(*column_name(s)*)  
+8. LIMIT - constrains the number of rows returned from a `SELECT` statement(*number*)   
+
+##### SQL Execution Order  
+FROM -> JOIN -> WHERE -> GROUP BY -> HAVING -> SELECT -> ORDER BY  
 
 **MySQL** - an open source program that allows users to create relational databases. By using MySQL and SQL users can find and store data based on its relationship with other data  
 **MySQL2** - a npm package that allows users to connect to the MySQL database  
