@@ -25,7 +25,7 @@ A language that can access and manipulate data from RELATIONAL databases. It all
 3. JOIN - combine rows from different tables where they have a common column(*table_name*)  
 4. WHERE - filter records(*condition*)   
 5. GROUP BY - groups rows that have the same value(*column_name(s)*)  
-6. HAVING - same as *WHERE* clause execpt can be used with agregate functions(*condition*)  
+6. HAVING - same as `WHERE` clause execpt can be used with agregate functions(*condition*)  
 7. ORDER BY - organize data in `ASC` or `DESC` order(*column_name(s)*)  
 8. LIMIT - constrains the number of rows returned from a `SELECT` statement(*number*)   
 
