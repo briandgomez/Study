@@ -4,6 +4,9 @@ A software model that uses objects to manipulate data
 **object** - a unorder collection of key-value pairs. A object is a instance of a class  
 **instance** - a specific example of a class  
 **class** - a template for creating multiple objects with same list of properties but different data values saved in it  
+**this** - refers to the current object that is being executed  
+Ex:  
+<img width="188" alt="image" src="https://user-images.githubusercontent.com/69539559/172754701-2f36da5d-4570-4e29-8dec-e29385598ed5.png">
 (Refer to inheritance definition for an example of a class)  
 **attribute** - information that is stored inside a class that is different for every instance  of that class(properties of a class)    
 **method** - a function that perform a spceific action on a object  
