@@ -46,3 +46,16 @@ A `for` loop is used when the numbers of times the loop should run is known whil
 Ex:   
 Iterating through an array - for  
 Asking for user input - while
+
+
+## Data Types  
+The 7 data types in JavaScript(primitives meaning not a object):  
+1. String  
+2. Number  
+3. BigInt - a very large number  
+4. Symbol  
+5. Boolean  
+6. Undefined - a variable has been declared but has no value  
+7. Null - means no value and can be assigned to a variable  
+Ex of difference between null and undefined:  
+<img width="364" alt="image" src="https://user-images.githubusercontent.com/69539559/172753117-bfe5e407-1ec0-41c8-a6df-8d8baee29f23.png">  
