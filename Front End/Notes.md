@@ -55,6 +55,11 @@ Ex:
 
 In the image above, `inputRef` gives us access to the current input. By setting `inputRef.current.value = "" ` erases the current input when the submit button is clicked.   
 
+**DOM(DOcument Object Model)** - the  data or object representation of a web document.  It can be manipulated such to dyamically access, update the content, strcuture of a document  
+
+The DOM has a structure of a tree of objects as shown below:  
+<img width="443" alt="image" src="https://user-images.githubusercontent.com/69539559/172755313-1e4ddf63-2774-402d-add3-30ce1e66b73b.png">  
+
 ## Rules of React  
 
 ### Hooks  
