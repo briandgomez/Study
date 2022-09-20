@@ -1,7 +1,7 @@
 # OOP (Object Oriented Programming)
 A software model that uses objects to manipulate data
 
-**object** - a unorder collection of key-value pairs. A object is a instance of a class  
+**object** - a unorder collection of key-value pairs. A object is a instance(example) of a class  
 **instance** - a specific example of a class  
 **class** - a template for creating multiple objects with same list of properties but different data values saved in it  
 **this** - refers to the current object that is being executed  
