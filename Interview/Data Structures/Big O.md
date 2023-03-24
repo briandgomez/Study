@@ -107,6 +107,5 @@
    ◇ Searching for a specific element (not using the indices) is O(1)  
 
 Big O Chart
-
-
+![image](https://user-images.githubusercontent.com/69539559/227420945-ccea9b5e-138c-4fdf-aa28-5ca89bb4058f.png)
 
