@@ -19,6 +19,7 @@ a) For each source, do the following things:
 — iv)If a child’s in-degree becomes ‘0’, add it to the sources Queue.
 b) Repeat (a), until the source Queue is empty.
 
+![image](https://user-images.githubusercontent.com/69539559/227814232-3c42766b-08c3-4554-bd5c-aeb60f3f39f6.png)  
 
 
 How to identify the Topological Sort pattern:
