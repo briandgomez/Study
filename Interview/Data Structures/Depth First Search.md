@@ -20,6 +20,15 @@ public class Main {
 }
 ```
 
+### Types of DFS
+1) Pre-order - visits the root node, then the left subtree and finally the right subtree. 
+![](https://upload.wikimedia.org/wikipedia/commons/a/ac/Preorder-traversal.gif)
+2) In-order - visits the left subtree, then the root node, and finally the right subtree. 
+![](https://upload.wikimedia.org/wikipedia/commons/4/48/Inorder-traversal.gif)
+3) Post-order - visits the left subtree, then the right subtree, and finally the root node.  
+![](https://upload.wikimedia.org/wikipedia/commons/2/28/Postorder-traversal.gif)
+
+
 #### All Methods for implementing a Binary Search Tree(BST)
 ```
 import java.util.ArrayList;
@@ -152,12 +161,13 @@ public class BST {
 
 ### When and when NOT to use DFS
 #### When:  
-- Solution(s) IS far from the root node
--  
+- Solution(s) ARE far from the root node
 
 #### When NOT:
-- Solution(s) is NOT far from the root node
+- Solution(s) ARE NOT far from the root node
 
-#### Extra Resource:  
+#### Extra Resource(s):  
 - [DFS Explained](https://brilliant.org/wiki/depth-first-search-dfs/#:~:text=Depth%2Dfirst%20search%20is%20used,if%20a%20graph%20is%20bipartite.) 
 - [Interview questions that use DFS](https://medium.com/@codingfreak/depth-first-search-dfs-interview-questions-and-practice-problems-3862d9cd26f)
+- [DFS Tree Traversals](https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/)
+- [DFS: Post, In, and Pre Order Explained](https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/)
