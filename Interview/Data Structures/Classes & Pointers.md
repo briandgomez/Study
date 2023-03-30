@@ -1,10 +1,10 @@
-• Classes - a template used to make objects that have the same properties but different data saved to them  
-   ◇ object - a unordered collection of key-value pairs. A object is an example of a class  
-   ◇ instance - a specific example of a class  
-   ◇ this - refers to the current object that is being executed  
-      ▪ Ex:  
-      **Main.java**  
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* Classes - a template used to make objects that have the same properties but different data saved to them  
+   - object - a unordered collection of key-value pairs. A object is an example of a class  
+   - instance - a specific example of a class  
+   - this - refers to the current object that is being executed  
+
+#### Implementing a class
+```
 class Main {
     public static void main(String[] args) {
         //instances
@@ -17,10 +17,10 @@ class Main {
         System.out.println(cookieTwo.getColor());
     }
 }
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 
-**Cookie.java**  
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+```
 // class
 public class Cookie {
     // class variable
@@ -37,15 +37,15 @@ public class Cookie {
         this.color = color;
     }
 }
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 
 
 
-
-• Pointers - the location of something in memory  
-   ◇ Ex:  
-      ▪ map1 = map2 meaning they are both "pointing" to the SAME HashMap in memory. Assigning a new value to either map1 or map2 will also affect the other.    
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#### Implementing a pointer
+* Pointers - the location of something in memory  
+   - Ex:  
+      - `map2 = map1` means they are both "pointing" to the SAME HashMap in memory. Assigning a new value to either map1 or map2 will affect the other.    
+```
 import java.util.HashMap;
 
 class Main {
@@ -62,4 +62,4 @@ class Main {
         System.out.println(map2);
     }
 }
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
