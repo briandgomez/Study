@@ -114,3 +114,14 @@ public class BST {
    }
 }
 ```
+
+### When and when NOT to use BFS
+#### When:  
+- Solution is NOT far from the root node  
+
+#### When NOT:
+- Solution IS far from the root node
+
+#### Extra Resource:  
+- [BFS Explained](https://brilliant.org/wiki/breadth-first-search-bfs/#breadth-first-search)  
+- [Interview questions that use BFS](https://medium.com/@codingfreak/bfs-interview-questions-and-practice-problems-56ab23d4404a)
