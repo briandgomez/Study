@@ -1,8 +1,8 @@
-• Breadth first search - starts at the root of the node and searches for all the nodes in the current level before moving into the next level
+* Breadth first search - starts at the root node and searches through all the nodes in the same level(neighboring nodes) before moving onto the next level  
+![BFS](https://upload.wikimedia.org/wikipedia/commons/5/5d/Breadth-First-Search-Algorithm.gif). 
 
-• Main.java
-   ◇ 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+### Implementing BFS
+```
 public class Main {
    public static void main(String[] args) {
        BST myBST = new BST();
@@ -18,13 +18,10 @@ public class Main {
        System.out.println(myBST.BFS());
    }
 }
+```
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-• BFS Methods
-   ◇ 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#### All Methods for implementing a Binary Search Tree(BST)
+```
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -116,5 +113,4 @@ public class BST {
        return results;
    }
 }
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
