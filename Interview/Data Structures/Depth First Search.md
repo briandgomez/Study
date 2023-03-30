@@ -1,5 +1,27 @@
+* Depth First Search - starts at the root node and searches through each branch before backtracking.  
+![DFS](https://upload.wikimedia.org/wikipedia/commons/7/7f/Depth-First-Search.gif). 
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+### Implementing DFS
+```
+public class Main {
+   public static void main(String[] args) {
+       BST myBST = new BST();
+       myBST.insert(47);
+       myBST.insert(21);
+       myBST.insert(76);
+       myBST.insert(18);
+       myBST.insert(27);
+       myBST.insert(52);
+       myBST.insert(82);
+
+
+       System.out.println(myBST.DFSInOrder());
+   }
+}
+```
+
+#### All Methods for implementing a Binary Search Tree(BST)
+```
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -126,28 +148,16 @@ public class BST {
        return results;
    }
 }
+```
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+### When and when NOT to use DFS
+#### When:  
+- Solution(s) IS far from the root node
+-  
 
+#### When NOT:
+- Solution(s) is NOT far from the root node
 
-
-• Main.java
-   ◇ 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-public class Main {
-   public static void main(String[] args) {
-       BST myBST = new BST();
-       myBST.insert(47);
-       myBST.insert(21);
-       myBST.insert(76);
-       myBST.insert(18);
-       myBST.insert(27);
-       myBST.insert(52);
-       myBST.insert(82);
-
-
-       System.out.println(myBST.DFSInOrder());
-   }
-}
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#### Extra Resource:  
+- [DFS Explained](https://brilliant.org/wiki/depth-first-search-dfs/#:~:text=Depth%2Dfirst%20search%20is%20used,if%20a%20graph%20is%20bipartite.) 
+- [Interview questions that use DFS](https://medium.com/@codingfreak/depth-first-search-dfs-interview-questions-and-practice-problems-3862d9cd26f)
