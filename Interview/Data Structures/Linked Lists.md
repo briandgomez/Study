@@ -1,40 +1,26 @@
-• Linked List vs Array List  
-   ◇ Linked lists do NOT have indexes and all the elements are NOT continuous in memory  
-   ◇ Each element in the list is called a Node  
-   ◇ The first node is called the Head and the last node is called the Tail  
-   ◇ Each node has a pointer that points to the node after it. The Tail has a pointer pointing to null.  
+* Linkedlist - a linear data structure that consists of a series of connected nodes. Each node contains data(value) and a address(pointer)that points to the next node. The first node in the list is called the 'head' while the last node is called the 'tail  
+	- Node - consists of a value and a pointer  
 
-• Big O  
-   ◇ Adding a node to the END is O(1)  
-   ◇ Removing a node from the END is O(n). It requires iterating through the list from the beginning, having the tail point to the new last node and the new second to last node also point to the new last node.  
-   ◇ Adding a node to the FRONT is O(1)  
-   ◇ Removing a node to the FRONT is O(1)  
-   ◇ Adding a node in the MIDDLE O(n). It requires iterating through the list until reaching the desired location.  
-   ◇ Removing a node in the MIDDLE O(n). It requires iterating through the list until reaching the desired location.  
-   ◇ Searching for a specific node is O(n)  
-      ▪ 
+![image](https://user-images.githubusercontent.com/69539559/229016793-1149bbb1-0f72-4d42-998d-bbea2ddffabc.png)
 
 
-• Node - consists of a value and a pointer  
-   ◇ Ex:
-
-
-					{
-	Head ------>		“value” = 23,
-							“next” = {
-											"value = 4,
-											“next” = {
-															“value” = 1,
-Tail 					------>							“next” = null	
-														}
-										}
+#### A node broken down using objects
+```
+		{
+Head ------>		“value” = 23,
+			“next” = {
+					"value" = 4,
+					“next” = {
+							“value” = 1,
+Tail ------>						“next” = null	
 						}
-						
-						
-• Constructor - a method that creates and initializes a new instance of a class whenever the class is used. The instance created contains the properties(class  of that class.  
-   ◇ Main.java
-• 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+				}
+		}				
+```
+
+
+#### Creating a instance of a linkedlist
+```
 class Main {
     public static void main(String[] args) {
 
@@ -42,20 +28,10 @@ class Main {
 
     LinkedList myLinkedList = new LinkedList(4);
 }
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- 
-
-   ◇ LinkedList.java  
-      ▪ Node class:  
-         - ‘this.value’ = ‘int value’  
-         - ‘Node(int value)’ = ‘value’  
-      ▪ LinkedList class:  
-         - ‘new Node(value)’ creates a node using the constructor of the ‘Node’ class  
-         - ‘Node newNode’ creates a variable called ‘newNode’ and points to the newly created node  
-         - ‘head = newNode’ points to the same node that ‘newNode’ is pointing to  
-         - 'tail = newNode’ also points to the same node that ‘newNode’ is  pointing to  
-   ◇ 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
+	 
+#### Implementing a Linkedlist that contains a Node  
+```
 import javafx.scene.Node;
 
 public class LinkedList {
@@ -84,243 +60,21 @@ public class LinkedList {
         length = 1;
     }
 }
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
+
+#### Linkedlist class broken down
+* Node class:  
+	- `this.value` corresponds to `int value`  
+	- `Node(int value)` corresponds to `value`  
+* LinkedList class:  
+	- `new Node(value)` creates a node using the constructor of the ‘Node’ class  
+	- `Node newNode` creates a variable called ‘newNode’ and points to the newly created node  
+	- `head = newNode` points to the same node that ‘newNode’ is pointing to  
+	- `tail = newNode` also points to the same node that ‘newNode’ is  pointing to  
 
 
-
-
-• Printing a List
-   ◇ 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-class Main {
-    public static void main(String[] args) {
-        LinkedList myLinkedList = new LinkedList(4);
-
-        myLinkedList.getHead();
-        myLinkedList.getTail();
-        myLinkedList.getLength();
-
-        myLinkedList.printList();
-    }
-}
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-   ◇ LinkedList.java
-   ◇ 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-import javafx.scene.Node;
-
-public class LinkedList {
-    private Node head;
-    private Node tail;
-    private int length;
-
-    class Node {
-        int value;
-        Node next;
-
-        Node(int value) {
-            this.value = value;
-        }
-    }
-
-    public LinkedList(int value) {
-        Node newNode = new Node(value);
-        head = newNode;
-        tail = newNode;
-        length = 1;
-    }
-
-    public void printList() {
-        Node temp = head;
-        while (temp != null) {
-            System.out.println(temp.value);
-            temp = temp.next;
-        }
-    }
-
-    public void getHead() {
-        System.out.println("Head: " + head.value);
-    }
-
-    public void getTail() {
-        System.out.println("Tail: " + tail.value);
-    }
-
-    public void getLength() {
-        System.out.println("Length: " + length);
-    }
-}
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-• Appending
-   ◇ 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-class Main {
-    public static void main(String[] args) {
-        LinkedList myLinkedList = new LinkedList(1);
-        myLinkedList.append(2);
-        myLinkedList.printList();
-    }
-}
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-• Removing from end
-   ◇ 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-class Main {
-    public static void main(String[] args) {
-        LinkedList myLinkedList = new LinkedList(1);
-        myLinkedList.append(2);
-        
-        // 2 items in the list - Returns node with value of 2
-        System.out.println(myLinkedList.removeLast().value);
-        // 1 item in the list - Returns node with value of 1
-        System.out.println(myLinkedList.removeLast().value);
-        // 0 items in the list - Returns null
-        System.out.println(myLinkedList.removeLast());
-    }
-}
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-• Adding to the beginning
-   ◇ 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-class Main {
-    public static void main(String[] args) {
-        LinkedList myLinkedList = new LinkedList(2);
-        myLinkedList.append(3);
-        myLinkedList.prepend(1);
-        myLinkedList.printList();
-    }
-}
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-   ◇ 
-
-• Removing from the beginning
-   ◇ 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-class Main {
-    public static void main(String[] args) {
-        LinkedList myLinkedList = new LinkedList(1);
-        myLinkedList.append(2);
-        
-        // 2 items in the list - Returns node with value of 1
-        System.out.println(myLinkedList.removeFirst().value);
-        // 1 item in the list - Returns node with value of 2
-        System.out.println(myLinkedList.removeFirst().value);
-        // 0 items in the list - Returns null
-        System.out.println(myLinkedList.removeFirst());
-    }
-}
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-• Get method
-   ◇ 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-class Main {
-    public static void main(String[] args) {
-        LinkedList myLinkedList = new LinkedList(0);
-        myLinkedList.append(1);
-        myLinkedList.append(2);
-        myLinkedList.append(3);
-
-        System.out.println("Index: " + myLinkedList.get(2).value);
-        myLinkedList.printList();
-    }
-}
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-• Set method
-   ◇ 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-class Main {
-    public static void main(String[] args) {
-        LinkedList myLinkedList = new LinkedList(11);
-        myLinkedList.append(3);
-        myLinkedList.append(23);
-        myLinkedList.append(7);
-
-        myLinkedList.set(1,4);
-        myLinkedList.printList();
-    }
-}
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-• Insert method
-   ◇ 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-class Main {
-    public static void main(String[] args) {
-        LinkedList myLinkedList = new LinkedList(0);
-        myLinkedList.append(2);
-
-        myLinkedList.insert(1,1);
-        myLinkedList.printList();
-    }
-}
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-• Remove method
-• 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-class Main {
-    public static void main(String[] args) {
-        LinkedList myLinkedList = new LinkedList(11);
-        myLinkedList.append(3);
-
-        myLinkedList.append(23);
-        myLinkedList.append(7);
-
-        myLinkedList.remove(2);
-        myLinkedList.printList();
-    }
-}
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-
-• Reverse method
-   ◇ 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-class Main {
-    public static void main(String[] args) {
-        LinkedList myLinkedList = new LinkedList(1);
-        myLinkedList.append(2);
-        myLinkedList.append(3);
-        myLinkedList.append(4);
-
-        myLinkedList.reverse();
-        myLinkedList.printList();
-    }
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-
-• All methods
-   ◇ 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#### All methods used for working with a Linkedlist
+```
 import javafx.scene.Node;
 
 public class LinkedList {
@@ -499,5 +253,22 @@ public class LinkedList {
         }
     }
 }
+```  
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#### Linked List vs Array List  
+   - Linked lists do NOT have indexes and all the elements are NOT continuous in memory  
+   - Each element in a linked list is called a Node  
+   - Each node has a pointer that points to the node after it. The Tail has a pointer pointing to null.  
+
+#### Big O  
+   - Adding a node to the END is O(1)  
+   - Removing a node from the END is O(n). It requires iterating through the list from the beginning, having the tail point to the new last node and the new second to last node also point to the new last node.  
+   - Adding a node to the FRONT is O(1)  
+   - Removing a node to the FRONT is O(1)  
+   - Adding a node in the MIDDLE O(n). It requires iterating through the list until reaching the desired location.  
+   - Removing a node in the MIDDLE O(n). It requires iterating through the list until reaching the desired location.  
+   - Searching for a specific node is O(n) 
+
+
+#### Extra Resource(s): 
+[Linkedlist explained](https://www.geeksforgeeks.org/what-is-linked-list//)
