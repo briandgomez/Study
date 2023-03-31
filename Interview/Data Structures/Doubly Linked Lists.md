@@ -1,144 +1,9 @@
- Append method
-   ◇ 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-class Main {
-    public static void main(String[] args) {
-        DoublyLinkedList myDLL = new DoublyLinkedList(1);
-        myDLL.append(2);
-
-        myDLL.printList();
-    }
-}
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* Doubly Linkedlist - a [linkedlist](https://github.com/briandgomez/Study/blob/main/Interview/Data%20Structures/Linked%20Lists.md) that has a pointer pointing to the next node AND the previous node. 
+![image](https://user-images.githubusercontent.com/69539559/229229093-0b14781c-0fe3-43b2-b615-1e94008db163.png)
 
 
-
-• Remove from the end
-   ◇ 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-class Main {
-    public static void main(String[] args) {
-        DoublyLinkedList myDLL = new DoublyLinkedList(1);
-        myDLL.append(2);
-
-        System.out.println(myDLL.removeLast().value);
-        System.out.println(myDLL.removeLast().value);
-        System.out.println(myDLL.removeLast());
-
-        myDLL.printList();
-    }
-}
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-• Add to the beginning
-   ◇ 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-class Main {
-    public static void main(String[] args) {
-        DoublyLinkedList myDLL = new DoublyLinkedList(2);
-        myDLL.append(3);
-
-        myDLL.prepend(1);
-        myDLL.printList();
-    }
-}
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-• Remove from the beginning
-   ◇ 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-class Main {
-    public static void main(String[] args) {
-        DoublyLinkedList myDLL = new DoublyLinkedList(2);
-        myDLL.append(1);
-
-        System.out.println(myDLL.removeFirst().value);
-        System.out.println(myDLL.removeFirst().value);
-        System.out.println(myDLL.removeFirst());
-    }
-}
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-• Get method
-   ◇ 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-class Main {
-    public static void main(String[] args) {
-        DoublyLinkedList myDLL = new DoublyLinkedList(0);
-        myDLL.append(1);
-        myDLL.append(2);
-        myDLL.append(3);
-
-        System.out.println(myDLL.get(1).value);
-        System.out.println(myDLL.get(2).value + "\n");
-        myDLL.printList();
-    }
-}
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-• Set method
-   ◇ 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-class Main {
-    public static void main(String[] args) {
-        DoublyLinkedList myDLL = new DoublyLinkedList(11);
-        myDLL.append(3);
-        myDLL.append(23);
-        myDLL.append(7);
-
-        myDLL.set(1, 4);
-        myDLL.printList();
-    }
-}
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-• Insert method
-   ◇ 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-class Main {
-    public static void main(String[] args) {
-        DoublyLinkedList myDLL = new DoublyLinkedList(1);
-        myDLL.append(3);
-
-        myDLL.insert(1, 2);
-        myDLL.printList();
-    }
-}
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-• Remove method
-   ◇ 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-class Main {
-    public static void main(String[] args) {
-        DoublyLinkedList myDLL = new DoublyLinkedList(0);
-        myDLL.append(1);
-        myDLL.append(2);
-
-        myDLL.remove(1);
-        myDLL.printList();
-    }
-}
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-All methods
-   ◇ 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#### All methods used for working with a Linkedlist
+```
 public class DoublyLinkedList {
     private Node head;
     private Node tail;
@@ -326,4 +191,7 @@ public class DoublyLinkedList {
         return temp;
     }
 }
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
+
+#### Extra Resource(s)
+[DLL Explained](https://opendsa-server.cs.vt.edu/ODSA/Books/CS3/html/ListDouble.html#:~:text=The%20most%20common%20reason%20to,easier%20to%20implement%20and%20debug)
