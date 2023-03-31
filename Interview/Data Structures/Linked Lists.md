@@ -256,7 +256,7 @@ public class LinkedList {
 ```  
 
 #### Linked List vs Array List  
-   - Linked lists do NOT have indexes and all the elements are NOT continuous in memory  
+   - Linked lists do NOT have indexes  
    - Each element in a linked list is called a Node  
    - Each node has a pointer that points to the node after it. The Tail has a pointer pointing to null.  
 
