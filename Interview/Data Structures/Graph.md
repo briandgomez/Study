@@ -1,21 +1,26 @@
-• Graphs are data structures used to store connected data such as a network of people
+* Graphs - a data structure used to store connected data such as a network of people on a social media platform  
+     - Graphs are made up of vertices(nodes) and edges(connections)
+        - Vertex - represents a entity such as person
+        - Edge - represents the relationship between vertices
 
-• Graphs are made up of vertices(nodes) and edges(connections)
-   ◇ Vertex - represents a entity
-   ◇ Edge - represents the relationship between vertices
+   - Directed Graph - a graph where the edges have direction. An example of this is when following someone on a social media app. When you follow someone they do not automatically follow you back.
+      ![image](https://user-images.githubusercontent.com/69539559/230697668-5125241f-3217-49b4-8495-4ef5cc8dd934.png)
+      
+   - Weighted Graph - a graph where the edges have a value. An example is when using google maps the distance between locations has a value in miles.
+      ![image](https://user-images.githubusercontent.com/69539559/230697744-3dbf192f-60f2-46dc-868b-d3b8d29d7d4d.png)
 
 
-◇ Adjacency Matrix (connection matrix) - used to indicate the connections between vertices. It visually represents what vertices are directly connected to other vertices  
+* Adjacency Matrix (connection matrix) - used to indicate the connections between vertices. It visually represents what vertices are directly connected to other vertices  
+  - A 1 represents that there is a connection between the vertices and a 0 represents there is no connection
 ![image](https://user-images.githubusercontent.com/69539559/227812030-3ee5d942-8221-419f-a9e5-c0066eb475a6.png)  
 
 
-• Adjacency List - another way to represent relationships between vertices. The relationships are represented using key-value pairs where the key is the vertex and the value are edges  
-![image](https://user-images.githubusercontent.com/69539559/227812049-39dfb0e3-377f-4d97-b1d0-e1b5fcf4e0bf.png)  
+* Adjacency List - another way to represent relationships between vertices. The relationships are represented using key-value pairs where the key is the vertex and the value are edges  
+  - A adjency list can be thought of as a array of lists. The size of the array is equivalent to the number of vertices in the graph. The list at a specific index in the array represents the adjacent vertices of the vertex at that specific index
+![image](https://user-images.githubusercontent.com/69539559/227812049-39dfb0e3-377f-4d97-b1d0-e1b5fcf4e0bf.png)   
 
-
-• Add vertex method
-   ◇ 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#### Add vertex method
+```
 public class Main {
    public static void main(String[] args) {
        Graph myGraph = new Graph();
@@ -23,99 +28,12 @@ public class Main {
        myGraph.addVertex("C");
        myGraph.printGraph();
    }
-
-
 }
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+```
 
 
-• Add edge method
-   ◇ 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-public class Main {
-   public static void main(String[] args) {
-       Graph myGraph = new Graph();
-       myGraph.addVertex("A");
-       myGraph.addVertex("B");
-       myGraph.addEdge("A", "B");
-      
-       myGraph.printGraph();
-   }
-
-
-}
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-• Remove edge method
-   ◇ 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-public class Main {
-   public static void main(String[] args) {
-       Graph myGraph = new Graph();
-
-
-       myGraph.addVertex("A");
-       myGraph.addVertex("B");
-       myGraph.addVertex("C");
-
-
-
-
-       myGraph.addEdge("A","B");
-       myGraph.addEdge("A","C");
-       myGraph.addEdge("B","C");
-
-
-       myGraph.removeEdge("A","B");
-
-
-       myGraph.printGraph();
-   }
-}
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-• Remove edge method
-   ◇ 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-public class Main {
-   public static void main(String[] args) {
-       Graph myGraph = new Graph();
-
-
-       myGraph.addVertex("A");
-       myGraph.addVertex("B");
-       myGraph.addVertex("C");
-       myGraph.addVertex("D");
-
-
-
-
-       myGraph.addEdge("A","B");
-       myGraph.addEdge("A","C");
-       myGraph.addEdge("A","D");
-       myGraph.addEdge("B","D");
-       myGraph.addEdge("C","D");
-
-
-       myGraph.removeVertex("D");
-
-
-       myGraph.printGraph();
-   }
-}
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-• Graph methods
-   ◇ 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+#### All methods used for Graphs
+```
 import java.util.*;
 
 
@@ -182,5 +100,7 @@ public class Graph {
        return true;
    }
 }
+```
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#### Extra Resource(s)
+[Graphs in Java](https://www.baeldung.com/java-graphs)
