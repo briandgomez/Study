@@ -1,4 +1,4 @@
-• The Hash method is only 1 way. You can only create a key-value pair and its address (a number) from the inputs and NOT vice versa.
+* The Hash method is only 1 way. You can only create a key-value pair and its address (a number) from the inputs and NOT vice versa.
 
 
 
