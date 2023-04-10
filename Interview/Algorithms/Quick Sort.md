@@ -54,6 +54,12 @@ public class QuickSort {
    }
 }
 ```
+### When and when NOT to use Quick Sort  
+#### When:  
+- Fast sorting is desired  
+
+#### When NOT:
+- There is limited space  
 
 #### Extra Resource:
 [Quick Sort Explained](https://www.geeksforgeeks.org/quick-sort/)
