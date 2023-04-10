@@ -1,11 +1,33 @@
-• Merge sort - breakdowns arrays into single valued sub arrays. The sub arrays are then sorted and merged into a final array
-   ◇ Can only be used if both arrays are sorted
-      ▪ Merge sort methods
-      ▪ 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* Merge sort - breakdowns arrays into single valued sub arrays. The sub arrays are then sorted and merged into a final array
+   - Can only be used if both arrays are sorted
+   - Merge sort methods
+![Merge Sort gif](https://user-images.githubusercontent.com/69539559/230983141-43855c58-4cf4-47d5-9731-4328373c1682.gif)
+
+### Merge Sort Code Example 
+#### Main.java
+```
 import java.util.Arrays;
 
+public class Main {
+   public static void main(String[] args) {
+       BasicSort mySort = new BasicSort();
 
+
+       int[] originalArray = { 3,1,4,2};
+       int[] sortedArray = mySort.mergeSort(originalArray);
+
+
+       System.out.println("\nOriginal Array: " + Arrays.toString(originalArray));
+       System.out.println("\nSorted Array: " + Arrays.toString(sortedArray));
+
+
+   }
+}
+```
+#### BasicSort.java
+```
+import java.util.Arrays;
 public class BasicSort {
    // puts subarrays back together(helper method)
    public int[] merge(int[] array1, int[] array2) {
@@ -54,32 +76,6 @@ public class BasicSort {
        return merge(left, right);
    }
 }
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-• Main.java
-   ◇ 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-import java.util.Arrays;
-
-
-public class Main {
-   public static void main(String[] args) {
-       BasicSort mySort = new BasicSort();
-
-
-       int[] originalArray = { 3,1,4,2};
-       int[] sortedArray = mySort.mergeSort(originalArray);
-
-
-       System.out.println("\nOriginal Array: " + Arrays.toString(originalArray));
-       System.out.println("\nSorted Array: " + Arrays.toString(sortedArray));
-
-
-   }
-}
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+```
+#### Extra Resource:  
+[Merge Sort Explained](https://www.geeksforgeeks.org/merge-sort/)
