@@ -1,7 +1,22 @@
-• Quick sort - using a pivot point to switch the places of the items in the array. If the pivot point is less than the next item, switch the items.
-• Quicksort methods
-   ◇ 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* Quick sort - using a pivot point to switch the places of the items in the array. If the pivot point is less than the next item, switch the items.
+![Quick Sort Gif](https://user-images.githubusercontent.com/69539559/230986654-57c3a973-8d9e-4335-beb7-1c69f92964ab.gif)
+
+### Quick Sort Code Example
+#### Main.java
+```
+import java.util.Arrays;
+
+public class Main {
+   public static void main(String[] args) {
+       QuickSort myQuickSort = new QuickSort();
+       int[] myArray = { 4, 6, 1, 7, 3, 2, 5 };
+       myQuickSort.quickSort(myArray);
+       System.out.println(Arrays.toString(myArray));
+   }
+}
+```
+#### QuickSort.java
+```
 public class QuickSort {
    // should be private
    public void swap(int[] array, int firstIndex, int secondIndex) {
@@ -38,23 +53,7 @@ public class QuickSort {
        quickSortHelper(array, 0, array.length - 1);
    }
 }
+```
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-• Main.java
-   ◇ 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-import java.util.Arrays;
-
-public class Main {
-   public static void main(String[] args) {
-       QuickSort myQuickSort = new QuickSort();
-       int[] myArray = { 4, 6, 1, 7, 3, 2, 5 };
-       myQuickSort.quickSort(myArray);
-       System.out.println(Arrays.toString(myArray));
-   }
-}
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#### Extra Resource:
+[Quick Sort Explained](https://www.geeksforgeeks.org/quick-sort/)
