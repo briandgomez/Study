@@ -77,5 +77,14 @@ public class BasicSort {
    }
 }
 ```
+### When and when NOT to use Merge Sort  
+#### When:  
+- Large sets of data   
+- Unsorted data  
+
+#### When NOT:
+- Small sets of data
+   - Note: A disadvantage of using merge sort is when the data set is sorted. It will still execute normally resulting in wasting computing time and space  
+
 #### Extra Resource:  
 [Merge Sort Explained](https://www.geeksforgeeks.org/merge-sort/)
