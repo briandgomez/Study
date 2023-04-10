@@ -4,11 +4,10 @@
    - Involves sorting the existing array in place  
    ![Bubble Sort Gif](https://user-images.githubusercontent.com/69539559/230976227-f7fea962-c987-4520-b329-ae46d938d3f3.gif)
 
-#### Bubble Sort Code Example  
+### Bubble Sort Code Example  
+#### Main.java
 ```
 import java.util.Arrays;
-
-
 public class Main {
    public static void main(String[] args) {
        BasicSort myBubbleSort = new BasicSort();
@@ -21,6 +20,9 @@ public class Main {
        System.out.println(Arrays.toString(myArray));
    }
 }
+```
+#### BasicSort.java
+```
 public class BasicSort {
    public void BubbleSort(int[] array) {
        for(int i = array.length - 1; i > 0; i--) {
@@ -57,22 +59,23 @@ public class BasicSort {
 ![Selection Sort Gif](https://user-images.githubusercontent.com/69539559/230978140-c257acfa-53cb-441f-9210-5815b570c241.gif)
 #### Selection Sort Code Example 
 ```
-   public void SelectionSort(int[] array) {
-       for(int i = 0; i < array.length; i++) {
-           int minIndex = i;
-           for(int j = i+1; j < array.length; j++) {
-               if(array[j] < array[minIndex]) {
-                   minIndex = j;
-               }
-           }
-           if(i != minIndex) {
-               int temp = array[i];
-               array[i] = array[minIndex];
-               array[minIndex] = temp;
-           }
-       }
-   }
-
+public class BasicSort {
+    public void SelectionSort(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            int minIndex = i;
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[j] < array[minIndex]) {
+                    minIndex = j;
+                }
+            }
+            if (i != minIndex) {
+                int temp = array[i];
+                array[i] = array[minIndex];
+                array[minIndex] = temp;
+            }
+        }
+    }
+}
 ```
 ### When and when NOT to use Selection Sort  
 #### When:  
@@ -94,18 +97,19 @@ public class BasicSort {
 ![Insertion Sort Gif](https://user-images.githubusercontent.com/69539559/230978884-f1a3711f-5ee7-4f19-8c8c-54aec12a7acc.gif)
 #### Insertion Sort Code Example 
 ```
-   public void insertionSort(int[] array) {
-       for(int i = 1; i < array.length; i++) {
-           int temp = array[i];
-           int j = i -1;
-           while(j > -1 && temp < array[j]) {
-               array[j+1] = array[j];
-               array[j] = temp;
-               j--;
-           }
-       }
-   }
-
+public class BasicSort {
+    public void insertionSort(int[] array) {
+        for(int i = 1; i < array.length; i++) {
+            int temp = array[i];
+            int j = i -1;
+            while(j > -1 && temp < array[j]) {
+                array[j+1] = array[j];
+                array[j] = temp;
+                j--;
+            }
+        }
+    }
+}
 ```
 ### When and when NOT to use Insertion Sort  
 #### When:  
