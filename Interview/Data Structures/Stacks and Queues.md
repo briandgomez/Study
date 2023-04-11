@@ -1,8 +1,9 @@
-• Stack - a data structure that can add or remove items only from the END. It follows LIFO (Last In First Out)
-   ◇ Ex: A  container holding tennis balls
-   ◇ A stack can be implemented by using a array list as long as you are adding and removing from the END
-      ▪ 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* Stack - a data structure that can add or remove items only from the END. It follows LIFO (Last In First Out)
+   - Ex: A  container holding tennis balls
+   - A stack can be implemented by using a array list as long as you are adding and removing from the END
+
+#### Main.java
+```
 class Main {
     public static void main(String[] args) {
         Stack myStack = new Stack(2);
@@ -11,9 +12,10 @@ class Main {
         myStack.printStack();
     }
 }
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#### Stack.java
+```
 public class Stack {
 
     private Node top;
@@ -74,13 +76,20 @@ public class Stack {
         return temp;
     }
 }
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 
+#### Extra Resource(s):
+[Stacks explained](https://www.geeksforgeeks.org/stack-data-structure/)
 
-• Queue -  a data structure that can add or remove items but at opposite ends. En-queue(add) at one end of a linked list means DE-queue(remove) must be done at the opposite side. It follows FIFO (First In First Out)
-   ◇ Ex: Waiting in line
-      ▪ 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+&nbsp;
+&nbsp;
+
+* Queue -  a data structure that can add and/or remove items but at opposite ends. 
+   - En-queue(add) must be done at one end of a linked list and DE-queue(remove) must be done at the opposite side. It follows FIFO (First In First Out)
+   - Ex: Waiting in line
+
+#### Main.java
+```
 class Main {
     public static void main(String[] args) {
         Queue myQueue = new Queue(1);
@@ -88,11 +97,10 @@ class Main {
         myQueue.printQueue();
     }
 }
+```
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#### Queue.java
+```
 public class Queue {
     private Node first;
     private Node last;
@@ -151,5 +159,6 @@ public class Queue {
         return temp;
     }
 }
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
+#### Extra Resource(s):
+[Queue explained](https://www.geeksforgeeks.org/queue-data-structure/)
