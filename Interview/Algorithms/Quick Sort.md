@@ -1,4 +1,4 @@
-* Quick sort - using a pivot point to switch the places of the items in the array. If the pivot point is less than the next item, switch the items.
+* Quick sort - using a pivot point to switch the places of the items in the array. If the pivot point is less than the next item, switch the items.  
 ![Quick Sort Gif](https://user-images.githubusercontent.com/69539559/230986654-57c3a973-8d9e-4335-beb7-1c69f92964ab.gif)
 
 ### Quick Sort Code Example
