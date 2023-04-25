@@ -1,64 +1,13 @@
-* The Hash method is only 1 way. You can only create a key-value pair and its address (a number) from the inputs and NOT vice versa.
+* Hashtable - similar to a Hashmap but instead it includes key-value pairs where each pair has a address (a number). 
+
+* Collisions:
+   - Separate chaining - multiple key-value pairs at the same address
+   - Linear probing - searching for a address that doesn’t have a key-value pair
 
 
-
-Collisions:
-◇ Separate chaining - multiple key-value pairs at the same address
-
-◇ Linear probing - searching for a address that doesn’t have a key-value pair
-
-▪ One type of open addressing
-
-Set method
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-public class Main {
-   public static void main(String[] args) throws Exception {
-       HashTable myHashTable = new HashTable();
-       myHashTable.set("nails", 100);
-       myHashTable.set("tile", 50);
-       myHashTable.set("lumber", 140);
-
-
-       myHashTable.set("bolts", 200);
-       myHashTable.set("screws", 140);
-
-
-       myHashTable.printTable();
-   }
-}
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-Get method
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-public class Main {
-   public static void main(String[] args) throws Exception {
-       HashTable myHashTable = new HashTable();
-       myHashTable.set("nails", 100);
-       myHashTable.set("tile", 50);
-       myHashTable.set("lumber", 80);
-
-
-       System.out.println(myHashTable.get("lumber"));
-       System.out.println(myHashTable.get("bolts"));
-
-
-   }
-}
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-
- Hash Table methods 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#### Methods used with Hashtables
+```
 import java.util.ArrayList;
-
 
 public class HashTable {
    private int size = 7;
@@ -159,27 +108,23 @@ public class HashTable {
        return allKeys;
    }
 }
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-• Big O
-◇ Hash method -> O(1)
-◇ Set method - > O(1)
-◇ Get method -> O(1)
+```
 
 
 
-• Interview Question
-◇ Check to see if 2 arrays have a common number ( a number that is in both of them)
+#### Big O
+- Hash method -> O(1)
+- Set method - > O(1)
+- Get method -> O(1)
 
-Inefficient Solution:
-      - 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+#### Interview Question
+- Check to see if 2 arrays have a common number ( a number that is in both of them)
+
+1. Inefficient Solution:
+```
 public class Main {
-
-
    public static boolean itemInCommon(int[] array1, int[] array2) {
        for (int i : array1) {
            for (int j : array2) {
@@ -191,26 +136,17 @@ public class Main {
 
 
    public static void main(String[] args) {
-
-
        int[] array1 = {1, 3, 5};
        int[] array2 = {2, 4, 5};
-
-
        System.out.println(itemInCommon(array1, array2));
-      
    }
-
-
 }
+```
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
-▪ Efficient Solution
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2. Efficient Solution
+```
 import java.util.HashMap;
-
 
 public class commonNumber {
    public boolean itemInCommon(int[] array1, int[] array2) {
@@ -227,7 +163,6 @@ public class commonNumber {
        }
   
        return false;
-  
    }
 }
 
@@ -235,18 +170,14 @@ public class commonNumber {
 public class Main {
    public static void main(String[] args) {
        commonNumber hashmap = new commonNumber();
-
-
        int[] array1 = {1, 3, 5};
        int[] array2 = {2, 4, 5};
-
-
       System.out.println(hashmap.itemInCommon(array1, array2));
 
 
    }
-
-
 }
+```
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#### Extra Resource(s):
+[Hashtable Explained](https://www.geeksforgeeks.org/hashtable-in-java/)
