@@ -1,6 +1,6 @@
 * Binary Search - a searching algorithm that repeatedly divides the data structure (array, string, etc) in half.
 
-![Binary Search](https://tenor.com/view/binary-search-sequence-search-gif-20595028.gif)
+![Binary Search](https://blog.penjee.com/wp-content/uploads/2015/04/binary-and-linear-search-animations.gif)
 
 ### When and when NOT to use Binary Search  
 #### When:  
