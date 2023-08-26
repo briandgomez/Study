@@ -91,6 +91,10 @@ Ex 2: Response
 **POST** - <ins>creates</ins> a new record  
 **PUT** - <ins>updates</ins> a record  
 **DELETE** - <ins>removes</ins> a record  
+Example of a POST method:
+<img width="892" alt="image" src="https://github.com/briandgomez/Study/assets/69539559/f856e680-5d32-45fd-82e9-09f6ff517175">  
+The image of above is an example from the "HTTP Methods Explained" link below. The colored brackets represent the code blocks that corresposnd to each other.  
+
 
 [What is a API w/ Examples](https://www.bigcommerce.com/blog/what-is-an-api/#what-is-an-api-request)  
 [What is a Header](https://apipheny.io/api-headers/#examples)  
