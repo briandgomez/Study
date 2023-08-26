@@ -4,7 +4,10 @@ The process of testing the smallest possible units of an application. Unit tests
 **TDD** - the process of writing failing tests (Red) BEFORE writing code. After writing tests, the minimal amount of code is written in order to pass the tests (Green). Developers can then refactor the code to keep it DRY (Refactor).  
 **TDD also makes it easier to write code since you know /have an idea of what to write thus the code itself is simple*
 
-**Jest** - is a testing framework (mainly used for React)
+**Jest** - is a testing framework (mainly used for React)  
+
+#### <ins>Helpful Links</ins>
+[TDD Explained w/ tutorial](https://www.freecodecamp.org/news/test-driven-development-tutorial-how-to-test-javascript-and-reactjs-app/#:~:text=Test%2Ddriven%20development%20(TDD),functioning%20the%20way%20you%20envisioned.)
 
 # Git
 Git is a version control management system that tracks all the changes and history made to a repository
