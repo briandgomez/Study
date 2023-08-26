@@ -34,6 +34,9 @@ The console.log on line 8 is the callback
 ### Differene between a Callback Function and Promise (both being asynchronous)  
 <img width="335" alt="image" src="https://user-images.githubusercontent.com/69539559/172521674-d2b7d837-afe3-4592-a9b7-a1f1df5228c0.png">  
 
+#### <ins>Helpful Links</ins>
+[What are Promises in Javascript](https://www.freecodecamp.org/news/what-is-promise-in-javascript-for-beginners/)
+
 ## When and When NOT to use Node.js  
 **When:**  
 1. Non-blocking is wanted
