@@ -86,8 +86,15 @@ Ex 1: Authorization
 Ex 2: Response  
 <img width="529" alt="image" src="https://user-images.githubusercontent.com/69539559/163689703-68eac723-a555-41be-9ac0-c373cee7e503.png">
 
+### HTTP Methods
+**GET** - <ins>retrieves</ins> a record  
+**POST** - <ins>creates</ins> a new record  
+**PUT** - <ins>updates</ins> a record  
+**DELETE** - <ins>removes</ins> a record  
+
 [What is a API w/ Examples](https://www.bigcommerce.com/blog/what-is-an-api/#what-is-an-api-request)  
 [What is a Header](https://apipheny.io/api-headers/#examples)  
+[HTTP Methods Explained](https://www.geeksforgeeks.org/5-http-methods-in-restful-api-development/)
 
 ## MVV Paradigm (Model-View-Controller)  
 **model** - stores the data and its related logic.  
