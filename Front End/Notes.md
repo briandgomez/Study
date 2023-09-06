@@ -1,3 +1,4 @@
+# JS, HTML and CSS  
 **Javascript**  
 A programmning language that is used for front end and back end development to create interacive and appealing web applications. It controls the functionality of the application  
 
@@ -20,9 +21,9 @@ border, and padding
 # React.js
 A JS library used to create single page web applications and UIs by using components.
 
-**seperation of concerns** - the idea of seperating an application into sections or parts where each section has a specific role. It makes code easier to read and resusable.
+**seperation of concerns** - the idea of seperating an application into sections or parts where each section has a specific role. It makes code easier to read and reusable.
 
-**single page web application**  - a app that does NOT reload the entire page when a change is made. Instead it only reloads the particular section of the app where the change was made (It makes apps more efficient).  
+**single page web application**  - a app that does NOT reload the entire page when a change is made. Instead it only reloads the particular section of the app where the change was made. It makes apps more efficient.  
 Ex:  
 <img width="383" alt="image" src="https://user-images.githubusercontent.com/69539559/164130166-588bf7bb-c6a8-4a4f-a922-fc2aba643b20.png">
 
@@ -55,12 +56,12 @@ Ex:
 
 In the image above, `inputRef` gives us access to the current input. By setting `inputRef.current.value = "" ` erases the current input when the submit button is clicked.   
 
-**DOM(DOcument Object Model)** - the  data or object representation of a web document.  It can be manipulated such to dyamically access, update the content, strcuture of a document  
+**DOM(Document Object Model)** - the  data or object representation of a web document.  It can be manipulated such to dyamically access, update the content, strcuture of a document  
 
 The DOM has a structure of a tree of objects as shown below:  
 <img width="443" alt="image" src="https://user-images.githubusercontent.com/69539559/172755313-1e4ddf63-2774-402d-add3-30ce1e66b73b.png">  
 
-## Rules of React  
+### <ins>Rules of React</ins> 
 
 ### Hooks  
 1. Hooks must be called at the very top of functions  
