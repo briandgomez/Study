@@ -141,6 +141,40 @@ The 7 data types in JavaScript(primitives meaning not a object):
 Ex of difference between null and undefined:  
 <img width="364" alt="image" src="https://user-images.githubusercontent.com/69539559/172753117-bfe5e407-1ec0-41c8-a6df-8d8baee29f23.png">
 
+### Function vs Block scope  
+1. Function scope is when a variable is declared inside a function and can be accessed anywhere from within the same function
+```
+function exampleFunction() {
+    var x = 10;
+    if (true) {
+        var y = 20;
+    }
+    console.log(x); // 10
+    console.log(y); // 20 (y is accessible even though it's declared inside an if block)
+}
+
+exampleFunction();
+console.log(x); // Error: x is not defined (outside the function)
+console.log(y); // Error: y is not defined (outside the function)
+```  
+2. Block scope is when a variable is declared inside a block of code and can only be accessed within the same bock of code
+```
+function exampleFunction() {
+    let x = 10;
+    if (true) {
+        let y = 20;
+        console.log(x); // 10 (x is accessible in the block)
+        console.log(y); // 20 (y is accessible in the block)
+    }
+    console.log(x); // 10 (x is still accessible in the function)
+    console.log(y); // Error: y is not defined (outside the block)
+}
+
+exampleFunction();
+console.log(x); // Error: x is not defined (outside the function)
+console.log(y); // Error: y is not defined (outside the function)
+```
+
 ### let vs const vs var keywords
 - const is immutable and block scoped meaning they can only be accessible within the block they are defined  
 ```
