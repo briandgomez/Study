@@ -50,13 +50,60 @@ Result: Operation complete
 - [Callbacks explained](https://www.geeksforgeeks.org/javascript-callbacks/)
 - [Synchronous vs Asynchronous Callbacks](https://maximorlov.com/synchronous-vs-asynchronous-callbacks/#:~:text=The%20main%20difference%20between%20synchronous,like%20PHP%2C%20Ruby%20or%20Java.)
 
-**arrow functions** - shorter syntax to write a function compared to Function Expressions  
-Ex:  
-<img width="284" alt="image" src="https://user-images.githubusercontent.com/69539559/169668559-d0c31d95-7ded-4819-94c9-268f666af9ac.png">    
+**arrow functions** - a concise way to write a function  
+`
+const add = (a, b) => a + b;
+console.log(add(1,2));
+`
+## Difference between arrow function and regular function
+1. Arrow functions have a shorter syntax
+#### Arrow Function
+```
+const arrowFunction = (a, b) => a + b;
+```
+#### Regular Function
+```
+function regularFunction(a, b) {
+  return a + b;
+}
+```    
+2. Arrow functions do NOT have their own "this" binding
+#### Arrow Function
+```
+const person = {
+  name: 'John',
+  greet: () => {
+    console.log(`Hello, my name is ${this.name}`);
+  }
+};
+person.greet(); // Outputs: Hello, my name is undefined
+```
+#### Regular Function
+```
+const person = {
+  name: 'John',
+  greet: function() {
+    console.log(`Hello, my name is ${this.name}`);
+  }
+};
+person.greet(); // Outputs: Hello, my name is John
+```
 
-**return keyword** - ends the execution of a function and returns a value  
-Ex:  
-<img width="280" alt="image" src="https://user-images.githubusercontent.com/69539559/172079990-872ca57f-4b71-444d-96c9-55fdb2cdc666.png">  
+3. Arrow functions must be created before being called
+#### Arrow Function
+```
+sayHello(); // Error: sayHello is not defined
+const sayHello = () => {
+  console.log('Hello!');
+};
+```
+#### Regular Function 
+```
+sayHello(); // Works fine
+function sayHello() {
+  console.log('Hello!');
+}
+```
 
 **object** - a unorder collection of data structured using key-value pairs. Each key-value pair is called a property. 
 
