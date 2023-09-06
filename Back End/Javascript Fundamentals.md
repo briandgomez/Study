@@ -139,4 +139,31 @@ The 7 data types in JavaScript(primitives meaning not a object):
 6. Undefined - a variable has been declared but has no value  
 7. Null - means no value and can be assigned to a variable  
 Ex of difference between null and undefined:  
-<img width="364" alt="image" src="https://user-images.githubusercontent.com/69539559/172753117-bfe5e407-1ec0-41c8-a6df-8d8baee29f23.png">  
+<img width="364" alt="image" src="https://user-images.githubusercontent.com/69539559/172753117-bfe5e407-1ec0-41c8-a6df-8d8baee29f23.png">
+
+### let vs const vs var keywords
+- const is immutable and block scoped meaning they can only be accessible within the block they are defined  
+```
+const pi = 3.14;
+pi = 4.0; // This will result in an error because you cannot reassign a const variable.
+const person = { name: "Alice" };
+person.name = "Bob"; // This is allowed because it modifies the object's property, not the variable itself.
+```
+
+- let is mutable and also block scoped
+```
+let age = 30;
+age = 35; // This is allowed because you can reassign a let variable.
+```
+
+- var is mutable and function scoped or global scope if the variable is declared outside a function  
+```
+  function example() {
+  var x = 10;
+  if (true) {
+    var x = 20; // This reassigns the existing 'x' variable within the same function scope.
+  }
+  console.log(x); // Outputs 20
+}
+   example();
+```  
