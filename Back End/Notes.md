@@ -101,13 +101,18 @@ Example of a POST method:
 <img width="892" alt="image" src="https://github.com/briandgomez/Study/assets/69539559/f856e680-5d32-45fd-82e9-09f6ff517175">  
 The image of above is an example from the "HTTP Methods Explained" link below. The colored brackets represent the code blocks that corresposnd to each other.  
 
-
-[What is a API w/ Examples](https://www.bigcommerce.com/blog/what-is-an-api/#what-is-an-api-request)  
-[What is a Header](https://apipheny.io/api-headers/#examples)  
-[HTTP Methods Explained](https://www.geeksforgeeks.org/5-http-methods-in-restful-api-development/)
+**Extra Resources**
+- [What is a API w/ Examples](https://www.bigcommerce.com/blog/what-is-an-api/#what-is-an-api-request)  
+- [What is a Header](https://apipheny.io/api-headers/#examples)  
+- [HTTP Methods Explained](https://www.geeksforgeeks.org/5-http-methods-in-restful-api-development/)
 
 ## MVV Paradigm (Model-View-Controller)  
-**model** - stores the data and its related logic.  
+The MVC paradigm is a design pattern to seperate an application into 3 logical components: Model, View , and Controller. It seperates the business logic and the presentation logic.  
+
+**model** - interacts with the data and its related logic.  
 **view** - displays the data or deals with user interaction.  
-**controller** - the middleman between the view and the model.        
+**controller** - the middleman between the view and the model. It takes a request fom the View, tells the model what to do, and returns the results back to the view.      
 <img width="443" alt="image" src="https://user-images.githubusercontent.com/69539559/169930729-b8897c9f-98e7-4fbe-bc00-3bd85411c6e0.png">
+
+**Extra Resources**
+- [MVC Framework Introduction](https://www.geeksforgeeks.org/mvc-framework-introduction/)
