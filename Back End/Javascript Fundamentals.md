@@ -55,7 +55,7 @@ Result: Operation complete
 const add = (a, b) => a + b;
 console.log(add(1,2));
 `
-## Difference between arrow function and regular function
+### Difference between arrow function and regular function
 1. Arrow functions have a shorter syntax
 #### Arrow Function
 ```
@@ -103,9 +103,18 @@ sayHello(); // Works fine
 function sayHello() {
   console.log('Hello!');
 }
+```  
+  
+**object** - a unorder collection of data structured using key-value pairs. Each key-value pair is called a property.  
 ```
-
-**object** - a unorder collection of data structured using key-value pairs. Each key-value pair is called a property. 
+let person = {
+  name: "John",
+  age: 30,
+  greet: function() {
+    return "Hello, " + this.name + "!";
+  },
+};
+```
 
 ### Functions vs Objects  
 The difference between functions and objects is that functions can be called. Functions are usually used to perform the same task mutliple times while objects are usually used to store and transport data.
