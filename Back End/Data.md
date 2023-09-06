@@ -34,8 +34,9 @@ FROM -> JOIN -> WHERE -> GROUP BY -> HAVING -> SELECT -> ORDER BY
 
 **MySQL** - an open source program that allows users to create relational databases. By using MySQL and SQL users can find and store data based on its relationship with other data  
 **MySQL2** - a npm package that allows users to connect to the MySQL database  
-Additonal help:  
-[10 Basic SQL Concepts](https://www.programming-hero.com/blog/10-sql-concepts-that-every-developer-should-know.html)  
+
+**Extra Resources**  
+- [10 Basic SQL Concepts](https://www.programming-hero.com/blog/10-sql-concepts-that-every-developer-should-know.html)  
  
 ## NoSQL
 Databases that store information that is NOT ONLY relational. The information is one of the following:  
