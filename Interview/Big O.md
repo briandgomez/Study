@@ -58,8 +58,9 @@ public class Main {
 
 ### Simplifying Big O Rules 
 1) Drop Constants  
-   - When describing time complexity of code, drop the constants
-      - The code below will print out 0-9 for both for loops. Thus the Big O is: O(n) + O(n) = O(2n) but to simplify this drop the 2 so the final answer is O(n)
+   - When describing time complexity of this code, drop the constants
+      - The code below will print out 0-9 for both for loops. Thus the Big O is: O(n) + O(n) = O(2n) but to simplify this drop the 2 so the final answer is O(n).
+   - The space complexity is different. Neither for loop depends on 'n' but variables are still created(`int i = 0`) and variables are printed (`System.out.println(i)`) thus making the space complexity O(1)  
 ```
     public static void printItems(int n) {
         for(int i=0; i < n; i++) {
