@@ -64,8 +64,8 @@ public class LinkedList {
 
 #### Linkedlist class broken down
 * Node class:  
-	- `this.value` corresponds to `int value`  
-	- `Node(int value)` corresponds to `value`  
+	- `this.value` corresponds to the calss variable `value` on line 45
+	- `Node(int value)` corresponds to `value` parameter located when creating a new instance of Node on line 57
 * LinkedList class:  
 	- `new Node(value)` creates a node using the constructor of the ‘Node’ class  
 	- `Node newNode` creates a variable called ‘newNode’ and points to the newly created node  
