@@ -192,6 +192,13 @@ public class DoublyLinkedList {
     }
 }
 ```
+### When and when NOT to use a doubly linked list
+#### When:  
+- Insertion/deletion into the middle is needed
+- Traversal of a list both forward and backwards
+
+#### When NOT:
+- Memory usage is important
 
 #### Extra Resource(s)
 [DLL Explained](https://opendsa-server.cs.vt.edu/ODSA/Books/CS3/html/ListDouble.html#:~:text=The%20most%20common%20reason%20to,easier%20to%20implement%20and%20debug)
