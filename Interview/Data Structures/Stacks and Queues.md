@@ -1,6 +1,9 @@
 * Stack - a data structure that can add or remove items only from the END. It follows LIFO (Last In First Out)
    - Ex: A  container holding tennis balls
    - A stack can be implemented by using a array list as long as you are adding and removing from the END
+ 
+  ![image](https://github.com/user-attachments/assets/872836fa-d2b7-47ee-a70f-59a726ed0921)
+
 
 #### Main.java
 ```
@@ -86,7 +89,9 @@ public class Stack {
 
 * Queue -  a data structure that can add and/or remove items but at opposite ends. 
    - En-queue(add) must be done at one end of a linked list and DE-queue(remove) must be done at the opposite side. It follows FIFO (First In First Out)
-   - Ex: Waiting in line
+   - Ex: Waiting in line  
+  ![image](https://github.com/user-attachments/assets/3f5439d7-b0dd-4490-858a-053a0b4b38e8)
+
 
 #### Main.java
 ```
