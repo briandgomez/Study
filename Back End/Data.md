@@ -2,14 +2,28 @@
 * SQL - A language that can access and manipulate data from **RELATIONAL** databases. It allows users to perform CRUD (Create, Read, Update, Delete,) operations.
   - relational databases - stores data in tables which are made of rows and columns similar to a spreadsheet. These tables are linked to other tables through keys.
 
-* primary key - a unique number used to identify each record (row) in a table     
-* foreign key - the number that is used to link 2 tables together  
+* primary key - a number used to make each record (row) in a table unique 
+* foreign key - a number that is used to link 2 tables together  
 ![image](https://user-images.githubusercontent.com/69539559/163200338-7ac15836-eb19-4ff3-aacb-884de0dfed21.png)
   - The table with the primary key is called the **Parent Table** and the other is called the **Child Table**  
 
-* unique key - a number that ensures that each row in a particular column is different  
-* schema - a list of commands that defines the structure of a database  
-* query - a list of commands used to interact with a database such as perform CRUD operations  
+* schema - list of commands that define the structure of a database
+  * Simple schema that creates a **Employees** table  
+    ```sql  
+    CREATE TABLE employees (
+    emp_no      INT             NOT NULL,  -- UNSIGNED AUTO_INCREMENT??
+    birth_date  DATE            NOT NULL,
+    first_name  VARCHAR(14)     NOT NULL,
+    last_name   VARCHAR(16)     NOT NULL,
+    gender      ENUM ('M','F')  NOT NULL,  -- Enumeration of either 'M' or 'F'  
+    hire_date   DATE            NOT NULL,
+    PRIMARY KEY (emp_no)                   -- Index built automatically on primary-key column
+                                           -- INDEX (first_name)
+                                           -- INDEX (last_name)
+    );
+    ```
+    
+* query - list of commands used to interact with a database 
 
 ## Rules for SQL Schemas  
 1. Only use lowercase letters, numbers, and underscores 
@@ -35,7 +49,7 @@ FROM -> JOIN -> WHERE -> GROUP BY -> HAVING -> SELECT -> ORDER BY
 * MySQL2 - a npm package that allows users to connect to the MySQL database  
 
 #### Extra Resources  
-- [10 Basic SQL Concepts](https://www.programming-hero.com/blog/10-sql-concepts-that-every-developer-should-know.html)  
+- [SQL Concepts and Queries](https://www.geeksforgeeks.org/sql-concepts-and-queries/) 
  
 # NoSQL
 * NoSQL - databases that store information that is NOT ONLY relational. The information is one of the following:  
