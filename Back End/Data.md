@@ -1,6 +1,11 @@
+# Relational vs Non-relational  
+* Relational databases - stores data in the form of tables that are made up of rows and columns. These tables are linked to other tables through keys
+   * Examples of relational software: MySQL, PostgreSQL, Oracle
+* Non-relational databases - data that is stored in a flexible format such as key-value pairs, documents, graphs, wide columns, etc. They are used for scalablility and unstrcutured or semi-structured data
+   * Examples of non-relational software: MongoDB, Redis
+
 # SQL
 * SQL - A language that can access and manipulate data from **RELATIONAL** databases. It allows users to perform CRUD (Create, Read, Update, Delete,) operations.
-  - relational databases - stores data in tables which are made of rows and columns similar to a spreadsheet. These tables are linked to other tables through keys.
 
 * primary key - a number used to make each record (row) in a table unique 
 * foreign key - a number that is used to link 2 tables together  
@@ -66,7 +71,7 @@ FROM -> JOIN -> WHERE -> GROUP BY -> HAVING -> SELECT -> ORDER BY
   ![image](https://user-images.githubusercontent.com/69539559/163231448-b97dad40-f442-452d-b4e7-e85d6bf85715.png)  
 
 ## MongoDB
-* MongoDB - a document oriented program used to store data from NoSQL databases.
+* MongoDB - a document oriented program used to store data from non-relational data.
 * mongoose - a ODM library used to manipulate **non-relational data**, validate schemas, and translates code to the apropriate format in MongoDB.  
 * sequelize - a ORM tool used to manipulate **relational data** 
 
@@ -88,8 +93,8 @@ FROM -> JOIN -> WHERE -> GROUP BY -> HAVING -> SELECT -> ORDER BY
      <img width="246" alt="image" src="https://user-images.githubusercontent.com/69539559/172074721-13fe032c-ad62-467d-96bd-92e104a64720.png">  
 
 
-## When to use SQL vs NoSQL databases  
-### NoSQL:  
-When working with large amounts of data, data that is not sensitive, and structure is not a priority NoSQL is the better choice  
-### SQL:  
-When the data is sensitive, structure is a priority and does not change often then SQL database is the better choice
+## When to use Relational vs Non-relational databases 
+### Relational:  
+When the data is sensitive, structure is a priority and does not change often then relational database is the better choice
+### Non-relational:  
+When working with large amounts of data, data that is not sensitive, and structure is not a priority non-relational is the better choice  
