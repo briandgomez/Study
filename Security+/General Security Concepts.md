@@ -86,3 +86,95 @@
 - <u>Honeyfile</u>: create files with fake information
 
 - <u>Honeytokens</u>: traceable data added to a honeynet in order to see who accessed a network
+
+
+# Change Management
+- <u>Change approval process</u>: formal process for managing changes
+    - Typical Process:
+        - Complete request form
+        - Determine the purpose of the change
+        - Identify the scope of the change
+        - Schedule a date and time of the change
+        - Determine affected systems and the impact
+        - Analyze the risk associated with the change
+        - Get aproval from the chnage control board
+        - Gen end user acceptance after the change is complete
+
+- <u>Owners</u>: individual or entity needs to make a change
+    - The owner manages the process but doesn't usually perform actual changes
+
+- <u>Sanbox test</u>: isolated environment used to test and analyze files or chnages
+
+
+# Technical Change Management
+- <u>Allow/deny lists</u>: lists used to determine which applications are allowed or not allowed to work in a environment (i.e. app thats known for having mutiple vulnerabilities)
+    - <u>Allow</u>: determines what applications can be ran (its really restrictive)
+    - <u>Deny</u>: determines what application can NOT be ran (i.e. anti-virus, anti-malware)
+- <u>Change Control Approval</u>: defines exactly which components are covered
+    - It doesn't mean you can make any change. Its very specific.
+    - Modifications to related components are allowed provided they remain within the defined scope of the approved change
+
+
+# Public Key Infrastructure
+- <u>PKI</u>: system used to grant access to people and systems using public accessible keys
+
+- <u>Symmetric Encryption</u>: a single key used for encryption and decryption.
+    - Its sometimes called a shared secret
+- <u>Asymmetric</u>: 2 keys where one is for encryption and the other is for decryption
+    - Private key = decrypts data
+    - Public key (anyone can see this) = encrypts data
+    - Anyone with the public key can encrypt and send data to you
+    - You can not derive the private key from the public key
+
+- <u>PKI</u>: system used to grant access to people and systems using public accessible keys
+
+
+# Encrypting Data
+- Its possible to encyrpt databases specifically:
+    - Encrypting all db information with a smmetric key
+    - Encrypting individual columns 
+
+- Larger keys are more secured since they are more complex making it more difficult for attackers to brute force. This applies to symmetric and assymmetric keys
+
+- Weak keys can be strengthened by performing multiple processes. For example, hash a password, hash the hash of the password and so on. This would require the attacker to go spend a lot more time
+
+
+# Key Exchange
+- Keys can be sent to others either ut-of-band or in band
+    - Out-of-band exchanges invovle sending keys not within your network (i.e. telephone, courier, in-person, etc.)
+    - In-band exchanges invovle sending keys within your network (i.e. asymmetric encryption to deliver symmetric keys)
+        - Process of sharing a symmetric session key using asymmetric encryption
+            1. Client encrypts a random (symmetric) key with a server's public key
+            2. The server decrypts this shared key and uses it to encrypt data (this is the session key)
+    - Session keys are temporary and should be unpredictable
+    
+
+# Encryption Technologies
+- <u>Trusted Platform Module (TPM)</u>: a security chip on a computer's motherboard designed to enhance security by securely storing cryptographic keys. It basically provides encryption for a single device
+
+- <u>Hardware Security Module (TPM)</u>: way to provide encryption for large amounts of data (not just 1 device)
+
+- <u>Key Management System</u>: way to manage all keys in a centralized manager (i.e. AWS Key Management Service)
+
+- <u>Secure Enclave</u>: a physically and logically isolated area within a device that stores and processes sensitive data securely (i.e. encryption keys, passwords, or biometric info). It uses cryptography and hardware level isolation to keep that data safe even if the main system is compromised
+
+
+# Obfuscation
+- <u>Obfuscation</u>: the process of makng something unclear in order to hide data (i.e. hiding information inside an image)
+    - Its possibel to read the information if you know how
+    - Common Steganography Techniques
+        1. Network based: embed messages in TCP packets
+        2. Use an image: embed the message in the image itself
+        3. Invisible watermarks: yellow dots on printers
+    - Theres is also audio and video steganography
+
+- <u>Tokenization</u>: replace sensitive data with a non-sensitive placeholder 
+    - Example: SSN=266-12-1112 is now 691-61-8539
+    - The token is temporary so an attacker can not use it later
+    - There is no encryption or hashing since the sensitive information is replaced
+    ![alt text](image-2.png)
+
+- <u>Data Masking</u>: technique used to protect sensitive data by replacing it with fictitious but realistic data. 
+    - This ensures data can not be deciphered even if an attacker has gained access to the masked data 
+    - Example
+    ![alt text](image-3.png)
