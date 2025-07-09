@@ -97,17 +97,17 @@
         - Schedule a date and time of the change
         - Determine affected systems and the impact
         - Analyze the risk associated with the change
-        - Get aproval from the chnage control board
+        - Get approval from the change control board
         - Gen end user acceptance after the change is complete
 
 - <u>Owners</u>: individual or entity needs to make a change
     - The owner manages the process but doesn't usually perform actual changes
 
-- <u>Sanbox test</u>: isolated environment used to test and analyze files or chnages
+- <u>Sandbox test</u>: isolated environment used to test and analyze files or changes
 
 
 # Technical Change Management
-- <u>Allow/deny lists</u>: lists used to determine which applications are allowed or not allowed to work in a environment (i.e. app thats known for having mutiple vulnerabilities)
+- <u>Allow/deny lists</u>: lists used to determine which applications are allowed or not allowed to work in a environment (i.e. app that is known for having multiple vulnerabilities)
     - <u>Allow</u>: determines what applications can be ran (its really restrictive)
     - <u>Deny</u>: determines what application can NOT be ran (i.e. anti-virus, anti-malware)
 - <u>Change Control Approval</u>: defines exactly which components are covered
@@ -130,19 +130,19 @@
 
 
 # Encrypting Data
-- Its possible to encyrpt databases specifically:
-    - Encrypting all db information with a smmetric key
+- Its possible to encrypt databases specifically:
+    - Encrypting all db information with a symmetric key
     - Encrypting individual columns 
 
-- Larger keys are more secured since they are more complex making it more difficult for attackers to brute force. This applies to symmetric and assymmetric keys
+- Larger keys are more secured since they are more complex making it more difficult for attackers to brute force. This applies to symmetric and asymmetric keys
 
 - Weak keys can be strengthened by performing multiple processes. For example, hash a password, hash the hash of the password and so on. This would require the attacker to go spend a lot more time
 
 
 # Key Exchange
-- Keys can be sent to others either ut-of-band or in band
-    - Out-of-band exchanges invovle sending keys not within your network (i.e. telephone, courier, in-person, etc.)
-    - In-band exchanges invovle sending keys within your network (i.e. asymmetric encryption to deliver symmetric keys)
+- Keys can be sent to others either out-of-band or in band
+    - Out-of-band exchanges involve sending keys not within your network (i.e. telephone, courier, in-person, etc.)
+    - In-band exchanges involve sending keys within your network (i.e. asymmetric encryption to deliver symmetric keys)
         - Process of sharing a symmetric session key using asymmetric encryption
             1. Client encrypts a random (symmetric) key with a server's public key
             2. The server decrypts this shared key and uses it to encrypt data (this is the session key)
@@ -160,13 +160,13 @@
 
 
 # Obfuscation
-- <u>Obfuscation</u>: the process of makng something unclear in order to hide data (i.e. hiding information inside an image)
-    - Its possibel to read the information if you know how
+- <u>Obfuscation</u>: the process of making something unclear in order to hide data (i.e. hiding information inside an image)
+    - Its possible to read the information if you know how
     - Common Steganography Techniques
         1. Network based: embed messages in TCP packets
         2. Use an image: embed the message in the image itself
         3. Invisible watermarks: yellow dots on printers
-    - Theres is also audio and video steganography
+    - There is also audio and video steganography
 
 - <u>Tokenization</u>: replace sensitive data with a non-sensitive placeholder 
     - Example: SSN=266-12-1112 is now 691-61-8539
@@ -178,3 +178,127 @@
     - This ensures data can not be deciphered even if an attacker has gained access to the masked data 
     - Example
     ![alt text](image-3.png)
+
+
+# Hashing and Digital Signatures
+- <u>Hash</u>: a one way trip that represents data as a short string of text. Its like a digital fingerprint.
+    - Its impossible to recover the original message 
+    - Its used to store passwords/confidentiality
+    - It can be used to verify a downloaded document is the same as the original
+    - Examples:
+    ![alt text](image-4.png)
+
+- <u>Salt</u>: random data added to a password when hashing
+    - The same password results in different hashes
+    ![alt text](image-5.png)
+
+- Digital signatures
+    - Proves the message was not changed (Integrity)
+    - Proves the source of the message (Authentication)
+    - Proves the signature is not fake (Non-repudiation)
+
+
+# Blockchain Technology
+- <u>Blockchain</u>: keeps track of transactions.Its like a distributed ledger.
+    - Everyone on the blockchain network maintains the ledger
+    - Its used for payment processing, digital identification, digital voting
+    - Transaction are sent to every computer in the network
+    - If a change is made, the hashes in the chain are changed and recalculated. The recalculated changes will no longer match the chains stored by the rest of the network and will be rejected
+
+
+# Certificates
+- <u>Digital Certificate</u>: binds a public key with a digital signature and other details about the key holder
+
+- <u>Root of Trust</u>: a trusted part of a computer (i.e. special chip or secure software) that the system relies on to start up securely and check that everything else is safe to run. Its the first thing the system trusts and everything else must prov it's safe before being allowed to run
+    - Its like a security guard for a building. The guards is trusted by everyone and nothing gets in unless the guard checks it first.
+
+- <u>Certificate Authority (CA)</u>: mechanism used to verify whether a website is trustworthy or not
+    - The CA signs the certificates of the website and the browser trusts the CA connecting the user to the website
+
+- <u>Private Certificate Authorities</u>: organization or system that acts as its own certificate authority for internal use
+
+- <u>Self-signed certificate</u>: digital certificate signed by the entity that created it
+
+- <u>Wildcard certificate</u>: certificate that can be configured to support many different domains
+    - A wildcard domain will apply to all server names in a domain
+
+- <u>Certificate Revocation List (CRL)</u>: list of revoked certificates kept on the CA
+
+- <u>Online Certificate Status Protocol (OSCP) stapling</u>: a way
+ for a website to prove its security certificate is still valid without making your browser check with the certificate authority every time
+
+
+# Threat Actors
+- <u>Threat Actors</u>: the entity responsible for an event that has an impact on the safety of another entity
+    - They can be internal or external
+    - They can be funded or have no money with no/little resources
+    - They can be sophisticated (knows exactly what they're doing) or know little (i.e. runs a script by accident)
+    #### Motives for Actors
+    1. Data exfiltration
+    2. Espionage
+    3. Service disruption
+    4. Blackmail
+    5. Financial gain
+    6. Philosophical/political beliefs
+    7. Ethical
+    8. Revenge
+    9. Disruption/chaos
+    10. War
+
+    - <u>Nation states</u>: external entity like government and national security
+        - Can have multiple motivations
+        - Can perform constant attacks because large amounts of resources
+        - Can be sophisticated attacks
+    
+    - <u>Unskilled attackers</u>: runs pre-made scripts without any knowledge of what's really happening
+        - Motivated by disruption or philosophical reasons
+        - Can be internal or external
+        - Not really sophisticated attacks
+        - Not a lot of funding
+    
+    - <u>Hacktivist</u>: hacker with a purpose
+        - Usually external but could be internal
+        - Attacks can be really sophisticated
+        - Limited funding
+    
+    - <u>Insider Threat</u>: someone within an organization taking advantage of their knowledge of the organization to perform attacks
+        - Extensive resources since they use the organizations resources
+        - Medium level of sophistication since they know where the vulnerabilities are
+ 
+     - <u>Organized Crime</u>: professional criminals
+        - Very sophisticated
+        - Organized
+        - Lots of funding
+    
+    - <u>Shadow IT</u>: professional criminals
+        - Very sophisticated
+        - Organized
+        - Lots of funding
+ 
+ ![alt text](image-6.png)
+
+
+# Common Threat Vectors
+- <u>Threat vectors</u>: method used by the attacker to gain access or infect a target
+    1. Message Based
+        - Phishing attacks
+    2. Image based
+        - Embedding malicious code in an SVG, PNG, JPG, file 
+    3. File based
+    4. Voice call
+        - Vishing
+    5. Removable device
+        - USBs
+    6. Vulnerable software
+    7. Unsupported systems
+        - Outdated or old systems
+    8. Unsecure networks
+    9. Open service ports
+    10. Default credentials
+        - Basic and common credentials
+    11. Supply chain
+        - 3rd party configuring hardware to access a system
+
+
+# Phishing
+- <u>Phishing</u>: tricking individuals to revealing sensitive information usually through email, text (smishing), voice call (vishing) etc.
