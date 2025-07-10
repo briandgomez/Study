@@ -301,4 +301,105 @@
 
 
 # Phishing
-- <u>Phishing</u>: tricking individuals to revealing sensitive information usually through email, text (smishing), voice call (vishing) etc.
+- <u>Phishing</u>: tricking individuals to revealing sensitive information usually through email, text (smishing), voice call (vishing), etc.
+
+# Impersonation
+- The goal is to extract information without the victim realizing it
+- An attacker can also steal someone's identity. They can use the victims identity to perform credit card, bank, loan or government fraud
+
+    #### Protection
+    - Never volunteer information
+    - Don't disclose personal details
+    - Always verify before revealing info
+    - Verification should be encouraged
+
+
+# Water Hole Attacks
+- <u>Water Hole Attack</u>: where the attacker compromises a legitimate third-party website or service that the victim uses. The goal is to use this trusted location as a stepping stone to infiltrate the attacker's real target (i.e the victim's workplace)
+    
+    #### Protection
+    - Defense in depth (Layers of security)
+        - Firewalls and IPS
+        - Anti-virus/Anti-malware signature updates
+
+
+# Other Social Engineering Attacks
+- Spreading misinformation through advertisements, social media, etc. in order to cause confusion and division
+- Brand impersonation can be used through pop ups (i.e. "You Won!" message), ads, etc.
+
+
+# Memory Injections
+- <u>Memory Injection</u>: inserting malicious code into a running process. The code can obtain permissions and perform unauthorized commands
+
+
+# Buffer overflow
+- <u>Buffer Overflow</u>: storing data in a temporary storage area than it was meant to hold causing data to overflow in adjacent memory locations
+    - This can cause adjacent to become corrupted or overwrite the data
+    - Overflowing data can also cause the application that uses the data to gain elevated privileges
+
+
+# Race Conditions
+- <u>Race Condition</u>: when 2 or more processes try to access or change the same data at the same time and the result depends on which 1 finishes first leading to unexpected behavior or security issues
+    - <u>Time of Check (TOC)</u>: when the system verifies and extracts the data
+    - <u>Time of Use (TOU)</u>: when the system uses the data
+
+
+# Malicious Updates
+- Updating OS and applications can improve security because of patches and bug fixes
+
+    #### Best Practices
+    - Always have a known good backup
+    - Install from trusted sources
+
+- Automatic updates include security checks/digital signatures. They are mostly trustworthy
+
+
+# OS Vulnerabilities
+- OS software are made up of millions lines of code. The more code the higher chance there is a vulnerability
+
+    #### Best Practices
+    - Always update OS either monthly or on-demand
+    - Test the OS before using (patches might cause problems)
+    - Do a reboot
+    - Have a backup
+
+
+# SQL Injection
+- <u>SQL Injection</u>: putting your own SQL queries into an application's code to perform commands you want
+    - It can allow you to view al db information, delete db information, add users, denial of service, etc.
+    - Seeing '1=1' is common indication of a SQL injection
+
+
+# Cross-site Scripting (XSS)
+- <u>Cross-site scripting</u>: an attack where a hacker puts harmful code into a website that other people use. When a victim visits the site, the code runs in their browser and can steal things like login information or cookies.
+
+- <u>Persistent (XSS)</u>: placing the malicious code on a popular website where every time a user clicks/uses the website the victim, the victim is affected
+
+    #### Protection
+    - Be careful when clicking untrusted links
+    - Consider disabling JS
+    - Keep your browser and applications updated
+
+
+# Hardware Vulnerabilities
+- <u>Firmware</u>: software (OS) running inside the hardware device
+    - Vendors are the only ones who can fix their hardware
+
+
+# Virtualization Vulnerabilities
+- It is possible to escape a VM and interact with the host OS or hardware. Escaping a VM would mean you have access to the host and control other guest VMs (huge exploit)
+
+- A hypervisor manages the relationship between physical and virtual resources (i.e. RAM, storage space, CPU, availability, etc.). These resources can be reused between VMs (a hypervisor can support 3 VMs with 2 GB of RAM each). Data can accidently be shared between VMs and overwritten
+
+
+# Cloud-specific Vulnerabilities
+- DDoS attacks
+- Weak or faulty authentications
+- Faulty configurations putting data at risk
+- Taking advantaged of unpatched systems
+
+#### Common Attacks
+- Web app attacks
+- XSS
+- <u>Out of bounds write</u>: writing to unauthorized memory areas
+- SQL injections
