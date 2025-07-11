@@ -192,3 +192,107 @@
     - Installing any type of software is risky
     - Digital signatures should be confirmed during installation
     - Even open source software isn't 100% safe
+
+
+# Misconfiguration Vulnerabilities
+#### Vulnerabilities
+- Not configuring any or the right permissions (open permissions )
+- Unsecured admin accounts
+    - Being able to access accounts easily
+- Insecure protocols
+    - Using the insecure protocols (i.e. HTTP) and not the secure ones (i.e. HTTPS)
+- Using default settings
+- Open ports and services
+
+
+# Mobile Device Vulnerabilities
+- <u>Jailbreaking/rooting</u>: replacing the existing OS
+    - You don't have access to the OS
+- <u>Sideloading</u>: installing software or apps without using an app store
+    - Prevent this by using the app store
+
+
+# Zero-day Vulnerabilities
+- <u>Zero-day</u>: a newly discovered vulnerability that has no solution or method to fix it
+    - This results in a race to exploit the vulnerability or create a patch
+
+
+# An Overview of Malware
+- <u>Malware</u>: software that is performing bad things on a system
+    - Malware can
+        - Gather information using keystrokes
+        - Showing advertising to get money
+        - Viruses or worms that infect a system
+
+    - Malware Types and Methods
+        - Viruses
+        - Worms
+        - Ransomware
+        - Trojan Horse
+        - Rootkit
+        - Keylogger
+        - Spyware 
+        - Bloatware
+        - Logic bomb
+    - Malware usually appears due to a combination of these types and 
+
+- <u>Ransomware</u>: when an a attacker gets a victims information and encrypts it. The victim can only access it if they do what the attacker says such as pay them money
+    - The OS will still work so the victim can see the messages from the attacker
+
+    #### Prevention
+    - Backups should be offline so the attacker can not access it
+    - Keep the OS up to date
+    - Keep apps up to date
+    - Keep anti-virus/anti-malware signatures up to date
+    - Keep everything up to date
+
+
+# Viruses and Worms
+- <u>Virus</u>: malware that reproduces itself WITH user interaction (i.e. when a user clicks or interacts with something)
+    - Reproduces through file systems and networks
+    - May or may not cause problems
+    - Simple actions like running a program can spread a virus
+
+- <u>Worms</u>: malware that reproduces itself WITHOUT user interaction
+    - The reproduce through the network and at the speed of the network
+
+
+# Spyware and Bloatware
+- <u>Spyware</u>: malware that spies on you
+    - It can trick you into installing 
+    - The browser will monitor you
+    - A keylogger capture your keystrokes
+
+    #### Prevention
+    - Maintain anti-virus/anti-malware
+    - Always know what you're installing
+    - Run scans
+    - Have backups
+
+
+- <u>Bloatware</u>: unnecessary apps installed by the manufacturer
+    - You don't get a choice since the manufacturer installs it
+    - The apps use valuable storage space that could open your system to exploits
+    - The system may be slower than expected
+
+
+# Other Malware Types
+- Keylogging
+- <u>Logic bomb</u>: waiting for an event to happen that triggers the "bomb"
+    - Its difficult to fix recognize a logic bomb but to prevent one you can
+        - Have a set of process and procedures
+        - Have electronic monitoring
+        - Constant auditing
+- <u>Rootkit</u>: code that is invisible and can perform tasks such as modify core system files. Its even invisible to the OS and anti-virus software
+    - You can use a remover specific to the rootkit to remove one
+
+
+# Physical Attacks
+- Brute force
+- RFID cloning (i.e. duplicate access badges)
+- Environment attacks (i.e. turning the power off)
+
+
+# Denial of Service
+- <u>Denial of Service</u>: when an attacker forces a service to fail or overload so that no one else can use it
+- <u>DDOS</u>: when multiple computers bring down a service
