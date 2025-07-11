@@ -296,3 +296,88 @@
 # Denial of Service
 - <u>Denial of Service</u>: when an attacker forces a service to fail or overload so that no one else can use it
 - <u>DDOS</u>: when multiple computers bring down a service
+
+
+# DNS Attacks
+- <u>DNS Attacks</u>: gaining control of a domain name (i.e. www.example.com). This is done by getting access to the DNS server and redirecting users to other websites. This is called domain poisoning/spoofing.
+    - <u>URL Hijacking</u>: taking over a URL since the fake URL is very similar to the real one
+
+
+# Wireless Attacks
+- <u>DeAuthentication Attack</u>: a DOS attack that involves disrupting the connection between a wireless device (i.e. phone, computer) and a access point (i.e. router) by sending forged deauthentication frames
+
+- <u>Radio frequency (RF) jamming</u>: transmitting interfering wireless signals preventing other nearby devices from connecting to access points
+
+
+# On-path Attacks
+- <u>On-path Attack (aka man in the middle)</u>: an attacker watching traffic move between 2 locations without either location knowing the attacker is watching
+    - The attacker redirects the traffic. They can alter the communication without either requestor or recipient knowing.
+![alt text](image-8.png)
+
+
+# Replay Attacks
+- <u>Replay Attack</u>: an attacker intercepts a request, holds it and then sends it pretending to be the legitimate user
+    ![alt text](image-7.png)
+    - An attacker could use this attack to get a users cookies
+      - <u>Session hijacking (side jacking)</u>: cookies taken by an attacker
+        - With stolen cookies, the attacker can pose as the user
+      ![alt text](image-9.png)
+      #### Prevention
+      - Encrypt everything (end to end encryption)
+      - Encrypt over the network
+
+
+# Malicious Code
+- Attackers can insert malicious code into system that works fine and leverage it to get information
+    #### Examples
+    - WannaCry ransomware
+    - British Airways XSS
+    - Estonian Central Health Database (SQL Injection)
+
+
+# Application Attacks
+- Injection Attacks (i.e. SQL Injection)
+- Buffer overflows
+- Replay Attacks
+- <u>Privilege Escalation</u>: gain higher level access to a system
+    - The attacker is NOT looking to gain admin access but is moving from user A and its access to user B (horizontal privilege escalation)
+    #### Prevention
+    - Patch vulnerabilities 
+    - Update anti-virus/anti-malware
+    - Randomize the locations of where data can be placed
+    - Limit the locations data is able to be ran
+- <u>Cross-site requests</u>: when a web request is made from one origin(site) to another (i.e. loading a YouTube video on a page)
+    - <u>Cross-site request forgery</u>: when a user's browser sends unauthorized commands to a legitimate site
+    ![alt text](image-10.png)
+<u>Directory Traversal</u>: read files from a web server that are outside of the websites file directory
+    - Its not an attack but it is a web server vulnerability
+
+
+# Cryptographic Attacks
+- <u>Birthday attack</u>: generating multiple versions of plaintext to match a hash
+    - The attackers attack the algorithms(i.e. SHA-256) in order to see how well they work
+    - <u>Collision</u>: when 2 plain text files have the same hash when encrypted
+- <u>Downgrade attack</u>: forcing a system to use a weaker, older, or less secure protocol or encryption method making it vulnerable to exploits
+    - SSL stripping (combines a downgrade attack and on-path attack)
+    ![alt text](image-12.png)
+
+
+# Password Attacks
+- Hashing a password is a 1 way trip. You can not deconstruct the password after its been hashed
+
+- <u>Spraying attack</u>: trying the most common passwords for accounts with weak passwords. 
+    - Since these accounts have weak passwords the odds of guessing correctly are high. The attacker will eventually move onto the next vulnerable account. They will also prevent any lockouts, alarms or alerts from going off.
+
+- <u>Brute force</u>: try every possible password combination until the hash is matched
+
+
+# Indicators of Compromise
+- Account lockout
+- Session usage (i.e. using an app in different locations at the same time)
+- Authentication (i.e. login in/out in different locations within a short time period)
+- Resource consumption (i.e. transferring files)
+- Resource inaccessibility (i.e.server is down)
+- Out of cycle logging (i.e. logs contains events that happen outside of normal hours)
+- Missing logs
+    - Attackers delete log information to cover tracks
+- Published documents
