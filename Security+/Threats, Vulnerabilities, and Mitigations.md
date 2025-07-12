@@ -381,3 +381,80 @@
 - Missing logs
     - Attackers delete log information to cover tracks
 - Published documents
+
+
+# Segmentation and Access Control
+- Segmenting/separating a network in physical, logical or virtual parts can improve security and performance.
+
+    - <u>Access Control List (ACL)</u>: allow or disallow traffic
+        - It can be used to restrict access to network devices through the use of limited IP addresses or other ID
+        - Example:
+        ![alt text](image-13.png)
+        - Many OS systems use ACLs to provide access to files
+
+    - Application allow/deny lists
+        - <u>Allow List</u>: grants permissions only to explicitly specified applications (very restrictive)
+        - <u>Deny List</u>: block specific applications while allowing all others (i.e. anti-virus and anti-malware)
+
+
+# Mitigation Techniques
+- Mitigation techniques limit the impact during or after an attack
+    - Prevent an attack from happening (i.e. Patching)
+    - Limit the amount of data files an attacker can get (i.e. Encryption)
+    - Constant monitoring
+    - Practice least privilege
+    - Apply specific security settings to a system (i.e. configure so only admin can install software on company laptops)
+    - Dispose items properly (i.e. destroying a device)
+
+
+# Harden Techniques
+- Harden techniques reduce the attack surface before an attack happens
+    - <u>System Hardening</u>: securing OS software, apps, and network devices
+    - Encryption
+    - Have multiple layers of security for all access points(endpoints)
+    - Have host based firewalls
+    - Use Host-based Intrusion Prevention Systems to detect and block attacks
+    - Close or control open ports
+    - Change default settings especially passwords
+    - Remove unnecessary software
+
+
+# Cloud Infrastructures
+- Responsibility matrix (i.e. AWS Share Responsibility Model)
+- Hybrid cloud (i.e. on-premise and cloud servers in combination)-
+- Third party companies are used with a user accounts and the cloud provider
+- Infrastructure as Code (i.e. CloudFormation or SAM)
+- Serverless architecture (i.e. AWS Lambda functions)
+- Microservice architecture and APIs (i.e. using AWS services together instead of 1 application doing everything) 
+
+
+# Network Infrastructure Concepts
+- Switches can be physically located in different locations
+- Virtual Local Area Networks (VLAN) are separated logically but not physically (i.e. user A uses 1 portion of the device and user B uses a different portion)
+- The software defined network separates different planes of a network such the control and data plane. The control plane handles incoming traffic while the data plane controls where to redirect the traffic.
+![alt text](image-14.png)
+
+
+# Other Infrastructure Concepts
+- On-premise security
+    - Customize your security posture
+    - On-site IT team can manage security better
+    - Local team maintains uptime and availability
+    - Security changes can take time
+
+- Centralized vs decentralized systems
+    - Most organizations are physically decentralized (i.e. many locations, cloud providers, OS, etc.)
+    - They're difficult to manage and to protect because of many diverse systems
+    - Centralized setups are easier to manage but means there is a single point of failure
+
+- Organizations are moving from VMs to containers because container have better security and easier to manage
+![alt text](image-15.png)
+
+- <u>Internet of Things (IoT)</u>: physical devices that are integrated with a network (i.e. sensors, Fitbit, etc.)
+
+- <u>Supervisory Control and Data Acquisition</u>: lets technicians sit in a centralized control  room, monitor the status of the pieces of equipment and make changes and modification without having to physically visit every piece of equipment
+![alt text](image-16.png)
+
+- <u>Real Time Operating System (RTOS)</u>: OS with a deterministic processing schedule (i.e. braking system in a car)
+
+- <u>Embedded Systems</u>: hardware and software designed for a specific function (i.e. smart watches)
