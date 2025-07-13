@@ -223,3 +223,110 @@
 - <u>Geolocation</u>: location details
     - Different ways to determine location (i.e. 802.11, mobile providers, GPS)
     - Can limit administrative tasks unless secure area is used
+
+
+ # Protecting Data
+ 1. <u>Geographic restrictions</u>: protecting data by making policies on where the data is located and where you are as a user
+     - <u>Geofencing</u>: automatically allow or restrict access when the user is in a particular location
+
+
+ 2. Encrypting data means encoding information into unreadable data
+    - Original form = plaintext
+    - Encrypted form = ciphertext
+    - <u>Confusion</u>: encrypted data that is drastically different than the plaintext
+
+ 3. Hashing
+    - Hashing + digital signature means you can authenticate, non-repudiation, and have integrity 
+
+ 4. Obfuscation
+ 
+ 5. Masking (a type of obfuscation)
+
+ 6. Tokenization
+
+ 7. <u>Segmentation</u>: separate data in smaller pieces and different locations
+
+  8. Permission restrictions
+
+
+  # Resiliency
+  - Redundancy doesn't always means always available
+  - High availability almost always means higher costs
+
+    - <u>Server clustering</u>: combine 2 or more server
+        - Easily increase capacity and availability 
+        ![alt text](image-25.png)
+    
+    - <u>Load balancing</u>: distribute load across multiple devices
+        - Easily increase capacity and availability
+  
+  - <u>Site resiliency</u>: recovery site is prepped and ready if something happens to the primary data site
+    - <u>Hot</u>: exact replica of data
+    - <u>Cold</u>: empty building where you need to bring everything
+    - <u>Warm</u>: big room with rack space where you bring the hardware
+    - <u>Geographic dispersion</u>: physically different from the primary location
+    - <u>Platform diversity</u>: using different OS  across a system to reduce attacks on the same vulnerability (having the same OS everywhere could mean they have the same vulnerability) 
+    - <u>Multi-cloud</u>: use different cloud providers
+    - <u>Continuity of operations planning (COOP)</u>: a backup up plan that doesn't involve using technology (i.e. the procedures to use hard copies)
+
+
+# Capacity Planning
+- Try your best to match supply to demand
+- People
+    - Too few people means you need to consider hiring more. Too little and you might need to redeploy to other parts of the organization or downsize 
+- Technology
+    - Use technologies that can scale
+- Infrastructure
+    - Need to decide what virtual and physical devices need to be used
+
+
+# Recovery Testing
+- <u>Table top exercise</u>: go through steps as if you were actually going through them
+
+- <u>Fail over test</u>: test if redundancy works
+![alt text](image-26.png)
+
+- <u>Simulation</u>: test with a simulated event
+
+- <u>Parallel processing</u>: split a process through multiple parallel CPUs
+
+
+# Backups
+- <u>Onsite/offsite</u>: for onsite, data and backup are at the same location. for offsite, data needs to be transferred over the internet somewhere else
+    - Organizations can use both, onsite for short term and offsite for long term 
+
+- <u>Frequency</u>: need to determine how often data needs to backup
+    - Depends on the different systems involved
+    - May have multiple backup sets
+    - Lots of planning is involved
+
+- Encryption
+
+- <u>Snapshots (VM)</u>: instant backup of an entire system
+![alt text](image-27.png)
+
+
+- <u>Recovery</u>: verify the backups can be restored and used
+    
+- <u>Replication</u>: copy data to one or multiple locations at the same time
+    - The replicas are updated as the primary data is updated
+
+- <u>Journaling</u>: logs changes before committing them to the final file
+    - Helps against power outages when updating/working on the data
+
+
+# Power Resiliency
+- <u>Uninterruptible Power Supply(UPS)</u>: short term power source
+    - Offline/Standby UPS = always running on main power but it power fails there's and internal switch that moves from main to battery backup
+    - Line-interactive UPS = slowly increases voltage if there is a drop in main line power
+    - On-line/double-conversion UPS = used for always using battery backup
+    - Generators are used for long term power
+
+
+# Secure Baselines
+- Establish
+    - Need to create the baselines. They can be found from manufacturers 
+- Deploy
+    - Need to put the baselines into action
+- Maintain
+    - Update the baselines when needed (i.e. updates, new OS, vulnerabilities)
