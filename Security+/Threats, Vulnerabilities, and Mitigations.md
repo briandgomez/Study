@@ -624,3 +624,23 @@
     - Public/Unclassified = no restrictions on viewing the data
     - Restricted/Private/Classified = restricted access and may require an NDA
     - Critical = data that should always be available
+
+
+# States of Data
+- <u>Data at rest</u>: data stored on a storage device (i.e. hard drive, SSD, flash drive, etc.)
+    - The data does not have to be encrypted in order for it to be called data at rest
+    - The whole disk can be encrypted, only the database is encrypted or the files/folder level is encrypted
+    - Once encrypted, then permissions can be added
+
+- <u>Data in transit</u>: data being moved cross the network
+    - Use firewalls or IPS to secure data in motion
+    - Use TLS or IPsec to encrypt the data
+
+- <u>Data in use</u>: data being processed in memory
+    - Data is almost always decrypted
+
+- <u>Data sovereignty</u>: when data is located in a country and is subject to the laws of that country
+
+- <u>Geolocation</u>: location details
+    - Different ways to determine location (i.e. 802.11, mobile providers, GPS)
+    - Can limit administrative tasks unless secure area is used
