@@ -348,3 +348,136 @@ enabled (COPE)
 - IDS/IPS
     - Different ways to find malicious traffic
     - Can customize IPs rules. It can take time configure rules (false positives can appear)
+
+
+# Web Filtering
+− Agent-based
+    - Software agents are installed on individual devices to monitor and filter web traffic
+    - Users can be located anywhere
+    - Updates need to be done to all agents
+
+− Centralized proxy
+    - Proxy is sitting in between internet and devices. It can be useful for caching, access controls, URL filtering, and content scanning
+    ![alt text](image-30.png)
+
+− Universal Resource Locator (URL) scanning aka URI
+    - Can be managed by categories
+    - Can have limited control
+    - Integrated with NGFW
+
+− Block rules
+    - Can be done for specific URLs(i.e. *.professormesser.com: Allow)
+    - Categorize by site content
+    
+− Reputation
+    - Filter based on perceived  (i.e. Trustworthy, Low risk, Medium risk Suspicious, High risk)
+    - The reputations can be assigned automatically or manually after a scan
+
+
+# Operating System Security
+- <u>Group Policy</u>: manage the computers or users
+- SELinux
+    - Adds mandatory access control to Linux
+
+
+# Secure Protocols
+- Protocol selection
+    - Always use protocols that use encryption. If not possible, don't use the app at all
+    ![alt text](image-31.png)
+
+- Port selection
+    - You can have secure(i.e. HTTPS) and insecure (i.e. HTTP) ports
+    - The port number does not guarantee security
+        - Need to verify security features are enabled
+
+- Transport method
+    - Don't rely on apps for encryption. Encrypt everything over the current network transport
+    - Use a VPN for encryption when data is in transit
+
+
+# Email Security
+- <u>Mail gateway</u>: verifies if an email was sent from a valid source. If not it will send it to Spam
+
+- <u>Sender Policy Framework (SPF)</u>: which email servers are authorized to send mail on our behalf
+
+- <u>Domain Keys Identified Mail (DKIM)</u>: a mail server digitally signs all outgoing mail
+    - Validated by receiving mail servers
+
+- <u>Domain based Message Authentication Reporting and conformance (DMARC)</u>: an extension of DKIM and SPF to better help against fake emails
+
+
+# Monitoring Data
+<u>File Integrity Monitoring (FIM)</u>: process that tracks and analyzes changes to files, directories and system configurations
+    - Windows = System File Checker (SFC)
+    - Linux = Tripwire
+
+- Data Loss Prevention
+    - Looks for data sent across the network and blocks it in real time
+
+- USB blocking
+    - DLP on a workstation. It Allows or denies certain tasks
+
+- Cloud-based DLP
+    - Its located between the user and the internet
+    - Block custom defined data strings
+    - Manage access to URLs
+    - Block viruses and malware or anything traversing the network that is suspicious 
+
+- DLP and email
+    - Checks every email inbound(i.e.fake wire transfers, W-2 transmission) and outbound(i.e. block keywords, identify imposters, quarantine)
+
+
+# Endpoint Security
+- Control the edge
+    - <u>Edge</u>: location where the inside of the network meets the outside aka the internet
+    - Use firewalls. The firewall rules may change
+
+- Access controls 
+    - Determines where you can control from. Either inside or outside the network
+
+- Posture Assessment
+    - Ensure a device is trustworthy before connecting to the network
+        - Could have malware infections/missing anti-malware
+    - Perform a health check before connecting to the network
+
+- <u>Endpoint detection and response solutions (EDR)</u>: securing individual endpoints (i.e. computer and servers) while providing detailed visibility into their activities and enabling quick responses to threats
+
+- <u>Extended detection and response (XDR)</u>: expands on EDR and includes multiple layers including endpoints, networks, cloud environments
+
+
+# Identity and Access Management
+- <u> Lightweight Directory Access Protocol (LDAP)</u>: protocol for reading and writing directories over an IP network
+    - It has a hierarchical structure
+
+- <u> Security Assertion Markup Language (SAML)</u>: authentication and authorization for a 3rd party database
+    - Not original meant for mobile devices
+
+- <u>OAuth</u>: an authorization framework that determines what resources a user will be able to access
+    - Used with OpenID,it handles authentication while OAuth handles authorization
+
+- <u>Federation</u>: allows network access without using a local authentication database
+    - Used when you want to sign in to an app but don't want to create an account
+    - 3rd parties like Facebook, Google, GitHub, etc. authenticate and authorize using a trust relationship
+
+
+# Access Controls
+- <u>Access controls</u>: after being authenticated, users need the resources in order to do their job
+    - The process of determining rights
+
+- <u>Mandatory Access Control</u>: the OS limits the operation on an object
+    - Every object gets a label (i.e. confidential, secret, top secret, etc.)
+    - The admin decides who has what access
+
+- <u>Discretionary Access Control</u>: user decides who has what access to each data
+
+- <u>Role Based Access Control (RBAC)</u>: access depends on role (i.e. admin, director, developer, etc.)
+
+- <u>Rule Based Access Control</u>: generic term for following rules
+    - Access is determined through system enforced rules
+    - The rules is associated with an object (i.e. a data in a lab can only be accessed between 9am-5pm)
+
+- <u>Attribute Based Access Control</u>: next generation authorization model where access to data is based on many different criteria
+    - Combine and evaluates multiple parameters (i.e. access based on IP, time of day, desired action, and relationship to data all at the same time)
+
+- <u>Time of day restriction</u>: access to a resource based on the time during the day (i.e. conference room access is limited after 6pm)
+    
