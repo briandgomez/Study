@@ -1,1 +1,7 @@
 deauthentication
+tcp
+ssh
+rdp
+dns
+udp
+ntp

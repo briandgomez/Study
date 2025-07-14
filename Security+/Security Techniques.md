@@ -184,3 +184,167 @@ enabled (COPE)
 
 - Dark web
     - The attacker themselves and the information they've successfully stolen
+
+
+# Penetration Testing
+- <u>Penetration Testing</u>: simulate an attack on your own system
+    - Rules of engagement define purpose and scope of the test. Basically it determines what is allowed to be tested and when
+    - Once in the system, the goal should be too move across systems (horizontally)
+    - Make sure you have a way back into the system (i.e. a back door)
+    - Leverage current compromised systems to access other as a stepping stone
+
+
+# Analyzing Vulnerabilities
+- <u>False positive</u>: vulnerability that doesn't really exist
+- <u>False negative</u>: vulnerability that does exist but wasn't detected
+    - Update signatures to prevent false positives or negatives
+
+- Prioritize
+    - Refer to public disclosures when deciding how to categorize vulnerabilities from least important to most important
+
+- <u>Common Vulnerability Scoring System (CVSS)</u>: rating system used to categorize vulnerabilities on a level of big of a threat they are
+
+- <u>Common Vulnerability Enumeration (CVE)</u>: list of vulnerabilities and how important they are
+
+- Vulnerability classification
+    - Scanning results when scanning most parts of a system but not everything. The signatures are the key.
+    
+- <u>Exposure factor</u>: determines how risky a vulnerability is as a percentage
+
+- Environmental variables
+    - If a system is isolated it might not be a priority but if its on the public cloud that's used by many users it could be the number one priority. The environment a system is determines how important it is.
+
+- Industry/organizational impact
+    - Who is affected by it should an attack happen. Some attacks have bigger affects on other users than others
+
+- Risk tolerance
+    - An organization's willingness to accept the potential negative impact of risks, even after mitigation efforts have been applied
+
+
+# Vulnerability Remediation
+- Patching
+    - Most common mitigation technique
+    - Schedule vulnerability/patches
+
+- Insurance
+    - Cybersecurity insurance after an attack happens to get lost money and data and prevent lawsuits
+    - It doesn't cover everything
+
+- Segmentation
+    - Limit access by separating devices to their own network/VLANs
+    - Patching isn't always possible
+    - Use internal NGFW
+
+- Compensating controls
+    - Makeup for security if patching isn't possible like:
+        - Disable the problematic service
+        - Revoke access to the application
+        - Limit external access
+        - Modify internal security controls and software firewalls
+
+- Exceptions and exemptions
+    - Some vulnerabilities can't be patched so they will not be taken care of. The severity of these vulnerabilities may not be high so they can be left alone (i.e. a vulnerability that require physical access)
+
+- Validation of remediations
+    - Rescan, Audit, and verify the patches/solutions worked
+
+- Reporting
+    - Ongoing checks of the system to discover new threats
+
+
+# Security Monitoring 
+- Computing resources 
+    - Systems
+        - Authentication from strange places and servers (i.e. backups, software versions, activity)
+    - Applications
+        - Ensure availability and data transfers are working properly
+    - Infrastructure
+        - Remote access systems and firewalls
+
+- Log aggregation
+    - <u>Security Information and Event Manager (SIEM)</u>: a way to consolidate many different logs to a central database
+    - Correlation between systems
+
+- Scanning
+
+- Reporting
+    - Analyze the collected data to determine what to do next
+    - Provides status information
+    - Ad hoc information summaries for hypothetical situations
+
+- Archiving
+    - May be mandated by law to hold onto certain information
+
+- Alerting
+    - Keeps the right people informed
+    - Help enable quick response and status information 
+
+- Alert response and remediation/validation
+    -  Quarantine
+        - Isolate the system from the rest of the network to prevent further attacks
+    - Alert tuning
+        - Make sure alerts are working properly and prevent false negatives
+
+
+# Security Tools
+- <u>Security Content Automation Protocol (SCAP)</u>: allows tools to identify and act on the same criteria
+    - Maintained by NIST
+    - Validates the security configuration
+    - Confirm patch installs
+    - Scan for a security breach
+    - Useful i large environments 
+
+- <u>Benchmarks</u>: applying security best practices to everything
+    - For a mobile device, good benchmarks would be to disable screenshots, disable screen recordings, prevent voice calls when locked
+
+- Agents/agentless
+    - Agents can check if a device is compliant and provide additional detail 
+    - It checks the system is working properly but it needs to be maintained updated
+
+- Security information and event management (SIEM)
+    - Collects security alerts
+    - Can be used to forensic analysis 
+
+- Antivirus
+    - Malware refers to the broad malicious software category
+    - Anti-virus and anti-malware are now the same thing
+
+- <u>Data loss prevention (DLP)</u>: look and block any data you do NOT want running on a network
+    - Stop the data before the attacker gets it
+
+- Simple Network Management Protocol (SNMP) traps
+    - Leverage to request statistics from a device
+    - Poll devices at fixed intervals
+
+- <u>NetFlow</u>: gathers traffic from all traffic flows
+    - Standard collection method
+    - Shared communication between devices
+
+- Vulnerability scanners
+    - Can check if there are potential vulnerabilities
+    - Gather as much helpful information as possible
+
+
+# Firewalls
+- Access lists
+- Ports/protocols
+    - Helps make forwarding decisions based on protocol and port numbers
+    - web server = tcp/80 or tcp/443
+    - ssh = tcp/22
+    - Microsoft rdp = tcp/3389
+    - dns query = udp/53
+    - ntp = udp/123
+
+- Rules
+    - They're logical paths
+    - They can be generic or specific
+    - Can have a implicit deny
+    - Examples:
+        ![alt text](image-29.png)
+
+- Screened subnets
+    - Its and additional layer of security between you and the internet
+
+- IDS/IPS
+    - Different ways to find malicious traffic
+    - Can customize IPs rules. It can take time configure rules (false positives can appear)
