@@ -479,5 +479,152 @@ enabled (COPE)
 - <u>Attribute Based Access Control</u>: next generation authorization model where access to data is based on many different criteria
     - Combine and evaluates multiple parameters (i.e. access based on IP, time of day, desired action, and relationship to data all at the same time)
 
-- <u>Time of day restriction</u>: access to a resource based on the time during the day (i.e. conference room access is limited after 6pm)
-    
+- <u>Time of day restriction</u>: access to a resource based on the time during the day (i.e. conference room access is limited after 8pm)
+
+
+# MFA
+- Factors
+    - Something you know (i.e. a password, PIN, or pattern)
+    - Something you have (i.e. smart card, USB security key, hardware or software token, your phone)
+    - Something you are (i.e. biometric authentication)
+        - The biometrics is stored as a mathematical representation
+    - Somewhere you are (i.e. IP address, mobile device location)
+
+
+# Password Security
+- The longer and more complex the password is the better. Strong passwords are at least 8 characters long
+    - Age
+        - How long the since a password was modified
+    - Expiration 
+        - How long the current password will be usable before it needs to be changed again
+    - Password managers
+        - Manage multiple/different passwords
+    - Password less
+        - Authenticate WITHOUT a password (i.e. facial recognition, PIN)
+    - Just-in-time permissions
+        - A user is granted temporary admin access to perform a certain task related to passwords
+        - Password vaulting
+            - Passwords stored in the vault and determines who gets access to credentials
+
+
+# Scripting and Automation
+- Automation 
+    - It can enforce baselines. If there is an important security patch, it can be automatically installed when identified
+    - It can be used for standard infrastructure configurations (i.e. add firewalls to a appliance, Ip configurations, security rules)
+
+- Secure scaling
+    - Orchestrate cloud resources
+    - Quickly scale up and down
+
+- Helps with employee retention
+    - Use automation to handle boring tasks and minimize the work on employees
+
+- Cases for automation
+    - When users need resources
+    - Offboarding and onboarding
+    - Assigning access to resources
+    - Can be used as "guard rails" meaning stop users from committing mistakes (i.e. deleting the wrong files)
+    - Add or remove user from groups
+    - Ticket creation
+    - Correct problems before involving a human (i.e. chatbot)
+    - Enable and disable services a certain times
+    - Continuous integration and testing (i.e. Code Pipeline)
+    - Interact with APIs automatically
+
+- Scripting considerations
+    - They're expensive 
+    - They're complex and need to make sure it works as intended
+    - Its a Single point of failure since nothing would get done if the script stops working
+    - Fixing a problem with script can create more problems to be fixed
+    - The script needs to be maintained
+
+
+# Incident Response
+- <u>National Institute of Standards and Technology (NIST) SP800-61</u>: document detailing how organizations handle incident responses
+
+- Preparing an incident
+    - Communication methods like phones or contact info
+    - Incident handling hardware and software
+    - Resources with the necessary information needed for the incident (i.e. documentation, network diagrams)
+    - Mitigation software
+    - Set of procedures and policies 
+
+- Challenges detecting incidents
+    - Different detection sources
+    - Large amount of "volume"
+    - Incidents are almost always complex
+
+-  If there is an attacking happening:
+    - Use a sandbox to isolate the system being attacked. This limits the amount of damage the attacker can do but isolating could cause problems to the system (i.e. files can be lost due to lost of connectivity)
+
+- After an incident
+    - Remove the malware 
+    - Fix vulnerabilities
+    - Restore backups, replace files, and rebuild what needs to be rebuild
+
+- Learn from an attack
+    - Figure out how to protect against it next time and what were the weak points. This should be done in a post incident meeting
+    - Ask questions that can help prevent the attack (i.e. what happened, how effective was our plan, what to do differently, etc.)
+
+- Implement training prior to an incident
+    - Helps the organization be prepared if it occurs
+
+
+
+# Incident Planning
+- Tabletop exercises
+    - Its less costly than performing a full scale disaster drill
+    - It involves everyone sitting around a table and logistically stepping through the policies and procedures for these security events
+
+- Simulation (i.e. phishing attacks, password requests, data breaches)
+
+- Root cause analysis 
+    - The focus is to determine the ultimate cause of an incident
+    - Do not use tunnel vision. There can be multiple causes for the breach
+
+- Threat hunting
+    - You are searching for threats that already exist before an attacker has used them
+
+
+# Digital Forensics
+- <u>Legal hold</u>:  a legal technique to preserve relevant information
+
+- Chain of Custody
+    - Controlling evidence
+    - Everyone whose been in contact with the evidence
+
+- Acquisition 
+    - Obtain data
+    - Some of the data may not be on a single system
+
+- Reporting
+    - Document findings
+    - Lets have a summary of information
+    - Contains a detailed explanation of data acquisition
+    - Helps professional make conclusions
+
+- Preservation
+    - Isolate the data
+    - Work from copies
+    - Manage the data collection from mobile devices
+
+- E-discovery
+    - Involves collecting, preparing, reviewing, interpreting and producing electronic documents
+    - There's no analysis, mostly gathering
+
+# Log Data
+- <u>security log files</u>>: detailed security information (i.e. block/allowed traffic, exploit attempts)
+    - It also contains important security information such as documentation of every traffic flow and summary of attack info
+
+- <u>firewall logs</u>>: traffic flows through the firewall
+    - NGFW logs applications used, URL filtering categories, anomalies and suspicious data
+
+- <u>application logs</u>>: specific to the application
+
+- <u>endpoint logs</u>>: specific to each endpoint (i.e. phones, laptops, tablets, desktops, servers, etc.)
+
+- <u>IP/IDS logs</u>>: contains information about predefined vulnerabilities
+
+- <u>metadata</u>>: data that describes other data sources
+
+- <u>packet captures</u>>: gathers packets on the network
