@@ -152,3 +152,110 @@
 
 - Questionnaires
     - Questions for the third party to asses and verify they are being thorough with your data (i.e. plans in place for disaster recovery, vendors due diligence)
+
+
+# Agreement Types
+<u>Service Level Agreement</u>: minimum terms for services provided (i.e. uptime, response time agreement, etc.)
+    - A Contract with an internet provider would mean the SLA is no more than 4 hours of unscheduled downtime
+
+<u>Memorandum of Understanding (MOU)</u>: both sides agree in general to the contents of the memorandum
+    - Its not a contract
+    - It states common goals and nothing else
+    - A Contract with an internet provider would mean the SLA is no more than 4 hours of unscheduled downtime
+
+<u>Memorandum of Agreement (MOA)</u>: next step after a MOU
+    - More details than a MOU
+
+<u>Master Service Agreement (MSA)</u>: legal contract and agreement of terms
+    - A broad framework to cover later transactions
+    - Many detailed transactions happen here
+    - Future projects will be based on this agreement
+
+<u>Work Order (WO)/ Statement of Work (SOW)</u>: specific list of items to be completed (i.e. details of the job, location, deliverables schedule, acceptance criteria, etc.)
+    - Used with the MSA
+
+<u>Business Partners Agreement (BPA)</u>: describes financial details associated with the agreement and describes what type of ownership stake is acquired as part of the agreement
+    - Contains who makes the business decisions
+    - Financial issue
+    - Disaster recovery
+
+
+# Compliance
+- Internal
+    - Monitor and report on organizational compliance efforts
+    - Large organizations have a Central Compliance Officer (CCO)
+
+- External
+    - Documentation required by external or industry regulators
+
+
+# Privacy
+- Local/Regional (i.e. state and local governments, vehicle registration)
+- National (i.e. HIPAA, COPPA)
+- Global
+    - Many countries are working together for privacy
+    - <u>General Data Protection Regulation (GDPR)</u>: data protection and privacy for individuals in the EU
+        - Gives power back to the subject to decide how their data can be used ("A right to be forgotten")
+        
+
+# Audit and Assessments
+- Cybersecurity Audit
+    - It lets you examine the IT infrastructure, software, devices, etc.
+    - Checks for effectiveness of policies and procedures
+    - Find vulnerabilities before the attackers
+
+- <u>Attestation</u>: provides an opinion of truth or accuracy of a company's security positioning
+    - An auditor will attest to a company's cybersecurity posture
+
+
+# Penetration Tests
+- OS system security can be bypassed by physical means
+    - Accessing devices can be done by first accessing a door, window, elevator, etc.
+
+- Known environment
+    - Full disclosure of information to the pen tester
+
+- Partially Known environment
+    - A mix of known and unknown of information to the pen tester
+
+- Unknown environment
+    - The pen tester knows nothing about the systems under attack aka Blind Test
+
+- Reconnaissance
+    - Pen tester gathers as much information before attacking
+    - Understand the security configurations, firewalls, etc.
+    - Focus on a particular part of the system
+    - Create a network map to see where routers, networks, and remote sites are located and connected to each other
+
+- Passive Reconnaissance
+    - Use social media, corporate websites, online forums, social engineering, dumpster dive, or speak with business organizations that interact with the target
+
+- Active Reconnaissance
+    - Trying doors, ping and port scans, DNS queries, OS scans, OS fingerprinting, service and version scans
+
+
+# Security Awareness
+- <u>Phishing Campaigns</u>: testing members of an organization if they will click on a phishing attack by sending a phishing an attack
+    - It can be an automated process
+    - Many companies will do their own campaigns
+    - Signs of a phishing attempt
+        1. Spelling and grammar mistakes
+        2. Domain name and email inconsistencies
+        3. Unusual attachments
+        4. Request for personal info
+
+
+# User Training
+- Policy/Handbooks
+    - Document all security requirements
+
+- Situational Awareness
+    - Users should always be looking for threats. Software (i.e. email links, attachments, test messages, etc.) and physical (i.e. USB drives in a FedEx envelope, unlocked building doors, etc.) threats
+
+- User Guidance and training
+    - Insider threats
+    - Password management
+    - Removable media and cables
+    - Social engineering
+    - Operational security(view security from attackers perspective)
+    - Hybrid/remote work environments
