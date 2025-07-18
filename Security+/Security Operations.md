@@ -1,4 +1,6 @@
 # Secure Baselines
+<u>Security Baselines</u>: minimum security configurations and settings established to protect and organizations systems and assets
+
 - Establish
     - Need to create the baselines. They can be found from manufacturers 
 - Deploy
@@ -8,15 +10,18 @@
 
 
 # Hardening Targets
+<u>Hardening</u>: securing a system by reducing the the number of weak points/openings an attacker can leverage 
+
 - Mobile devices
     - Updates are critical for bugs and security patches
-    - Segmentation can protect data where company and user data are separated
+    - Segmentation can protect data. The company and user data are separated
 
 - Workstations
-    -  Automate monthly patches
-    - Remove software from the device to reduce the chance of a attack (less options = less vulnerabilities)
+    - Automate monthly patches
+    - Remove unnecessary software from the device to reduce the chance of a attack (less options = less vulnerabilities)
 
-- Switches
+- Network infrastructure devices
+    - Includes switches, routers, etc.
     - Always change the default credentials
     - Check with manufacturer for any security updates as they are the only ones who will know
 
@@ -26,13 +31,14 @@
     - Always have backups
 
 - Servers
-    - Keep updated (i.e. system updates, service packs, security patches)
-    - Follow good practices like complex passwords and limit the number of account a user has
+    - Keep servers updated (i.e. system updates, service packs, security patches)
+    - Follow good practices like complex passwords
+    - Limit access to account using least privilege and disable unused account
     - Limit network access
     - Monitor and secure using anti-virus/anti-malware
 
 - ICS/SCADA
-    - Requires extensive segmentation (limited access to them)
+    - Are isolated from the rest of the system
 
 - Embedded systems
     - Perform security patches 
@@ -45,7 +51,7 @@
 
 - IoT devices
     - Perform updates ASAP
-    - Segmentation from other devices on a network
+    - Segmentation from other devices on a network (limits access to attacker)
 
 
 # Securing Wireless and Mobile

@@ -34,7 +34,7 @@
 - <u>Supervisory Control and Data Acquisition</u>: lets technicians sit in a centralized control  room, monitor the status of the pieces of equipment and make changes and modification without having to physically visit every piece of equipment
 ![alt text](image-16.png)
 
-- <u>Real Time Operating System (RTOS)</u>: OS with a deterministic processing schedule (i.e. braking system in a car)
+- <u>Real Time Operating System (RTOS)</u>: OS designed to process data immediately as it comes in with little delay (i.e. braking system in a car)
 
 - <u>Embedded Systems</u>: hardware and software designed for a specific function (i.e. smart watches)
 
