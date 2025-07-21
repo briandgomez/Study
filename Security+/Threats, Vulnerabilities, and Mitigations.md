@@ -71,7 +71,11 @@
 
 
 # Phishing
-- <u>Phishing</u>: tricking individuals to revealing sensitive information usually through email, text (smishing), voice call (vishing), etc.
+- <u>Phishing</u>: cyberattack where attackers send fraudulent emails or messages pretending to be from reputable sources to trick individuals into revealing sensitive information such as usernames, password, credit cards details, etc.
+
+- <u>Vishing</u>: voice phishing involves attackers using phone calls to impersonate legitimate organizations or individuals to trick victims into providing personal information such as credit card numbers or social security numbers
+
+- <u>Smishing</u>: SMS phishing involves attackers sending fraudulent text messages that appear to come from reputable sources. These messages often contain links or phone numbers that lead to phishing websites or prompt the victim to provide personal information
 
 # Impersonation
 - The goal is to extract information without the victim realizing it
@@ -85,7 +89,7 @@
 
 
 # Water Hole Attacks
-- <u>Water Hole Attack</u>: where the attacker compromises a legitimate third-party website or service that the victim uses. The goal is to use this trusted location as a stepping stone to infiltrate the attacker's real target (i.e the victim's workplace)
+- <u>Water Hole Attack</u>: an attack where attackers compromise a specific website or set of websites that are frequently visited by a particular group, organization, or industry. The goal is to infect the visitors of these sites with malware
     
     #### Protection
     - Defense in depth (Layers of security)
@@ -99,17 +103,16 @@
 
 
 # Memory Injections
-- <u>Memory Injection</u>: inserting malicious code into a running process. The code can obtain permissions and perform unauthorized commands
+- <u>Memory Injection</u>: an attack that involves inserting malicious code into the memory space of a legitimate running process. This allows the malicious code to operate with the same privileges as the compromised process
 
 
 # Buffer overflow
-- <u>Buffer Overflow</u>: storing data in a temporary storage area than it was meant to hold causing data to overflow in adjacent memory locations
-    - This can cause adjacent to become corrupted or overwrite the data
+- <u>Buffer Overflow</u>: an attack where the attacker sends more data to a buffer that it can handle which leads to overwriting adjacent memory locations. This potentially can allow the attacker to execute arbitrary code
     - Overflowing data can also cause the application that uses the data to gain elevated privileges
 
 
 # Race Conditions
-- <u>Race Condition</u>: when 2 or more processes try to access or change the same data at the same time and the result depends on which 1 finishes first leading to unexpected behavior or security issues
+- <u>Race Condition</u>: when 2 or more processes try to access or change the same data at the same time and the result depends on which 1 finishes first. This leads to unexpected behavior or security issues
     - <u>Time of Check (TOC)</u>: when the system verifies and extracts the data
     - <u>Time of Use (TOU)</u>: when the system uses the data
 
@@ -125,7 +128,7 @@
 
 
 # OS Vulnerabilities
-- OS software are made up of millions lines of code. The more code the higher chance there is a vulnerability
+- OS software is made up of millions lines of code. The more code the higher chance there is a vulnerability
 
     #### Best Practices
     - Always update OS either monthly or on-demand
@@ -135,19 +138,19 @@
 
 
 # SQL Injection
-- <u>SQL Injection</u>: putting your own SQL queries into an application's code to perform commands you want
-    - It can allow you to view al db information, delete db information, add users, denial of service, etc.
+- <u>SQL Injection</u>: vulnerability where attackers execute malicious SQL statements by manipulating input data
+    - It can allow you to view all db information, delete db information, add users, denial of service, etc.
     - Seeing '1=1' is common indication of a SQL injection
 
 
 # Cross-site Scripting (XSS)
-- <u>Cross-site scripting</u>: an attack where a hacker puts harmful code into a website that other people use. When a victim visits the site, the code runs in their browser and can steal things like login information or cookies.
+- <u>Cross-site scripting</u>: an attack injecting malicious scripts into web pages to execute in the victim's browser
 
-- <u>Persistent (XSS)</u>: placing the malicious code on a popular website where every time a user clicks/uses the website the victim, the victim is affected
+- <u>Persistent (XSS)</u>: placing the malicious code on a popular website where every time a user clicks/uses the website the victim is affected
 
     #### Protection
     - Be careful when clicking untrusted links
-    - Consider disabling JS
+    - Consider disabling JavaScript
     - Keep your browser and applications updated
 
 
@@ -160,6 +163,8 @@
 - It is possible to escape a VM and interact with the host OS or hardware. Escaping a VM would mean you have access to the host and control other guest VMs (huge exploit)
 
 - A hypervisor manages the relationship between physical and virtual resources (i.e. RAM, storage space, CPU, availability, etc.). These resources can be reused between VMs (a hypervisor can support 3 VMs with 2 GB of RAM each). Data can accidently be shared between VMs and overwritten
+
+- <u>Resource Reuse</u>: a vulnerability exploiting shared CPU resources to access or modify data between VMs
 
 
 # Cloud-specific Vulnerabilities
@@ -187,7 +192,7 @@
     - Use small suppliers that you trust
     - Have strict control over policies and procedures
 - Cisco products
-    - Since everything runs through switches and routers, Cisco products have been copied and sold. The products are counterfeit
+    - Since everything runs through switches and routers, Cisco products have been copied and sold. These products are counterfeit
 - Software providers
     - Installing any type of software is risky
     - Digital signatures should be confirmed during installation
@@ -234,7 +239,7 @@
         - Spyware 
         - Bloatware
         - Logic bomb
-    - Malware usually appears due to a combination of these types and 
+    - Malware usually appears due to a combination of these types
 
 - <u>Ransomware</u>: when an a attacker gets a victims information and encrypts it. The victim can only access it if they do what the attacker says such as pay them money
     - The OS will still work so the victim can see the messages from the attacker
@@ -246,22 +251,23 @@
     - Keep anti-virus/anti-malware signatures up to date
     - Keep everything up to date
 
+<u>Trojan</u>: type of malware that disguises itself as legitimate software to deceive users into installing it. Once installed it will perform malicious actions
 
 # Viruses and Worms
-- <u>Virus</u>: malware that reproduces itself WITH user interaction (i.e. when a user clicks or interacts with something)
+- <u>Virus</u>: malware that needs to be attached to a legitimate file or program in order to spread and replicate itself. Replication requires user interaction (i.e. opening an infected file)
     - Reproduces through file systems and networks
     - May or may not cause problems
     - Simple actions like running a program can spread a virus
 
-- <u>Worms</u>: malware that reproduces itself WITHOUT user interaction
-    - The reproduce through the network and at the speed of the network
+- <u>Worms</u>: malware that replicates itself without needing to be attached to a file or program.
+    - They reproduce through the network and at the speed of the network
 
 
 # Spyware and Bloatware
 - <u>Spyware</u>: malware that spies on you
-    - It can trick you into installing 
+    - It can trick you into installing malicious software
     - The browser will monitor you
-    - A keylogger capture your keystrokes
+    - A keylogger captures your keystrokes
 
     #### Prevention
     - Maintain anti-virus/anti-malware
@@ -278,33 +284,35 @@
 
 # Other Malware Types
 - Keylogging
-- <u>Logic bomb</u>: waiting for an event to happen that triggers the "bomb"
-    - Its difficult to fix recognize a logic bomb but to prevent one you can
-        - Have a set of process and procedures
+- <u>Logic bomb</u>: malicious code of software program intentionally inserted into a system to execute a harmful action when certain conditions are met (i.e. Is a user doesn't type anything for X minutes, delete all files on the system)
+    - Its difficult to fix a logic bomb but to prevent one you can:
+        - Have a set of processes and procedures
         - Have electronic monitoring
         - Constant auditing
-- <u>Rootkit</u>: code that is invisible and can perform tasks such as modify core system files. Its even invisible to the OS and anti-virus software
-    - You can use a remover specific to the rootkit to remove one
+- <u>Rootkit</u>: malware designed to gain and maintain admin level access to a computer system while remaining hidden from users and security software. They operate at the OS level making them difficult to detect and remove.
+    - You can use a remover specific to rootkits to remove one
 
 
 # Physical Attacks
 - Brute force
 - RFID cloning (i.e. duplicate access badges)
-- Environment attacks (i.e. turning the power off)
+- Environmental attacks (i.e. turning the power off)
 
+<u>RFID Cloning</u>: when an attacker copies the signal/data from a RFID item (i.e. badge, card, etc.) and uses it to create a duplicate
 
 # Denial of Service
-- <u>Denial of Service</u>: when an attacker forces a service to fail or overload so that no one else can use it
-- <u>DDOS</u>: when multiple computers bring down a service
+- <u>Denial of Service</u>: an attack from a single source that tries to make a system, service, or network unavailable by overwhelming it
+- <u>DDOS</u>: an attack from many compromised computers (aka botnet) that tries to make a system, service, or network unavailable by overwhelming it
 
 
 # DNS Attacks
-- <u>DNS Attacks</u>: gaining control of a domain name (i.e. www.example.com). This is done by getting access to the DNS server and redirecting users to other websites. This is called domain poisoning/spoofing.
+- <u>DNS Attacks</u>: An attack that targets DNS servers to redirect users, disrupt services or steal data
+    - This is called domain poisoning/spoofing.
     - <u>URL Hijacking</u>: taking over a URL since the fake URL is very similar to the real one
 
 
 # Wireless Attacks
-- <u>DeAuthentication Attack</u>: a DOS attack that involves disrupting the connection between a wireless device (i.e. phone, computer) and a access point (i.e. router) by sending forged deauthentication frames
+- <u>DeAuthentication Attack</u>: s DOS attack that takes people that are working on the wireless network and disconnects them from any connectivity over that network
 
 - <u>Radio frequency (RF) jamming</u>: transmitting interfering wireless signals preventing other nearby devices from connecting to access points
 
@@ -346,40 +354,42 @@
     - Update anti-virus/anti-malware
     - Randomize the locations of where data can be placed
     - Limit the locations data is able to be ran
-- <u>Cross-site requests</u>: when a web request is made from one origin(site) to another (i.e. loading a YouTube video on a page)
-    - <u>Cross-site request forgery</u>: when a user's browser sends unauthorized commands to a legitimate site
-    ![alt text](image-10.png)
-<u>Directory Traversal</u>: read files from a web server that are outside of the websites file directory
+- <u>Cross-site requests</u>: when a web request is made from one origin (site) to another (i.e. loading a YouTube video on a page)
+    - <u>Cross-site request forgery</u>: an attack where a bad website tricks your browser into sending a request to another site where you're already logged in using credentials without your permission
+    ![alt text](image-10.png)  
+
+<u>Directory Traversal</u>: a web server vulnerability that lets an attacker have access to files and directories outside the web root folder by manipulating file path inputs (i.e. " ../ " )    
     - Its not an attack but it is a web server vulnerability
 
 
 # Cryptographic Attacks
-- <u>Birthday attack</u>: generating multiple versions of plaintext to match a hash
-    - The attackers attack the algorithms(i.e. SHA-256) in order to see how well they work
+- <u>Birthday attack</u>: a cryptographic attack that takes advantage of the chance that two different inputs can create the same hash value
+    - The attackers attack the algorithms (i.e. SHA-256) in order to see how well they work
     - <u>Collision</u>: when 2 plain text files have the same hash when encrypted
 - <u>Downgrade attack</u>: forcing a system to use a weaker, older, or less secure protocol or encryption method making it vulnerable to exploits
-    - SSL stripping (combines a downgrade attack and on-path attack)
+    - SSL stripping (combines a downgrade attack and on-path attack)  
     ![alt text](image-12.png)
 
 
 # Password Attacks
 - Hashing a password is a 1 way trip. You can not deconstruct the password after its been hashed
 
-- <u>Spraying attack</u>: trying the most common passwords for accounts with weak passwords. 
-    - Since these accounts have weak passwords the odds of guessing correctly are high. The attacker will eventually move onto the next vulnerable account. They will also prevent any lockouts, alarms or alerts from going off.
+- <u>Spraying attack</u>: a type of brute force attack where an attacker attempts a small list of commonly used passwords against many different usernames to gain unauthorized access
+    - Since these accounts have weak passwords the odds of guessing correctly are high. The attacker will eventually move onto the next vulnerable account. 
+    - They will also prevent any lockouts, alarms or alerts from going off.
 
 - <u>Brute force</u>: try every possible password combination until the hash is matched
 
 
 # Indicators of Compromise
 - Account lockout
-- Session usage (i.e. using an app in different locations at the same time)
+- Session usage (i.e. using an app in different location at the same time)
+- Blocked Content
 - Authentication (i.e. login in/out in different locations within a short time period)
 - Resource consumption (i.e. transferring files)
 - Resource inaccessibility (i.e.server is down)
-- Out of cycle logging (i.e. logs contains events that happen outside of normal hours)
-- Missing logs
-    - Attackers delete log information to cover tracks
+- Out of cycle logging (i.e. logs contain events that happen outside of normal hours)
+- Missing logs (i.e. attackers delete log information to cover tracks)
 - Published documents
 
 
@@ -388,7 +398,7 @@
 
     - <u>Access Control List (ACL)</u>: allow or disallow traffic
         - It can be used to restrict access to network devices through the use of limited IP addresses or other ID
-        - Example:
+        - Example:  
         ![alt text](image-13.png)
         - Many OS systems use ACLs to provide access to files
 
@@ -407,7 +417,7 @@
     - Dispose items properly (i.e. destroying a device)
 
 
-# Harden Techniques
+# Hardening Techniques
 - Harden techniques reduce the attack surface before an attack happens
     - <u>System Hardening</u>: securing OS software, apps, and network devices
     - Encryption
@@ -417,230 +427,3 @@
     - Close or control open ports
     - Change default settings especially passwords
     - Remove unnecessary software
-
-
-# Cloud Infrastructures
-- Responsibility matrix (i.e. AWS Share Responsibility Model)
-- Hybrid cloud (i.e. on-premise and cloud servers in combination)-
-- Third party companies are used with a user accounts and the cloud provider
-- Infrastructure as Code (i.e. CloudFormation or SAM)
-- Serverless architecture (i.e. AWS Lambda functions)
-- Microservice architecture and APIs (i.e. using AWS services together instead of 1 application doing everything) 
-
-
-# Network Infrastructure Concepts
-- Switches can be physically located in different locations
-- Virtual Local Area Networks (VLAN) are separated logically but not physically (i.e. user A uses 1 portion of the device and user B uses a different portion)
-- The software defined network separates different planes of a network such the control and data plane. The control plane handles incoming traffic while the data plane controls where to redirect the traffic.
-![alt text](image-14.png)
-
-
-# Other Infrastructure Concepts
-- On-premise security
-    - Customize your security posture
-    - On-site IT team can manage security better
-    - Local team maintains uptime and availability
-    - Security changes can take time
-
-- Centralized vs decentralized systems
-    - Most organizations are physically decentralized (i.e. many locations, cloud providers, OS, etc.)
-    - They're difficult to manage and to protect because of many diverse systems
-    - Centralized setups are easier to manage but means there is a single point of failure
-
-- Organizations are moving from VMs to containers because container have better security and easier to manage
-![alt text](image-15.png)
-
-- <u>Internet of Things (IoT)</u>: physical devices that are integrated with a network (i.e. sensors, Fitbit, etc.)
-
-- <u>Supervisory Control and Data Acquisition</u>: lets technicians sit in a centralized control  room, monitor the status of the pieces of equipment and make changes and modification without having to physically visit every piece of equipment
-![alt text](image-16.png)
-
-- <u>Real Time Operating System (RTOS)</u>: OS with a deterministic processing schedule (i.e. braking system in a car)
-
-- <u>Embedded Systems</u>: hardware and software designed for a specific function (i.e. smart watches)
-
-
-# Infrastructure Considerations
-1. Availability
-    - Its a factor since you want users to be able to access whatever they whenever they want
-
-2. Resiliency 
-    - Will be tested once something happens. Its referred to as mean time to repair
-
-3. Money is 
-    - Always a factor to consider. 
-    - Installation, maintenance, replacements, or tax implications affect cost.
-
-4. Responsiveness
-    - Critical especially for interactive applications
-
-5. Scalability 
-    -  Can be tested anytime
-
-6. Ease of deployments
-    - Important to consider during the product engineering phase
-
-7. Risk transference
-    - Use cybersecurity insurance
-    - Could result in legal issues with customers
-    - Involves recovering loss data
-
-8. Ease of recovery
-    - Make recovery easy as possible
-
-9. Patch availability
-    - Make sure there are solutions to any bugs or issues 
-    - Keep up to date and make sure patches are working properly 
-
-10. Inability to patch
-    - Embedded systems (i.e. HVAc controls, time clocks) do not have patching as an option
-    - Its best to think about additional security controls when this happens
-
-11. Power
-    - Think of backups (i.e. generators)
-
-12. Compute
-    - Use multiple CPUs across multiple cloud for intense tasks and scalability
-
-
-# Secure Infrastructure
-- <u>Security Zone</u>: lets you logically separate devices by use or access type
-    - Each area is associated with a zone (i.e. trusted, internal, inside, servers, screened, etc.)
-    - Makes it easier to simplify security policies (i.e. trusted to untrusted or untrusted to screened)
-    ![alt text](image-17.png)
-
-- <u>Attack surfaces</u>: potential openings an attacker can access a network
-    - Anything can be a vulnerability
-        - Application code
-        - Open ports
-        - Human error
-    - Minimize the surface by auditing code, blocking ports with firewalls, monitoring traffic in real time
-
-- Connectivity
-    - Ensure an attacker does not access the network by
-        - Securing network cables
-        - Application level encryption
-        - Network level encryption
-
-
-# Intrusion Prevention
-- <u>Intrusion Prevention System (IPS)</u>: designed to watch traffic as it traverses the network in real time
-    - It can block anything that is considered dangerous quickly (i.e. SQL injection)
-    - Intrusion Detection System (IDS) can only detect/alarm/alert while a IPS can block
-- Fail open = when a system fails and data continues to flow
-- Fail closed = when a system fails and data does not flow
-
-- <u>Active monitoring</u>: system is connected inline
-    - Data can be blocked in real time as it passes by
-    - Intrusion prevention is commonly active
-    ![alt text](image-19.png)
-
-- <u>Passive monitoring</u>: a copy of the network traffic is examined using a tap or port monitor
-    - Data cannot be blocked in real time 
-    - Intrusion detection is commonly passive
-    ![alt text](image-18.png)
-
-
-# Network Appliances
-- <u>Jump server</u>: a device on the inside of a network that is accessible from the outside
-![alt text](image-20.png)
-
-- <u>Proxy server</u>: sits in the middle of devices and make request on behalf of the users
-    - Useful for caching, URL filtering, content scanning
-![alt text](image-21.png)
-
-- Proxies
-    - Simplest proxy = NAT
-    - Application proxies are the most common since they work with different protocols 
-
-- <u>Proxy server</u>: sits in the middle of devices and make request on behalf of the users
-    - Useful for caching, URL filtering, content scanning
-![alt text](image-21.png)
-
-- <u>Load Balancers</u>: distributes loads to multiple services
-    - For large scale implementations and fault tolerance
-
-- Sensors and collectors
-    - They compile information from network devices
-    - Sensors are IPS and use firewall logs, authentication logs, web server logs. This data is then sent to collectors. Collectors are proprietary consoles and consolidate the data being logged
-
-
- # Port Security
- - <u>Port Security</u>: security of the individual interfaces that are on a switch or connection to a wireless access point
-     - Uses Extensible Authentication Protocol (EAP)
-     - EAP and 802.1X work together so that you can provide login credentials and have those credentials provide you with access to the network
-
-
-# FireWall Types
-- Firewalls can filter traffic by port number or app (i.e. OSI layer 4 or OSI layer 7)
-    - Layer 4 = TCP or UDP ports
-    - Layer 7 = Application layer
-- Firewalls encrypt traffic
-- Firewalls can act as routers
-
-- <u>Unified Threat Management (UTM)</u>: older all-in-one firewall that bundles several security tools into a single device
-    - Used as all in one box firewall with antivirus and VPN
-
-- <u>Next Generation Firewalls (NGFW)</u>: modern firewall that combines traditional firewall functions with advanced features like deep packet inspection, intrusion prevention, and application awareness
-    - Operate at layer 7
-
-- <u>Web Application Firewall (WAF)</u>: protects web applications by filtering, monitoring, and blocking HTTP/HTTPS traffic
-
-# Secure Communication
-- <u>VPN</u>: encrypts all private data and sends it across the internet
-    - <u>Concentrator</u>: decrypts/encrypts data
-
-- SSL/TLS VPN
-     - Used for remote access
-     - Uses protocol 443
-     ![alt text](image-22.png)
-
-- <u>Software Defined Networking (SDN WAN)</u>: method to connect to web based applications
-    - No need to connect to a central point (i.e. data center) before connecting to the cloud anymore
-    ![alt text](image-23.png)
-
-- <u>Secure Access Service Edge (SASE)</u>: secure way to connect to the cloud
-    - It replaces the the concentrator for security
-    ![alt text](image-24.png)
-
- #### Selection of effective controls
- 1. VPN - use SSL/TLS for user access
-    - IPsec tunnels for site to site access
- 2. SD-WAN - use to manage network connectivity to the cloud
-    - Use SASE for security
-
-
- # Data Types and Classifications
-- <u>Regulated</u>: 3rd party determines how the data should be protected
-- <u>Trade secret</u>: secret formulas used by organizations
-- <u>Intellectual property</u>: may be publicly visible
-- <u>Legal information</u>: i.e court records and documents
-- <u>Financial information</u>: i.e customer financials, payment records, etc.
-- Human readable vs non-human readable (i.e. barcodes)
-    - CSV, XML, JSON are hybrid of both
-
-    - Sensitive = intellectual property, PII, PHI
-    - Confidential = very sensitive and must be approved
-    - Public/Unclassified = no restrictions on viewing the data
-    - Restricted/Private/Classified = restricted access and may require an NDA
-    - Critical = data that should always be available
-
-
-# States of Data
-- <u>Data at rest</u>: data stored on a storage device (i.e. hard drive, SSD, flash drive, etc.)
-    - The data does not have to be encrypted in order for it to be called data at rest
-    - The whole disk can be encrypted, only the database is encrypted or the files/folder level is encrypted
-    - Once encrypted, then permissions can be added
-
-- <u>Data in transit</u>: data being moved cross the network
-    - Use firewalls or IPS to secure data in motion
-    - Use TLS or IPsec to encrypt the data
-
-- <u>Data in use</u>: data being processed in memory
-    - Data is almost always decrypted
-
-- <u>Data sovereignty</u>: when data is located in a country and is subject to the laws of that country
-
-- <u>Geolocation</u>: location details
-    - Different ways to determine location (i.e. 802.11, mobile providers, GPS)
-    - Can limit administrative tasks unless secure area is used
