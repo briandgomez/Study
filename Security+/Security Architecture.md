@@ -1,6 +1,6 @@
 # Cloud Infrastructures
 - Responsibility matrix (i.e. AWS Share Responsibility Model)
-- Hybrid cloud (i.e. on-premise and cloud servers in combination)-
+- Hybrid cloud (i.e. on-premise and cloud servers in combination)
 - Third party companies are used with a user accounts and the cloud provider
 - Infrastructure as Code (i.e. CloudFormation or SAM)
 - Serverless architecture (i.e. AWS Lambda functions)
@@ -9,8 +9,8 @@
 
 # Network Infrastructure Concepts
 - Switches can be physically located in different locations
-- Virtual Local Area Networks (VLAN) are separated logically but not physically (i.e. user A uses 1 portion of the device and user B uses a different portion)
-- The software defined network separates different planes of a network such the control and data plane. The control plane handles incoming traffic while the data plane controls where to redirect the traffic.
+- Virtual Local Area Networks (VLAN) are separated logically but not physically (i.e. user A uses 1 portion of the device and user B uses a different portion)  
+- <u>Software-defined Network (SDN)</u>: separates different planes of a network such as the control and data plane. The control plane handles incoming traffic while the data plane controls where to redirect the traffic.
 ![alt text](image-14.png)
 
 
@@ -26,27 +26,27 @@
     - They're difficult to manage and to protect because of many diverse systems
     - Centralized setups are easier to manage but means there is a single point of failure
 
-- Organizations are moving from VMs to containers because container have better security and easier to manage
+- Organizations are moving from VMs to containers because containers have better security and easier to manage
 ![alt text](image-15.png)
 
 - <u>Internet of Things (IoT)</u>: physical devices that are integrated with a network (i.e. sensors, Fitbit, etc.)
 
-- <u>Supervisory Control and Data Acquisition</u>: lets technicians sit in a centralized control  room, monitor the status of the pieces of equipment and make changes and modification without having to physically visit every piece of equipment
+- <u>Supervisory Control and Data Acquisition</u>: lets technicians sit in a centralized control  room, monitor the status of the pieces of equipment and make changes and modification without having to physically visit every piece of equipment  
 ![alt text](image-16.png)
 
 - <u>Real Time Operating System (RTOS)</u>: OS designed to process data immediately as it comes in with little delay (i.e. braking system in a car)
 
-- <u>Embedded Systems</u>: hardware and software designed for a specific function (i.e. smart watches)
+- <u>Embedded Systems</u>: A device created to a very specific task within a larger mechanical or electrical system (i.e. smartwatches, medical devices)
 
 
 # Infrastructure Considerations
 1. Availability
-    - Its a factor since you want users to be able to access whatever they whenever they want
+    - Its a factor since you want users to be able to access whatever they want whenever they want
 
 2. Resiliency 
     - Will be tested once something happens. Its referred to as mean time to repair
 
-3. Money is 
+3. Cost
     - Always a factor to consider. 
     - Installation, maintenance, replacements, or tax implications affect cost.
 
@@ -79,13 +79,13 @@
     - Think of backups (i.e. generators)
 
 12. Compute
-    - Use multiple CPUs across multiple cloud for intense tasks and scalability
+    - Use multiple CPUs across multiple cloud vendors for intense tasks and scalability
 
 
 # Secure Infrastructure
 - <u>Security Zone</u>: lets you logically separate devices by use or access type
     - Each area is associated with a zone (i.e. trusted, internal, inside, servers, screened, etc.)
-    - Makes it easier to simplify security policies (i.e. trusted to untrusted or untrusted to screened)
+    - Makes it easier to simplify security policies (i.e. trusted to untrusted or untrusted to screened)  
     ![alt text](image-17.png)
 
 - <u>Attack surfaces</u>: potential openings an attacker can access a network
@@ -103,51 +103,48 @@
 
 
 # Intrusion Prevention
-- <u>Intrusion Prevention System (IPS)</u>: designed to watch traffic as it traverses the network in real time
+- <u>Intrusion Prevention System (IPS)</u>: a security tool that actively monitors network traffic, detects malicious activity, and automatically takes action to block or mitigate threats in real time
     - It can block anything that is considered dangerous quickly (i.e. SQL injection)
     - Intrusion Detection System (IDS) can only detect/alarm/alert while a IPS can block
-- Fail open = when a system fails and data continues to flow
-- Fail closed = when a system fails and data does not flow
+- Fail open =  scenario where if there is a failure on the network, the system will automatically open or allow access
+- Fail closed = scenario where if there is a failure on the network, the system will automatically close or deny access
 
-- <u>Active monitoring</u>: system is connected inline
+- <u>Active monitoring</u>: sending test traffic into the network to check performance or availability (i.e. ping test, IPS)  
     - Data can be blocked in real time as it passes by
-    - Intrusion prevention is commonly active
+    - Intrusion prevention is commonly active  
     ![alt text](image-19.png)
 
-- <u>Passive monitoring</u>: a copy of the network traffic is examined using a tap or port monitor
+- <u>Passive monitoring</u>: watching and analyzing real network traffic without interfering (i.e. IDS)
     - Data cannot be blocked in real time 
-    - Intrusion detection is commonly passive
+    - Intrusion detection is commonly passive  
     ![alt text](image-18.png)
 
 
 # Network Appliances
-- <u>Jump server</u>: a device on the inside of a network that is accessible from the outside
+- <u>Jump server</u>: a secure computer that you connect to first before accessing other systems inside a network. It helps protect internal systems by acting like a security checkpoint  
 ![alt text](image-20.png)
 
-- <u>Proxy server</u>: sits in the middle of devices and make request on behalf of the users
-    - Useful for caching, URL filtering, content scanning
+- <u>Proxy server</u>: sits in the middle of devices and make request on behalf of the users   
+    - Useful for caching, URL filtering, content scanning  
 ![alt text](image-21.png)
 
 - Proxies
     - Simplest proxy = NAT
-    - Application proxies are the most common since they work with different protocols 
+    - Application proxies are the most common since they work with different protocols  
 
-- <u>Proxy server</u>: sits in the middle of devices and make request on behalf of the users
-    - Useful for caching, URL filtering, content scanning
-![alt text](image-21.png)
-
-- <u>Load Balancers</u>: distributes loads to multiple services
+- <u>Load Balancers</u>: distributes loads to multiple services  
     - For large scale implementations and fault tolerance
 
-- Sensors and collectors
+- Sensors and collectors  
     - They compile information from network devices
     - Sensors are IPS and use firewall logs, authentication logs, web server logs. This data is then sent to collectors. Collectors are proprietary consoles and consolidate the data being logged
 
 
  # Port Security
  - <u>Port Security</u>: security of the individual interfaces that are on a switch or connection to a wireless access point
-     - Uses Extensible Authentication Protocol (EAP)
-     - EAP and 802.1X work together so that you can provide login credentials and have those credentials provide you with access to the network
+     - <u>Uses Extensible Authentication Protocol (EAP)</u>: a framework used for authentication. It allows different methods of verifying a user's identity over a network.
+     - <u>802.1X</u>: port based network access control system that uses EAP to authenticate users before allowing them on the network  
+        - EAP and 802.1X work together so that you can provide login credentials and have those credentials provide you with access to the network
 
 
 # FireWall Types
@@ -157,36 +154,49 @@
 - Firewalls encrypt traffic
 - Firewalls can act as routers
 
-- <u>Unified Threat Management (UTM)</u>: older all-in-one firewall that bundles several security tools into a single device
-    - Used as all in one box firewall with antivirus and VPN
+- <u>Unified Threat Management (UTM)</u>: When multiple security features or services are combined into a single device within your network  
+    - Used as all in one firewall with antivirus and VPN
 
 - <u>Next Generation Firewalls (NGFW)</u>: modern firewall that combines traditional firewall functions with advanced features like deep packet inspection, intrusion prevention, and application awareness
-    - Operate at layer 7
+    - Operates at layer 7
 
-- <u>Web Application Firewall (WAF)</u>: protects web applications by filtering, monitoring, and blocking HTTP/HTTPS traffic
+- <u>Web Application Firewall (WAF)</u>: monitors, filters, and blocks malicious traffic to and from web apps
 
 # Secure Communication
-- <u>VPN</u>: encrypts all private data and sends it across the internet
+- <u>Virtual Private Network (VPN)</u>: encrypts all private data and sends it across the internet
     - <u>Concentrator</u>: decrypts/encrypts data
 
 - SSL/TLS VPN
      - Used for remote access
-     - Uses protocol 443
+     - Uses protocol 443  
      ![alt text](image-22.png)
 
-- <u>Software Defined Networking (SDN WAN)</u>: method to connect to web based applications
-    - No need to connect to a central point (i.e. data center) before connecting to the cloud anymore
+- <u>Software Defined Networking (SD-WAN)</u>: uses SDN principles to securely and efficiently manage connections between different physical locations. It involves integrating additional security services or device to enhance a network's defenses such as using a 3rd party cloud based service or specialized security device that works with the current SD-WAN technology  
+    - No need to connect to a central point (i.e. data center) before connecting to the cloud anymore  
     ![alt text](image-23.png)
 
-- <u>Secure Access Service Edge (SASE)</u>: secure way to connect to the cloud
-    - It replaces the the concentrator for security
+- <u>Secure Access Service Edge (SASE)</u>: combines network security and WAN capabilities in a cloud-based service
+    - It replaces the the concentrator for security  
     ![alt text](image-24.png)
 
  #### Selection of effective controls
- 1. VPN - use SSL/TLS for user access
-    - IPsec tunnels for site to site access
- 2. SD-WAN - use to manage network connectivity to the cloud
-    - Use SASE for security
+ 1. VPN (remote user access)
+    - Uses TLS encryption to protect data
+    - Its secure, flexible, and app level access. Its best used for individual remote users 
+    - Use case example: employees working from home
+ 2. IPsec (site to site network link)
+    - Works at the Network Layer (Layer 3)
+    - Encrypts all IP traffic
+    - Used in site to site VPNs 
+    - Use case example: connecting a NY office and a LA office
+ 3. SD-WAN (cloud traffic management)
+    - Improves performance and reliability  
+    - Use case example: managing traffic between branch offices and cloud apps  
+ 4. SASE (cloud based security)
+    - Protects users and data regardless of location
+    - Great for remote work and cloud first environments
+    - Security policies are enforced in cloud and on-premises
+    - Use case example: employees working remotely from anywhere such as coffee shops, airport, or home
 
 
  # Data Types and Classifications
@@ -195,14 +205,16 @@
 - <u>Intellectual property</u>: may be publicly visible
 - <u>Legal information</u>: i.e court records and documents
 - <u>Financial information</u>: i.e customer financials, payment records, etc.
+
 - Human readable vs non-human readable (i.e. barcodes)
     - CSV, XML, JSON are hybrid of both
 
-    - Sensitive = intellectual property, PII, PHI
-    - Confidential = very sensitive and must be approved
-    - Public/Unclassified = no restrictions on viewing the data
-    - Restricted/Private/Classified = restricted access and may require an NDA
-    - Critical = data that should always be available
+1. Sensitive: should not be publicly exposed but not the most important (i.e. employee schedules, internal company memos)
+2. Confidential: specific to a group and could cause serious damage if exposed (i.e. customer data, employee records)
+3. Public: shared with everyone. No security required
+4. Restricted: very limited in access. Only available to specific people (i.e. system admin credentials)
+5. Private: PII and leaking it could result in privacy violations or identity theft (i.e. medical records, SSN)
+6. Critical: losing the data or access to the data will have severe impact (i.e. payment processing systems)
 
 
 # States of Data
@@ -253,21 +265,29 @@
   - Redundancy doesn't always means always available
   - High availability almost always means higher costs
 
-    - <u>Server clustering</u>: combine 2 or more server
-        - Easily increase capacity and availability 
+    - <u>Server clustering</u>: multiple servers configured to all work together as one big server. The users never see the configuration, they just see one server cluster
         ![alt text](image-25.png)
     
-    - <u>Load balancing</u>: distribute load across multiple devices
-        - Easily increase capacity and availability
+    - <u>Load balancing</u>: distributes load across all of the individual multiple devices
+
+        - Load Balancing vs Server Clustering
+            - In load balancing, each of the servers have no idea that the other server even exists
+            - Server clustering involves sharing resources
+            - Server Clustering provides better redundancy than Load balancing since the servers are grouped together
+            - Load Balancing provides increase availability, better performance, and scalability while Server clustering provides high availability, fault tolerance and scalability
+            - They're similar in that you can add and remove devices from both
   
   - <u>Site resiliency</u>: recovery site is prepped and ready if something happens to the primary data site
-    - <u>Hot</u>: exact replica of data
-    - <u>Cold</u>: empty building where you need to bring everything
+    - <u>Hot</u>: fully functional real time replica of the primary environment
+    - <u>Cold</u>: an empty building with basic infrastructure like power, cooling, and network connectivity
     - <u>Warm</u>: big room with rack space where you bring the hardware
-    - <u>Geographic dispersion</u>: physically different from the primary location
-    - <u>Platform diversity</u>: using different OS  across a system to reduce attacks on the same vulnerability (having the same OS everywhere could mean they have the same vulnerability) 
+    - <u>Geographic dispersion</u>: data center or recovery sites located at a sufficient different distance from the primary site 
+
+    - <u>Platform diversity</u>: using different OS' across a system to reduce attacks on the same vulnerability (having the same OS everywhere could mean they have the same vulnerability) 
+
     - <u>Multi-cloud</u>: use different cloud providers
-    - <u>Continuity of operations planning (COOP)</u>: a backup up plan that doesn't involve using technology (i.e. the procedures to use hard copies)
+
+    - <u>Continuity Of Operations Planning (COOP)</u>: the plan set in place if there is a disruption. It outlines essential functions and services that will be maintained during and after the disruption to ensure operations continue as normally (i.e. the procedures to use hard copies)
 
 
 # Capacity Planning
@@ -283,7 +303,7 @@
 # Recovery Testing
 - <u>Table top exercise</u>: go through steps as if you were actually going through them
 
-- <u>Fail over test</u>: test if redundancy works
+- <u>Fail over test</u>: test if redundancy works  
 ![alt text](image-26.png)
 
 - <u>Simulation</u>: test with a simulated event
@@ -292,32 +312,35 @@
 
 
 # Backups
-- <u>Onsite/offsite</u>: for onsite, data and backup are at the same location. for offsite, data needs to be transferred over the internet somewhere else
+- <u>Onsite/offsite</u>: 
+    - Onsite 
+        - Data and backups are at the same location 
+    - Offsite,
+        - Data needs to be transferred over the internet somewhere else
     - Organizations can use both, onsite for short term and offsite for long term 
 
-- <u>Frequency</u>: need to determine how often data needs to backup
+- <u>Frequency</u>: need to determine how often data needs to backed up 
     - Depends on the different systems involved
     - May have multiple backup sets
     - Lots of planning is involved
 
 - Encryption
 
-- <u>Snapshots (VM)</u>: instant backup of an entire system
+- <u>Snapshots (VM)</u>: instant backup of an entire system  
 ![alt text](image-27.png)
-
 
 - <u>Recovery</u>: verify the backups can be restored and used
     
 - <u>Replication</u>: copy data to one or multiple locations at the same time
     - The replicas are updated as the primary data is updated
 
-- <u>Journaling</u>: logs changes before committing them to the final file
+- <u>Journaling</u>: writing data to a temporary journal, located on a drive, before writing to the database. If power is lost, the system can recover the last transaction
     - Helps against power outages when updating/working on the data
 
 
 # Power Resiliency
-- <u>Uninterruptible Power Supply(UPS)</u>: short term power source
-    - Offline/Standby UPS = always running on main power but it power fails there's and internal switch that moves from main to battery backup
+- <u>Uninterruptible Power Supply (UPS)</u>: short term power source
+    - Offline/Standby UPS =  normally runs on main power but if power fails, an internal switch quickly transfers the load to the backup battery
     - Line-interactive UPS = slowly increases voltage if there is a drop in main line power
     - On-line/double-conversion UPS = used for always using battery backup
     - Generators are used for long term power
