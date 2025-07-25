@@ -396,7 +396,7 @@
 # Segmentation and Access Control
 - Segmenting/separating a network in physical, logical or virtual parts can improve security and performance.
 
-    - <u>Access Control List (ACL)</u>: allow or disallow traffic
+    - <u>Access Control List (ACL)</u>: set of rules that define what a device or user can access once they're on the network
         - It can be used to restrict access to network devices through the use of limited IP addresses or other ID
         - Example:  
         ![alt text](image-13.png)
