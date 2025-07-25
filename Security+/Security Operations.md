@@ -1,5 +1,5 @@
 # Secure Baselines
-<u>Security Baselines</u>: minimum security configurations and settings established to protect and organizations systems and assets
+<u>Security Baselines</u>: minimum security configurations and settings established to protect an organizations systems &  assets
 
 - Establish
     - Need to create the baselines. They can be found from manufacturers 
@@ -33,7 +33,7 @@
 - Servers
     - Keep servers updated (i.e. system updates, service packs, security patches)
     - Follow good practices like complex passwords
-    - Limit access to account using least privilege and disable unused account
+    - Limit access to accounts using least privilege and disable unused accounts
     - Limit network access
     - Monitor and secure using anti-virus/anti-malware
 
@@ -66,7 +66,7 @@
 
 #### Mobile
 - System admins can control devices by using a mobile device management (MDM) since its a centralized way to view all devices in a organization
-    -  Lets admin do stuff like lock after a certain amount of time, require a PIN to use, separate information in the device, have the camera turned off all the time, etc.
+    -  Lets admin do stuff like lock an item after a certain amount of time, require a PIN to be used to sing in, separate information in the device, have the camera turned off all the time, etc.
 
 - <u>Bring your own device (BYOD)</u>: use personal device for personal use and work
     - Difficult to manage since you have to manage personal info and company info
@@ -84,7 +84,7 @@ enabled (COPE)
     - Susceptible to on-path attacks and DOS attacks
 
 - Bluetooth
-    - Susceptible to attacks like WIFI and cellular networks. Be careful to connecting to anything public since anyone can also connect and exploit your device
+    - Susceptible to attacks like WIFI and cellular networks. Be careful of connecting to anything public since anyone can also connect and exploit your device
 
 
 # Wireless Security Settings
@@ -112,7 +112,7 @@ enabled (COPE)
     - Used for tracking, personalization, session management
     - Sensitive information should not be saved in a cookie
 
-- <u>Static code analysis (SAST) </u>: automatically scanning an application's source code for vulnerabilities before its executed
+- <u>Static code analysis</u>: automatically scanning an application's source code for vulnerabilities before its executed
 
 - <u>Code signing</u>: digitally signing software to verify its authenticity and integrity to make sure it has not been tampered with
 
@@ -137,11 +137,12 @@ enabled (COPE)
         - Type of asset
         - Hardware
         - Software
-    - Monitoring/asset tracking
-        - Helps the helpdesk for tracking of devices
-        - Inventory (i.e. laptops, desktops, servers, etc.)
-        - Enumeration
-            - Lists all parts if an asset (i.e. CPU, memory, storage drive, keyboard)
+
+- Monitoring/asset tracking
+    - Helps the helpdesk for tracking of devices
+    - Inventory (i.e. laptops, desktops, servers, etc.)
+    - Enumeration
+        - When referring to monitoring/asset tracking, it means listing and labeling each asset (i.e. hardware, software, or data) so it can be tracked, managed and secured properly
 
 - Disposal/decommissioning
     - Remove all data. It wont be used again
@@ -151,7 +152,7 @@ enabled (COPE)
 
 - Certification
     - Destruction of hardware by a third party. There is a confirmation that the hardware is destroyed.
-    - Used when a organization does not have time destroy the hardware themselves
+    - Used when a organization does not have time to destroy the hardware themselves
 
 - Data retention
     - Backup data
@@ -168,7 +169,7 @@ enabled (COPE)
     - The vulnerabilities are found easily
 
 - Dynamic analysis(Fuzzing)
-    - Sends random input to an application in order to see what the output might be (i.e. fault injecting, robustness testing, syntax testing, negative testing)
+    - Sends random input to an application in order to see what the output might be (aka fault injecting, robustness testing, syntax testing, negative testing)
 
 - Package monitoring
     - Some applications are distributed in a package. You need to confirm the package is legitimate
@@ -176,7 +177,7 @@ enabled (COPE)
 
 
 # Threat Intelligence
-- Open-source intelligence (OSINT)
+- <u>Open-source intelligence (OSINT)</u>: method of gathering and analyzing publicly available information to help inform decisions
     - Use discussion groups or anything public including the government
     - Commercial data like maps, financials are also usable
 
@@ -197,7 +198,7 @@ enabled (COPE)
     - Rules of engagement define purpose and scope of the test. Basically it determines what is allowed to be tested and when
     - Once in the system, the goal should be too move across systems (horizontally)
     - Make sure you have a way back into the system (i.e. a back door)
-    - Leverage current compromised systems to access other as a stepping stone
+    - Leverage current compromised systems to access others as stepping stones
 
 
 # Analyzing Vulnerabilities
@@ -208,12 +209,12 @@ enabled (COPE)
 - Prioritize
     - Refer to public disclosures when deciding how to categorize vulnerabilities from least important to most important
 
-- <u>Common Vulnerability Scoring System (CVSS)</u>: rating system used to categorize vulnerabilities on a level of big of a threat they are
+- <u>Common Vulnerability Scoring System (CVSS)</u>: rating system used to categorize vulnerabilities on a level of how big of a threat they are
 
 - <u>Common Vulnerability Enumeration (CVE)</u>: list of vulnerabilities and how important they are
 
 - Vulnerability classification
-    - Scanning results when scanning most parts of a system but not everything. The signatures are the key.
+    - Scanning most parts of a system but not everything. The signatures are the key.
     
 - <u>Exposure factor</u>: determines how risky a vulnerability is as a percentage
 
@@ -293,12 +294,12 @@ enabled (COPE)
 
 
 # Security Tools
-- <u>Security Content Automation Protocol (SCAP)</u>: allows tools to identify and act on the same criteria
+- <u>Security Content Automation Protocol (SCAP)</u>: specifications developed by NIST to standardize the way security software communicates information about vulnerabilities, configurations, and compliance
     - Maintained by NIST
     - Validates the security configuration
     - Confirm patch installs
     - Scan for a security breach
-    - Useful i large environments 
+    - Useful in large environments 
 
 - <u>Benchmarks</u>: applying security best practices to everything
     - For a mobile device, good benchmarks would be to disable screenshots, disable screen recordings, prevent voice calls when locked
@@ -309,21 +310,22 @@ enabled (COPE)
 
 - Security information and event management (SIEM)
     - Collects security alerts
-    - Can be used to forensic analysis 
+    - Can be used for forensic analysis 
 
 - Antivirus
     - Malware refers to the broad malicious software category
     - Anti-virus and anti-malware are now the same thing
 
-- <u>Data loss prevention (DLP)</u>: look and block any data you do NOT want running on a network
+- <u>Data loss prevention (DLP)</u>: set of tools and processes used to ensure that sensitive data is not lost, misused, or accessed by unauthorized users
     - Stop the data before the attacker gets it
 
 - Simple Network Management Protocol (SNMP) traps
-    - Leverage to request statistics from a device
+    - <u>SNMP</u>: protocol used for collecting and organizing information about managed devices on IP networks and for modifying that information to change device behavior
+    - Can be leveraged to request statistics from a device
     - Poll devices at fixed intervals
 
-- <u>NetFlow</u>: gathers traffic from all traffic flows
-    - Standard collection method
+- <u>NetFlow</u>: network protocol for collecting IP traffic and monitoring network flow
+    - Used to get a picture of network traffic flow and volume
     - Shared communication between devices
 
 - Vulnerability scanners
@@ -344,55 +346,55 @@ enabled (COPE)
 - Rules
     - They're logical paths
     - They can be generic or specific
-    - Can have a implicit deny
-    - Examples:
+    - Can have a implicit deny  
+    - Examples:  
         ![alt text](image-29.png)
 
 - Screened subnets
-    - Its and additional layer of security between you and the internet
+    - Its an additional layer of security between you and the internet
 
 - IDS/IPS
     - Different ways to find malicious traffic
-    - Can customize IPs rules. It can take time configure rules (false positives can appear)
+    - Can customize IPs rules. It can take time to configure rules (false positives can appear)
 
 
 # Web Filtering
-− Agent-based
-    - Software agents are installed on individual devices to monitor and filter web traffic
-    - Users can be located anywhere
-    - Updates need to be done to all agents
+− Agent-based  
+    - Software agents are installed on individual devices to monitor and filter web traffic  
+    - Users can be located anywhere  
+    - Updates need to be done to all agents  
 
-− Centralized proxy
-    - Proxy is sitting in between internet and devices. It can be useful for caching, access controls, URL filtering, and content scanning
+− Centralized proxy  
+    - Proxy is sitting in between internet and devices. It can be useful for caching, access controls, URL filtering, and content scanning  
     ![alt text](image-30.png)
 
-− Universal Resource Locator (URL) scanning aka URI
-    - Can be managed by categories
-    - Can have limited control
-    - Integrated with NGFW
+− Universal Resource Locator (URL) scanning aka URI  
+    - Can be managed by categories  
+    - Can have limited control  
+    - Integrated with NGFW  
 
 − Block rules
-    - Can be done for specific URLs(i.e. *.professormesser.com: Allow)
+    - Can be done for specific URLs (i.e. *.professormesser.com: Allow)
     - Categorize by site content
     
 − Reputation
-    - Filter based on perceived  (i.e. Trustworthy, Low risk, Medium risk Suspicious, High risk)
+    - Filter based on whats perceived  (i.e. Trustworthy, Low risk, Medium risk, Suspicious, High risk)
     - The reputations can be assigned automatically or manually after a scan
 
 
 # Operating System Security
 - <u>Group Policy</u>: manage the computers or users
-- SELinux
+- <u>SELinux</u>: security feature in Linux that limits what programs can do using strict security policies to reduce damage from attacks
     - Adds mandatory access control to Linux
 
 
 # Secure Protocols
 - Protocol selection
-    - Always use protocols that use encryption. If not possible, don't use the app at all
+    - Always use protocols that use encryption. If not possible, don't use the app at all  
     ![alt text](image-31.png)
 
 - Port selection
-    - You can have secure(i.e. HTTPS) and insecure (i.e. HTTP) ports
+    - You can have secure (i.e. HTTPS) and insecure (i.e. HTTP) ports
     - The port number does not guarantee security
         - Need to verify security features are enabled
 
@@ -402,18 +404,18 @@ enabled (COPE)
 
 
 # Email Security
-- <u>Mail gateway</u>: verifies if an email was sent from a valid source. If not it will send it to Spam
+- <u>Mail gateway</u>: verifies if an email was sent from a valid source. If it wasn't, it will be directed to Spam
 
-- <u>Sender Policy Framework (SPF)</u>: which email servers are authorized to send mail on our behalf
+- <u>Sender Policy Framework (SPF)</u>: email authentication method that verifies that a mail server is authorized to send emails from a specific domain
 
-- <u>Domain Keys Identified Mail (DKIM)</u>: a mail server digitally signs all outgoing mail
+- <u>Domain Keys Identified Mail (DKIM)</u>: uses digital signatures to verify sender's identity and ensure email integrity
     - Validated by receiving mail servers
 
-- <u>Domain based Message Authentication Reporting and conformance (DMARC)</u>: an extension of DKIM and SPF to better help against fake emails
+- <u>Domain-based Message Authentication Reporting & Conformance (DMARC)</u>: tells mail servers what to do when DKIM or SPF fail, whether to mark failing emails as "spam", deliver it anyway or drop it altogether
 
 
 # Monitoring Data
-<u>File Integrity Monitoring (FIM)</u>: process that tracks and analyzes changes to files, directories and system configurations
+<u>File Integrity Monitoring (FIM)</u>: monitor and detect changes to files and directories on systems. They generate alerts or notifications when unauthorized changes occur
     - Windows = System File Checker (SFC)
     - Linux = Tripwire
 
@@ -430,7 +432,7 @@ enabled (COPE)
     - Block viruses and malware or anything traversing the network that is suspicious 
 
 - DLP and email
-    - Checks every email inbound(i.e.fake wire transfers, W-2 transmission) and outbound(i.e. block keywords, identify imposters, quarantine)
+    - Checks every email inbound (i.e.fake wire transfers, W-2 transmission) and outbound (i.e. block keywords, identify imposters, quarantine)
 
 
 # Endpoint Security
@@ -438,28 +440,28 @@ enabled (COPE)
     - <u>Edge</u>: location where the inside of the network meets the outside aka the internet
     - Use firewalls. The firewall rules may change
 
-- Access controls 
-    - Determines where you can control from. Either inside or outside the network
+- <u>Network Access Control (NAC)</u>: controls access to a network by validating devices and users before they are allowed to connect
 
 - Posture Assessment
     - Ensure a device is trustworthy before connecting to the network
         - Could have malware infections/missing anti-malware
     - Perform a health check before connecting to the network
 
-- <u>Endpoint detection and response solutions (EDR)</u>: securing individual endpoints (i.e. computer and servers) while providing detailed visibility into their activities and enabling quick responses to threats
+- <u>Endpoint Detection and Response Solutions (EDR)</u>: monitors and protects individual devices (endpoints) like laptops, desktops, and servers
 
-- <u>Extended detection and response (XDR)</u>: expands on EDR and includes multiple layers including endpoints, networks, cloud environments
+- <u>Extended Detection and Response (XDR)</u>: expands on EDR and pulls together data from multiple sources like endpoints, email, cloud, and network systems
 
 
 # Identity and Access Management
-- <u> Lightweight Directory Access Protocol (LDAP)</u>: protocol for reading and writing directories over an IP network
+- <u> Lightweight Directory Access Protocol (LDAP)</u>: protocol that allows applications to access and authenticate specific user information across directory services
     - It has a hierarchical structure
 
 - <u> Security Assertion Markup Language (SAML)</u>: authentication and authorization for a 3rd party database
     - Not original meant for mobile devices
 
-- <u>OAuth</u>: an authorization framework that determines what resources a user will be able to access
-    - Used with OpenID,it handles authentication while OAuth handles authorization
+- <u>OAuth</u>: token based authorization used to grant users limited access to their resources without exposing credentials
+    - Used with OpenID
+        - OpenID handles authentication while OAuth handles authorization
 
 - <u>Federation</u>: allows network access without using a local authentication database
     - Used when you want to sign in to an app but don't want to create an account
@@ -470,7 +472,7 @@ enabled (COPE)
 - <u>Access controls</u>: after being authenticated, users need the resources in order to do their job
     - The process of determining rights
 
-- <u>Mandatory Access Control</u>: the OS limits the operation on an object
+- <u>Mandatory Access Control</u>: when the OS or security system enforces access based on security labels assigned to users and resources
     - Every object gets a label (i.e. confidential, secret, top secret, etc.)
     - The admin decides who has what access
 
@@ -482,8 +484,8 @@ enabled (COPE)
     - Access is determined through system enforced rules
     - The rules is associated with an object (i.e. a data in a lab can only be accessed between 9am-5pm)
 
-- <u>Attribute Based Access Control</u>: next generation authorization model where access to data is based on many different criteria
-    - Combine and evaluates multiple parameters (i.e. access based on IP, time of day, desired action, and relationship to data all at the same time)
+- <u>Attribute Based Access Control</u>: new generation authorization where access is based on a combination of attributes related to the user, resource, environment, and requested action
+    - Combines and evaluates multiple parameters (i.e. access based on IP, time of day, desired action, and relationship to data all at the same time)
 
 - <u>Time of day restriction</u>: access to a resource based on the time during the day (i.e. conference room access is limited after 8pm)
 
@@ -500,17 +502,15 @@ enabled (COPE)
 # Password Security
 - The longer and more complex the password is the better. Strong passwords are at least 8 characters long
     - Age
-        - How long the since a password was modified
+        - How long since a password was modified
     - Expiration 
         - How long the current password will be usable before it needs to be changed again
     - Password managers
         - Manage multiple/different passwords
     - Password less
         - Authenticate WITHOUT a password (i.e. facial recognition, PIN)
-    - Just-in-time permissions
-        - A user is granted temporary admin access to perform a certain task related to passwords
-        - Password vaulting
-            - Passwords stored in the vault and determines who gets access to credentials
+    - <u>Just-in-time permissions </u>: gives access only when its needed and take it away afterward (i.e. A user is granted temporary admin access to perform a certain task related to passwords)
+        - <u>Password vaulting</u>: storing passwords in a vault and determines what credentials each user can access
 
 
 # Scripting and Automation
@@ -541,7 +541,7 @@ enabled (COPE)
     - They're expensive 
     - They're complex and need to make sure it works as intended
     - Its a Single point of failure since nothing would get done if the script stops working
-    - Fixing a problem with script can create more problems to be fixed
+    - Fixing a problem with a script can create more problems
     - The script needs to be maintained
 
 
@@ -593,7 +593,7 @@ enabled (COPE)
 
 
 # Digital Forensics
-- <u>Legal hold</u>:  a legal technique to preserve relevant information
+- <u>Legal hold</u>: a legal technique to preserve relevant information
 
 - Chain of Custody
     - Controlling evidence
@@ -607,7 +607,7 @@ enabled (COPE)
     - Document findings
     - Lets have a summary of information
     - Contains a detailed explanation of data acquisition
-    - Helps professional make conclusions
+    - Helps professionals make conclusions
 
 - Preservation
     - Isolate the data
