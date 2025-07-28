@@ -6,11 +6,11 @@
     - Answers the question "What happens when..."
     - They need to be enforced
 
-- <us>Acceptable  use Policies</u>: list of policies that states what users are allowed to do with the given items at their disposal
+- <us>Acceptable Use Policies (AUP)</u>: set of rules that explain what employees are allowed and not allowed to do when using the company's computers, internet, and other tech resources
     - Includes topics like internet use, computers, mobile devices, etc.
-    - Used by an organization for legal issues to protect themselves(if needed)
+    - Used by an organization for legal issues to protect themselves (if needed)
 
-- <us>Business continuity</u>: an alternative plan should the main process is not working properly
+- <us>Business continuity</u>: an alternative plan should the main process not working properly
     - Needs to be created and tested before an issue occurs
 
 - Incident Response Roles
@@ -21,7 +21,7 @@
     - Users
 
 - Change Management
-    - This could be software upgrade, change firewall configuration, modify switch ports, etc.
+    - This could be software upgrade, change firewall configurations, modify switch ports, etc.
 
 
 # Security Standards
@@ -59,8 +59,7 @@
     - The security team must follow legal guidelines  (i.e. keeping data within a certain region)
 
 - Industry
-    - Each industry may require specific security considerations
-    - Electrical power an public utilities
+    - Each industry may require specific security considerations (i.e. Accessing electrical power and public utilities information)
     - Medical has high secure data storage and access logs
         - Data encryption and protection
 
@@ -81,36 +80,41 @@
 
 
 # Risk Management
-- Risk management helps to understand potential risks and identify weaknesses before the become an issue
+- Risk management helps to understand potential risks and identify weaknesses before they become an issue
 
 
 # Risk Analysis
 - Annualized Rate of Occurrence
     - It determines how often a risk will happen in 1 year
 
-- Risk appetite
-    - Like a highways speed limit
-    - Government authorities have set the speed limit. The limit is an acceptable balance between safety and convenience
+- <u>Risk appetite</u>: an organization's willingness to retain or embrace a certain level of risk to further goals
+    - Like a highways speed limit. Government authorities have set the speed limit. The limit is an acceptable balance between safety and convenience
 
-- Risk Tolerance
-    - Drivers will be ticketed when the speed limit is violated
-    - Ticketing usually occurs well above the posted limit
-    This tolerance can change with road conditions, weather, traffic, etc.
+- <u>Risk Tolerance</u>: the max amount of risk an organization is willing to take one
+    - Drivers will be ticketed when the speed limit is violated. Ticketing usually occurs well above the posted limit. This tolerance can change with road conditions, weather, traffic, etc.
 
+- <u>Qualitative Risk Analysis</u>: method of assessing risk based on potential impact and likelihood without assigning a numerical value
+
+- <u>Quantitative Risk Analysis</u>: method of evaluating risk using numerical measurements
+
+- <u>Single Loss Expectancy (SLE)</u>: amount of money expected to be lost  in a single event
+    - Formula: $Asset Value * Exposure Factor% = SLE
+
+- <u>Annualized Loss Expectancy (ALE)</u>: amount of money expected to be lost  in a single event
+    - Formula: SLE * ARO = ALE
 
 # Risk Management Strategies
 - Transfer
-    - Move the risk to another party
-    - Buy cybersecurity insurance
+    - Move the risk to another party (i.e. Buy cybersecurity insurance)
 
 - Accept
     - Accept the risk
 
 - Accept with exemption
-    - A security policy can not be followed
+    - i.e. A security policy can not be followed
 
 - Accept with exception
-    - Internal security policies are not applied
+    - i.e. Internal security policies are not applied
 
 - Risk reporting
     - Document with a list of all the risks the organization is tracking
@@ -119,14 +123,13 @@
 
 
 # Business Impact Analysis
-<u> Recovery Time Objective</u>: time to get back up and running
+<u> Recovery Time Objective (RTO)</u>: the max acceptable amount of time to restore a system or process after a disaster or failure
 
-<u> Recovery Time Objective</u>: a point int time you can say you are back up and running
+<u> Recovery Point Objective (RPO)</u>: the max acceptable amount of data loss measured in time
 
-<u>Mean Time To Repair (MTTR)</u>: average time to fix a required issue
-    - Includes diagnosing and everything related to fix the issue
+<u>Mean Time To Repair (MTTR)</u>: average time to repair a system or component. Includes diagnosing and everything related to the issue
 
-<u>Mean Time Between Failures (MTBF)</u>: the time a system will run before another outage
+<u>Mean Time Between Failures (MTBF)</u>: the average time between failures of a system or component during operation
 
 
 # Third Party Risk Assessment
@@ -148,22 +151,21 @@
     - Involves investigating and verifying information like financial status, pending or past legal issues, etc.
 
 - Conflict of Interest
-    - A personal interest could compromise judgement like potential partner also does business with your largest competitor 
+    - A personal interest could compromise judgement like a potential partner also does business with your largest competitor 
 
 - Questionnaires
     - Questions for the third party to asses and verify they are being thorough with your data (i.e. plans in place for disaster recovery, vendors due diligence)
 
 
 # Agreement Types
-<u>Service Level Agreement</u>: minimum terms for services provided (i.e. uptime, response time agreement, etc.)
+<u>Service Level Agreement</u>: standard of service a client can expect from a provider (i.e. uptime, response time agreement, etc.)
     - A Contract with an internet provider would mean the SLA is no more than 4 hours of unscheduled downtime
 
-<u>Memorandum of Understanding (MOU)</u>: both sides agree in general to the contents of the memorandum
+<u>Memorandum of Understanding (MOU)</u>: outlines a mutual agreement on project goals. Often the first step toward collaboration.
     - Its not a contract
     - It states common goals and nothing else
-    - A Contract with an internet provider would mean the SLA is no more than 4 hours of unscheduled downtime
 
-<u>Memorandum of Agreement (MOA)</u>: next step after a MOU
+<u>Memorandum of Agreement (MOA)</u>: document outlining specific responsibilities and roles of involved parties
     - More details than a MOU
 
 <u>Master Service Agreement (MSA)</u>: legal contract and agreement of terms
@@ -171,10 +173,10 @@
     - Many detailed transactions happen here
     - Future projects will be based on this agreement
 
-<u>Work Order (WO)/ Statement of Work (SOW)</u>: specific list of items to be completed (i.e. details of the job, location, deliverables schedule, acceptance criteria, etc.)
+<u>Work Order (WO)/ Statement of Work (SOW)</u>: specifies the details of work to be done (i.e. details of the job, location, deliverables schedule, acceptance criteria, etc.)
     - Used with the MSA
 
-<u>Business Partners Agreement (BPA)</u>: describes financial details associated with the agreement and describes what type of ownership stake is acquired as part of the agreement
+<u>Business Partners Agreement (BPA)</u>: a document that explains the money details and ownership share involved when two or more parties go into business together
     - Contains who makes the business decisions
     - Financial issue
     - Disaster recovery
@@ -190,7 +192,8 @@
 
 
 # Privacy
-- Local/Regional (i.e. state and local governments, vehicle registration)
+- Local/Regional (state and local governments)
+    - i.e. Vehicle registration
 - National (i.e. HIPAA, COPPA)
 - Global
     - Many countries are working together for privacy
@@ -204,12 +207,13 @@
     - Checks for effectiveness of policies and procedures
     - Find vulnerabilities before the attackers
 
-- <u>Attestation</u>: provides an opinion of truth or accuracy of a company's security positioning
+- <u>Attestation</u>: providing an opinion of a companies's security position. A 3rd party generally attests to a companies' security posture after testing the system
     - An auditor will attest to a company's cybersecurity posture
 
+- <u>Audit Committee</u>: internal committee overseeing an organization's internal controls, financial reporting and compliance
 
 # Penetration Tests
-- OS system security can be bypassed by physical means
+- OS security can be bypassed by physical means
     - Accessing devices can be done by first accessing a door, window, elevator, etc.
 
 - Known environment
@@ -227,10 +231,10 @@
     - Focus on a particular part of the system
     - Create a network map to see where routers, networks, and remote sites are located and connected to each other
 
-- Passive Reconnaissance
+- <u>Passive Reconnaissance</u>: gathering information about an a organization without network interaction
     - Use social media, corporate websites, online forums, social engineering, dumpster dive, or speak with business organizations that interact with the target
 
-- Active Reconnaissance
+- <u>Active Reconnaissance</u>: directly interacting with a target system to gather information
     - Trying doors, ping and port scans, DNS queries, OS scans, OS fingerprinting, service and version scans
 
 
