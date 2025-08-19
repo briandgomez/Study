@@ -66,7 +66,7 @@
 
 #### Mobile
 - System admins can control devices by using a mobile device management (MDM) since its a centralized way to view all devices in a organization
-    -  Lets admin do stuff like lock an item after a certain amount of time, require a PIN to be used to sing in, separate information in the device, have the camera turned off all the time, etc.
+    -  Lets admin do stuff like lock an item after a certain amount of time, require a PIN to be used to sign in, separate information in the device, have the camera turned off all the time, etc.
 
 - <u>Bring your own device (BYOD)</u>: use personal device for personal use and work
     - Difficult to manage since you have to manage personal info and company info
@@ -88,7 +88,7 @@ enabled (COPE)
 
 
 # Wireless Security Settings
-- <u>Wi-Fi Protected Access 3 (WPA3)</u>: protocol used for security on WIFI
+- <u>Wi-Fi Protected Access 3 (WPA3)</u>: newest security standard that keeps your Wifi connection safe.
     - Galois/Counter Mode Protocol (GCMP) block cipher code is a stronger encryption than the one used on WPA2 
 
 - <u>AAA/Remote Authentication</u>: tracks resources connecting to a network
@@ -116,8 +116,9 @@ enabled (COPE)
 
 - <u>Code signing</u>: digitally signing software to verify its authenticity and integrity to make sure it has not been tampered with
 
-- <u>Sandboxing</u>: the application can not access unrelated resources
-    - They play in their own sandbox
+- <u>Sandboxing</u>: the practice of isolating an environment when working with potentially malicious software to prevent the primary system from being affected
+    - The application can not access unrelated resources
+    - "Play in their own sandbox"
 
 - You can monitor your application in real time
     - View blocked attacks
@@ -144,8 +145,10 @@ enabled (COPE)
     - Enumeration
         - When referring to monitoring/asset tracking, it means listing and labeling each asset (i.e. hardware, software, or data) so it can be tracked, managed and secured properly
 
-- Disposal/decommissioning
-    - Remove all data. It wont be used again
+- Sanitization
+    - Remove all data. It wont be used again.
+    - There are different use cases (i.e. clean a hard drive for future use, permanently delete a single file)
+    - If data is completely removed, the device can be used by someone else without worrying if the new user can access the old data
 
 - Destruction
     - Physically destroy hardware
@@ -161,18 +164,25 @@ enabled (COPE)
 
 
 # Vulnerability Scanning
-- Vulnerability scans only check what potential vulnerabilities are there like a port scan
+- Vulnerability scans only check what potential vulnerabilities there are like a port scan
     - Not all scans are accurate. Need to review reports to view what is accurate and whats not
 
 - Static analysis
     - Scans for multiple vulnerabilities to help identify security flaws
+        - Involves using Static Application Security Testing (SAST) software
     - The vulnerabilities are found easily
+    - Not everything can be identified through analysis (i.e. authentication, security, insecure cryptography, etc.)
+    - Requires verification of each finding to avoid false-positives
 
-- Dynamic analysis(Fuzzing)
+- Dynamic analysis (Fuzzing)
     - Sends random input to an application in order to see what the output might be (aka fault injecting, robustness testing, syntax testing, negative testing)
+    - Looking for something out if the ordinary to occur (i.e. application crash, server error, exception)
 
 - Package monitoring
     - Some applications are distributed in a package. You need to confirm the package is legitimate
+        - Trust the source
+        - No added malware
+        - No embedded vulnerabilities
     - Confirm package is safe before deploying
 
 
@@ -182,7 +192,7 @@ enabled (COPE)
     - Commercial data like maps, financials are also usable
 
 - Proprietary/third-party
-    - They can analyze threats across multiple organizations simultaneously
+    - 3rd party organizations who analyze threats across multiple organizations simultaneously
 
 - Information-sharing organization
     - Can be private or public organizations
@@ -214,15 +224,17 @@ enabled (COPE)
 - <u>Common Vulnerability Enumeration (CVE)</u>: list of vulnerabilities and how important they are
 
 - Vulnerability classification
-    - Scanning most parts of a system but not everything. The signatures are the key.
+    - Scanning most parts of a system but not everything. 
+    - The signatures are the key in that they have information related to the latest vulnerabilities
+        - Example: ![alt text](image-32.png)
     
-- <u>Exposure factor</u>: determines how risky a vulnerability is as a percentage
+- <u>Exposure Factor (EF)</u>: determines how risky a vulnerability is as a percentage
 
 - Environmental variables
-    - If a system is isolated it might not be a priority but if its on the public cloud that's used by many users it could be the number one priority. The environment a system is determines how important it is.
+    - If a system is isolated it might not be a priority but if its on the public cloud that's used by many users it could be the number one priority. The environment a system is a part of determines how important it is.
 
 - Industry/organizational impact
-    - Who is affected by it should an attack happen. Some attacks have bigger affects on other users than others
+    - Who is affected by it should an attack happen. Some attacks have bigger affects on others
 
 - Risk tolerance
     - An organization's willingness to accept the potential negative impact of risks, even after mitigation efforts have been applied
@@ -234,7 +246,7 @@ enabled (COPE)
     - Schedule vulnerability/patches
 
 - Insurance
-    - Cybersecurity insurance after an attack happens to get lost money and data and prevent lawsuits
+    - Cybersecurity insurance after an attack helps to get lost money &  data and prevents lawsuits
     - It doesn't cover everything
 
 - Segmentation
@@ -250,7 +262,7 @@ enabled (COPE)
         - Modify internal security controls and software firewalls
 
 - Exceptions and exemptions
-    - Some vulnerabilities can't be patched so they will not be taken care of. The severity of these vulnerabilities may not be high so they can be left alone (i.e. a vulnerability that require physical access)
+    - Some vulnerabilities can't be patched so they will not be taken care of. The severity of these vulnerabilities may not be high so they can be left alone (i.e. a vulnerability that requires physical access)
 
 - Validation of remediations
     - Rescan, Audit, and verify the patches/solutions worked
@@ -282,11 +294,9 @@ enabled (COPE)
 - Archiving
     - May be mandated by law to hold onto certain information
 
-- Alerting
+- Alert response and remediation/validation
     - Keeps the right people informed
     - Help enable quick response and status information 
-
-- Alert response and remediation/validation
     -  Quarantine
         - Isolate the system from the rest of the network to prevent further attacks
     - Alert tuning
@@ -305,8 +315,12 @@ enabled (COPE)
     - For a mobile device, good benchmarks would be to disable screenshots, disable screen recordings, prevent voice calls when locked
 
 - Agents/agentless
-    - Agents can check if a device is compliant and provide additional detail 
-    - It checks the system is working properly but it needs to be maintained updated
+    - <u>Agent Based Solution</u>: specialized software installed directly onto a device (i.e. endpoint, server, or VM) in order to perform security related tasks and report data (i.e. antivirus, endpoint detection)
+        - Agents can check if a device is compliant and provide additional details
+        - Best used for real time security, in depth monitoring, and proactive actions
+        - It checks the system is working properly but it needs to be maintained updated
+    - <u>Agentless Solution</u>: no software is installed. The monitoring system connects to the device or cloud service (via APIs, SNMP or cloud provider) to gather usage and security data
+        - Best used for simple and broad visibility of a system
 
 - Security information and event management (SIEM)
     - Collects security alerts
@@ -342,6 +356,8 @@ enabled (COPE)
     - Microsoft rdp = tcp/3389
     - dns query = udp/53
     - ntp = udp/123
+    - smtp = tcp/25
+    - ftp = tcp/21
 
 - Rules
     - They're logical paths
@@ -350,8 +366,9 @@ enabled (COPE)
     - Examples:  
         ![alt text](image-29.png)
 
-- Screened subnets
+- <u>Screened subnets:</u> small network placed between an internal trusted network and the internet. Its like a guarded courtyard between the street (internet) and your house (internal network). Visitors can access the courtyard but can't enter your house without permission.
     - Its an additional layer of security between you and the internet
+        ![alt text](image-33.png)
 
 - IDS/IPS
     - Different ways to find malicious traffic
@@ -359,27 +376,30 @@ enabled (COPE)
 
 
 # Web Filtering
-− Agent-based  
+- Agent-based  
     - Software agents are installed on individual devices to monitor and filter web traffic  
     - Users can be located anywhere  
     - Updates need to be done to all agents  
 
-− Centralized proxy  
+- Centralized proxy  
     - Proxy is sitting in between internet and devices. It can be useful for caching, access controls, URL filtering, and content scanning  
     ![alt text](image-30.png)
 
-− Universal Resource Locator (URL) scanning aka URI  
+- Universal Resource Locator (URL) scanning aka URI  
     - Can be managed by categories  
     - Can have limited control  
     - Integrated with NGFW  
 
-− Block rules
-    - Can be done for specific URLs (i.e. *.professormesser.com: Allow)
+- Block rules
+    - Can be applied for specific URLs (i.e. *.professormesser.com: Allow)
     - Categorize by site content
     
-− Reputation
+- Reputation
     - Filter based on whats perceived  (i.e. Trustworthy, Low risk, Medium risk, Suspicious, High risk)
     - The reputations can be assigned automatically or manually after a scan
+
+- DNS Filtering
+    - Before connecting to a website get the IP address. Do a DNS lookup.
 
 
 # Operating System Security
@@ -456,14 +476,14 @@ enabled (COPE)
 - <u> Lightweight Directory Access Protocol (LDAP)</u>: protocol that allows applications to access and authenticate specific user information across directory services
     - It has a hierarchical structure
 
-- <u> Security Assertion Markup Language (SAML)</u>: authentication and authorization for a 3rd party database
-    - Not original meant for mobile devices
+- <u> Security Assertion Markup Language (SAML)</u>: language used in authenticating and authorizing data between an identity provider (i.e. Google) and service provider (i.e. AWS)
+    - Not originally meant for mobile devices
 
 - <u>OAuth</u>: token based authorization used to grant users limited access to their resources without exposing credentials
     - Used with OpenID
         - OpenID handles authentication while OAuth handles authorization
 
-- <u>Federation</u>: allows network access without using a local authentication database
+- <u>Federation</u>: using a 3rd party (i.e. Google, Facebook, GitHub) to authenticate a user instead of creating a new account
     - Used when you want to sign in to an app but don't want to create an account
     - 3rd parties like Facebook, Google, GitHub, etc. authenticate and authorize using a trust relationship
 
@@ -478,7 +498,7 @@ enabled (COPE)
 
 - <u>Discretionary Access Control</u>: user decides who has what access to each data
 
-- <u>Role Based Access Control (RBAC)</u>: access depends on role (i.e. admin, director, developer, etc.)
+- <u>Role Based Access Control (RBAC)</u>: access depends on the job role (i.e. admin, director, developer, etc.)
 
 - <u>Rule Based Access Control</u>: generic term for following rules
     - Access is determined through system enforced rules
@@ -533,7 +553,7 @@ enabled (COPE)
     - Add or remove user from groups
     - Ticket creation
     - Correct problems before involving a human (i.e. chatbot)
-    - Enable and disable services a certain times
+    - Enable and disable services at certain times
     - Continuous integration and testing (i.e. Code Pipeline)
     - Interact with APIs automatically
 
@@ -576,7 +596,6 @@ enabled (COPE)
     - Helps the organization be prepared if it occurs
 
 
-
 # Incident Planning
 - Tabletop exercises
     - Its less costly than performing a full scale disaster drill
@@ -588,12 +607,11 @@ enabled (COPE)
     - The focus is to determine the ultimate cause of an incident
     - Do not use tunnel vision. There can be multiple causes for the breach
 
-- Threat hunting
-    - You are searching for threats that already exist before an attacker has used them
+- <u>Threat hunting</u>: searching for threats that already exist before alerts or alarms go off
 
 
 # Digital Forensics
-- <u>Legal hold</u>: a legal technique to preserve relevant information
+- <u>Legal hold</u>: a legal technique to preserve relevant information for a legal case, investigation, audit, etc.
 
 - Chain of Custody
     - Controlling evidence
@@ -614,23 +632,22 @@ enabled (COPE)
     - Work from copies
     - Manage the data collection from mobile devices
 
-- E-discovery
-    - Involves collecting, preparing, reviewing, interpreting and producing electronic documents
+- <u>E-discovery</u>: involves collecting, preparing, reviewing, interpreting and producing electronic documents in a legal case or investigation
     - There's no analysis, mostly gathering
 
 # Log Data
-- <u>security log files</u>>: detailed security information (i.e. block/allowed traffic, exploit attempts)
+- <u>security log files</u>: detailed security information (i.e. block/allowed traffic, exploit attempts)
     - It also contains important security information such as documentation of every traffic flow and summary of attack info
 
-- <u>firewall logs</u>>: traffic flows through the firewall
+- <u>firewall logs</u>: traffic flows through the firewall
     - NGFW logs applications used, URL filtering categories, anomalies and suspicious data
 
-- <u>application logs</u>>: specific to the application
+- <u>application logs</u>: specific to the application
 
-- <u>endpoint logs</u>>: specific to each endpoint (i.e. phones, laptops, tablets, desktops, servers, etc.)
+- <u>endpoint logs</u>: specific to each endpoint (i.e. phones, laptops, tablets, desktops, servers, etc.)
 
-- <u>IP/IDS logs</u>>: contains information about predefined vulnerabilities
+- <u>IPS/IDS logs</u>: contains information about predefined vulnerabilities
 
-- <u>metadata</u>>: data that describes other data sources
+- <u>metadata</u>: data that describes other data sources
 
-- <u>packet captures</u>>: gathers packets on the network
+- <u>packet captures</u>: recording of network traffic. It saves the actual packets (the raw data being sent/received) to be analyzed later
