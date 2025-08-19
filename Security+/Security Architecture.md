@@ -8,8 +8,12 @@
 
 
 # Network Infrastructure Concepts
-- Switches can be physically located in different locations
-- Virtual Local Area Networks (VLAN) are separated logically but not physically (i.e. user A uses 1 portion of the device and user B uses a different portion)  
+- <u>Switch</u>: connects devices within the same network and uses MAC addresses to send data only to the right device. It’s like a postal worker who sorts and delivers mail to the correct person in the same building.
+    - Can be physically located in different locations
+- <u>Router</u>: connects different networks and uses IP addresses to decide where data should go. It’s like a postal service , delivering mail between different buildings and choosing the best route to get it to the right place.
+- <u>Local Area Network (LAN) </u>: network of devices all connected to each other in the same physical area like a office floor (i.e. An office that has a printer, laptop, phone all connected to a Wifi router)
+- <u>Virtual Local Area Networks (VLAN)</u>: a way to split 1 physical LAN into separate, smaller networks using a switch. Devices in different VLANS can't talk to each other unless a router or Layer 3 device allows it.
+    - Are separated logically but not physically (i.e. user A uses 1 portion of the device and user B uses a different portion)  
 - <u>Software-defined Network (SDN)</u>: separates different planes of a network such as the control and data plane. The control plane handles incoming traffic while the data plane controls where to redirect the traffic.
 ![alt text](image-14.png)
 
