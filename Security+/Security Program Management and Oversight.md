@@ -1,16 +1,16 @@
 # Security Policies
 - Security policies answer the "what" and "why" questions. The technical security controls answer "how"
 
-- <us>Information Security Policies</u>: big list of all security guidelines
+- <u>Information Security Policies</u>: big list of all security guidelines
     - Need to follow compliance requirements
     - Answers the question "What happens when..."
     - They need to be enforced
 
-- <us>Acceptable Use Policies (AUP)</u>: set of rules that explain what employees are allowed and not allowed to do when using the company's computers, internet, and other tech resources
+- <u>Acceptable Use Policies (AUP)</u>: set of rules that explain what employees are allowed and not allowed to do when using the company's computers, internet, and other tech resources
     - Includes topics like internet use, computers, mobile devices, etc.
     - Used by an organization for legal issues to protect themselves (if needed)
 
-- <us>Business continuity</u>: an alternative plan should the main process not working properly
+- <u>Business continuity</u>: an alternative plan should the main process not working properly
     - Needs to be created and tested before an issue occurs
 
 - Incident Response Roles
@@ -66,17 +66,16 @@
 
 # Data Roles and Responsibilities
 - Data Owner
-    - They are accountable for specific data. Often a senior officer
+    - The person or department who decides who can access the data, how the data is used, and the protections needed for it (i.e. CFO is the data owner of all financial records)
 
 - Data Controller
-    - Controls how the data will be used (i.e. payroll department)
+    - The entity that determines why and how the data is collected and processed (i.e. An online retailer determines what customer info to collect like name, address, payment details)
 
-- Data processor
-    - Processes the data from the controller (i.e. payroll company)
+- Data Processor
+    - The 3rd party or system that handles/processes the data on behalf of the controller (i.e. A cloud provider that stores and manages customer data)
 
 - Data custodian/steward
-    - Responsible for data accuracy, privacy, and security
-    - Works directly with the data
+    - The IT role that directly works with the data. They implement and enforce policies (i.e. A database admin)
 
 
 # Risk Management
@@ -87,11 +86,10 @@
 - Annualized Rate of Occurrence
     - It determines how often a risk will happen in 1 year
 
-- <u>Risk appetite</u>: an organization's willingness to retain or embrace a certain level of risk to further goals
-    - Like a highways speed limit. Government authorities have set the speed limit. The limit is an acceptable balance between safety and convenience
+- <u>Risk appetite</u>: an organization's overall willingness to accept a risk to achieve its goals (the mindset or amount of risk you're willing to take on)
 
-- <u>Risk Tolerance</u>: the max amount of risk an organization is willing to take one
-    - Drivers will be ticketed when the speed limit is violated. Ticketing usually occurs well above the posted limit. This tolerance can change with road conditions, weather, traffic, etc.
+- <u>Risk Tolerance</u>: the specific limits or boundaries of the risk appetite (the number or actual value of risk you're willing to take on)
+
 
 - <u>Qualitative Risk Analysis</u>: method of assessing risk based on potential impact and likelihood without assigning a numerical value
 
@@ -158,7 +156,7 @@
 
 
 # Agreement Types
-<u>Service Level Agreement</u>: standard of service a client can expect from a provider (i.e. uptime, response time agreement, etc.)
+<u>Service Level Agreement</u>: standard of service a client can expect from a provider (i.e. uptime, response time agreement, etc.)  
     - A Contract with an internet provider would mean the SLA is no more than 4 hours of unscheduled downtime
 
 <u>Memorandum of Understanding (MOU)</u>: outlines a mutual agreement on project goals. Often the first step toward collaboration.
@@ -168,7 +166,7 @@
 <u>Memorandum of Agreement (MOA)</u>: document outlining specific responsibilities and roles of involved parties
     - More details than a MOU
 
-<u>Master Service Agreement (MSA)</u>: legal contract and agreement of terms
+<u>Master Service Agreement (MSA)</u>: Legal contract that sets the terms and conditions for a long term relationship
     - A broad framework to cover later transactions
     - Many detailed transactions happen here
     - Future projects will be based on this agreement
