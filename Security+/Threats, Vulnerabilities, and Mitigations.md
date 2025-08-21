@@ -17,7 +17,7 @@
 
     - <u>Nation states</u>: external entity like government and national security
         - Can have multiple motivations
-        - Can perform constant attacks because large amounts of resources
+        - Can perform constant attacks because of their large amounts of resources
         - Can be sophisticated attacks
     
     - <u>Unskilled attackers</u>: runs pre-made scripts without any knowledge of what's really happening
@@ -40,11 +40,8 @@
         - Organized
         - Lots of funding
     
-    - <u>Shadow IT</u>: professional criminals
-        - Very sophisticated
-        - Organized
-        - Lots of funding
- 
+    - <u>Shadow IT</u>: an individual or department that works around the rules of a organization either knowingly or unknowingly (i.e. An employee storing sensitive data on their personal Google drive since its easier)
+
  ![alt text](image-6.png)
 
 
@@ -284,7 +281,7 @@
 
 # Other Malware Types
 - Keylogging
-- <u>Logic bomb</u>: malicious code of software program intentionally inserted into a system to execute a harmful action when certain conditions are met (i.e. Is a user doesn't type anything for X minutes, delete all files on the system)
+- <u>Logic bomb</u>: malicious code of software program intentionally inserted into a system to execute a harmful action when certain conditions are met (i.e. If a user doesn't type anything for X minutes, delete all files on the system)
     - Its difficult to fix a logic bomb but to prevent one you can:
         - Have a set of processes and procedures
         - Have electronic monitoring
@@ -312,7 +309,7 @@
 
 
 # Wireless Attacks
-- <u>DeAuthentication Attack</u>: s DOS attack that takes people that are working on the wireless network and disconnects them from any connectivity over that network
+- <u>DeAuthentication Attack</u>: A DOS attack that takes people that are working on the wireless network and disconnects them from any connectivity over that network
 
 - <u>Radio frequency (RF) jamming</u>: transmitting interfering wireless signals preventing other nearby devices from connecting to access points
 
@@ -327,7 +324,7 @@
 - <u>Replay Attack</u>: an attacker intercepts a request, holds it and then sends it pretending to be the legitimate user
     ![alt text](image-7.png)
     - An attacker could use this attack to get a users cookies
-      - <u>Session hijacking (side jacking)</u>: cookies taken by an attacker
+      - <u>Session hijacking (side jacking)</u>: an attack in which an attacker attempts to impersonate the user by using their session token
         - With stolen cookies, the attacker can pose as the user
       ![alt text](image-9.png)
       #### Prevention
@@ -348,7 +345,6 @@
 - Buffer overflows
 - Replay Attacks
 - <u>Privilege Escalation</u>: gain higher level access to a system
-    - The attacker is NOT looking to gain admin access but is moving from user A and its access to user B (horizontal privilege escalation)
     #### Prevention
     - Patch vulnerabilities 
     - Update anti-virus/anti-malware
@@ -358,7 +354,7 @@
     - <u>Cross-site request forgery</u>: an attack where a bad website tricks your browser into sending a request to another site where you're already logged in using credentials without your permission
     ![alt text](image-10.png)  
 
-<u>Directory Traversal</u>: a web server vulnerability that lets an attacker have access to files and directories outside the web root folder by manipulating file path inputs (i.e. " ../ " )    
+- <u>Directory Traversal</u>: a web server vulnerability that lets an attacker have access to files and directories outside the web root folder by manipulating file path inputs (i.e. " ../ " )    
     - Its not an attack but it is a web server vulnerability
 
 
@@ -403,8 +399,8 @@
         - Many OS systems use ACLs to provide access to files
 
     - Application allow/deny lists
-        - <u>Allow List</u>: grants permissions only to explicitly specified applications (very restrictive)
-        - <u>Deny List</u>: block specific applications while allowing all others (i.e. anti-virus and anti-malware)
+        - <u>Allow List</u>: grants permissions to whats on the list. Everything else is implicitly denied. (very restrictive)
+        - <u>Deny List</u>: denies permissions to whats on the list. Everything else is implicitly allowed others (i.e. anti-virus and anti-malware)
 
 
 # Mitigation Techniques
@@ -421,9 +417,10 @@
 - Harden techniques reduce the attack surface before an attack happens
     - <u>System Hardening</u>: securing OS software, apps, and network devices
     - Encryption
-    - Have multiple layers of security for all access points(endpoints)
+    - Have multiple layers of security for all access points (endpoints)
     - Have host based firewalls
     - Use Host-based Intrusion Prevention Systems to detect and block attacks
+        - <u> Host-based Intrusion Prevention System (HIPS)</u>: tool installed on a computer (host) that monitors the system in real time for suspicious behavior. If it detects something it can block or stop it immediately
     - Close or control open ports
     - Change default settings especially passwords
     - Remove unnecessary software
