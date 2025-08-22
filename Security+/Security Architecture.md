@@ -14,7 +14,8 @@
 - <u>Local Area Network (LAN) </u>: network of devices all connected to each other in the same physical area like a office floor (i.e. An office that has a printer, laptop, phone all connected to a Wifi router)
 - <u>Virtual Local Area Networks (VLAN)</u>: a way to split 1 physical LAN into separate, smaller networks using a switch. Devices in different VLANS can't talk to each other unless a router or Layer 3 device allows it.
     - Are separated logically but not physically (i.e. user A uses 1 portion of the device and user B uses a different portion)  
-- <u>Software-defined Network (SDN)</u>: separates different planes of a network such as the control and data plane. The control plane handles incoming traffic while the data plane controls where to redirect the traffic.
+- <u>Software-defined Network (SDN)</u>: uses software to control how network devices behave rather than relying on their built in hardware logic.  
+    - Can separate different planes of a network such as the control and data plane. The control plane handles incoming traffic while the data plane controls where to redirect the traffic.
 ![alt text](image-14.png)
 
 
@@ -76,7 +77,7 @@
     - Keep up to date and make sure patches are working properly 
 
 10. Inability to patch
-    - Embedded systems (i.e. HVAc controls, time clocks) do not have patching as an option
+    - Embedded systems (i.e. HVAC controls, time clocks) do not have patching as an option
     - Its best to think about additional security controls when this happens
 
 11. Power
@@ -146,7 +147,7 @@
 
  # Port Security
  - <u>Port Security</u>: security of the individual interfaces that are on a switch or connection to a wireless access point
-     - <u>Uses Extensible Authentication Protocol (EAP)</u>: a framework used for authentication. It allows different methods of verifying a user's identity over a network.
+     - <u>Extensible Authentication Protocol (EAP)</u>: a framework used for authentication. It allows different methods of verifying a user's identity over a network.
      - <u>802.1X</u>: port based network access control system that uses EAP to authenticate users before allowing them on the network  
         - EAP and 802.1X work together so that you can provide login credentials and have those credentials provide you with access to the network
 
