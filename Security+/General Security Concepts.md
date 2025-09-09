@@ -9,11 +9,17 @@
 
 #### Control Types
 <u>Preventive</u>: prevent security incidents from happening (i.e. firewalls, passwords, biometrics, IPS, security policies and procedures)
-<u>Deterrent</u>: discourage attackers from attempting to compromise a system. Make and attacker think twice (i.e. warning signs, security guards, CCTV)  
+
+<u>Deterrent</u>: discourage attackers from attempting to compromise a system. Make and attacker think twice (i.e. warning signs, security guards, CCTV)
+
 <u>Detective</u>: detect and alert on security incidents as the occur (i.e. Intrusion Detection Systems (IDS), Security Information and Event Management Systems (SIEM), Audit logs and monitoring, surveillance cameras)
-<u>Corrective</u>: correct and mitigate the impact of security incidents (i.e. anti-virus/anti-malware software, backup and recovery procedures, patch management systems, incident response plans) 
-<u>Compensating</u>: security measures implemented to provide an alternative method of protecting assets when standard controls aren't enough (i.e. temporary access restrictions, additional monitoring when primary controls are down) 
+
+<u>Corrective</u>: correct and mitigate the impact of security incidents (i.e. anti-virus/anti-malware software, backup and recovery procedures, patch management systems, incident response plans)  
+
+<u>Compensating</u>: security measures implemented to provide an alternative method of protecting assets when standard controls aren't enough (i.e. temporary access restrictions, additional monitoring when primary controls are down)  
+
 <u>Directive</u>: directing a subject towards a security compliance (i.e. security policies and guidelines, employee handbooks, SOPs)
+
 ![alt text](image.png)
 
 
@@ -66,7 +72,9 @@ a user located in China requesting access to a resource located in the U.S.)
     - Combining these 2 results in policy driven access control
 
 <u>Policy Decision Point (PDP) </u>: makes authorization decisions based on predefined policies. It interprets rules and decides whether access requests should be allowed or denied
+
 <u>Policy Administrator</u>: the role responsible for developing, implementing, and maintaining policies, standards, guidelines, and procedures 
+
 <u>Policy Enforcement Point</u>: enforces security policies by allowing and blocking traffic based on predefined rules
 
 #### Zero Trust Policy Plane
