@@ -13,8 +13,10 @@
 <u>Hardening</u>: securing a system by reducing the the number of weak points/openings an attacker can leverage 
 
 - Mobile devices
+    - Hardening checklists are available from manufacturers 
     - Updates are critical for bugs and security patches
-    - Segmentation can protect data. The company and user data are separated
+    - Segmentation can protect data. The company and user data are usually separated
+    - Mobile devices can be managed through a Mobile Device Manager (MDM)
 
 - Workstations
     - Automate monthly patches
@@ -32,12 +34,13 @@
 
 - Servers
     - Keep servers updated (i.e. system updates, service packs, security patches)
-    - Follow good practices like complex passwords
-    - Limit access to accounts using least privilege and disable unused accounts
+    - Follow good practices like complex passwords and minimum password lengths
+    - Limit access each account has using least privilege and disable unused accounts
     - Limit network access
     - Monitor and secure using anti-virus/anti-malware
 
 - ICS/SCADA
+    - Its a combination of using the network and platforms that manage, monitor, and control industrial equipment
     - Are isolated from the rest of the system
 
 - Embedded systems
@@ -51,7 +54,7 @@
 
 - IoT devices
     - Perform updates ASAP
-    - Segmentation from other devices on a network (limits access to attacker)
+    - Segment from other devices on a network (limits access to an attacker)
 
 
 # Securing Wireless and Mobile
@@ -88,10 +91,12 @@ enabled (COPE)
 
 
 # Wireless Security Settings
-- <u>Wi-Fi Protected Access 3 (WPA3)</u>: newest security standard that keeps your Wifi connection safe.
-    - Galois/Counter Mode Protocol (GCMP) block cipher code is a stronger encryption than the one used on WPA2 
+- <u>Wi-Fi Protected Access 3 (WPA3)</u>: newest security standard that keeps your Wifi connection safe
+    - Galois/Counter Mode Protocol (GCMP) block cipher code is a stronger encryption than the one used on WPA2
+        - Includes data confidentiality feature using AES, Message Integrity Check (MIC), and Galois Message Authentication Code (GMAC)
+    - <u>Simultaneous Authentication of Equals (SAE)</u>: new more secure password key exchange that replaced the Pre-Shared Key (PSK) system used in WPA2. With this new system, everyone uses a different session key even with the same PSK
 
-- <u>AAA/Remote Authentication</u>: tracks resources connecting to a network
+- <u>AAA/Remote Authentication</u>: framework used to determine how access to computers works
     - A = Authentication
     - A = Authorization
     - A = Accounting
@@ -100,23 +105,27 @@ enabled (COPE)
     - You don't get access to the network until you authenticate
     - Uses EAP
 
-- Remote Authentication Dial-In User Service (RADIUS)
-    - Common AAA protocols
+- <u>Remote Authentication Dial-In User Service (RADIUS)</u>: authentication protocol that uses the AAA framework
+    - Common AAA protocol
     - Used not only for dial ins
 
 
 # Application Security
--<u>Input validation</u>: verifies that anything not expected in the input will not be interpreted by the app
+- <u>Input validation</u>: verifies that anything not expected in the input will not be interpreted by the app  
+    - Example: An input that expects a zip code can check that only numbers and a certain amount of numbers are allowed
 
-- <u>Secure cookies</u>: information stored on your computer by the browser
+- <u>Cookies</u>: information stored on your computer by the browser
     - Used for tracking, personalization, session management
     - Sensitive information should not be saved in a cookie
+    - Secure cookies will be sent over HTTPS
 
 - <u>Static code analysis</u>: automatically scanning an application's source code for vulnerabilities before its executed
+    - Static Application Security Testing (SAST) is the processing of finding these vulnerabilities
 
 - <u>Code signing</u>: digitally signing software to verify its authenticity and integrity to make sure it has not been tampered with
 
 - <u>Sandboxing</u>: the practice of isolating an environment when working with potentially malicious software to prevent the primary system from being affected
+    - Commonly used during development 
     - The application can not access unrelated resources
     - "Play in their own sandbox"
 
@@ -159,13 +168,14 @@ enabled (COPE)
 
 - Data retention
     - Backup data
-    - Follow compliance (i.e. certain amount of data needs to be kept)
+    - Follow compliance (i.e. certain amounts of data need to be kept)
     - Different data types have different procedures
 
 
 # Vulnerability Scanning
 - Vulnerability scans only check what potential vulnerabilities there are like a port scan
     - Not all scans are accurate. Need to review reports to view what is accurate and whats not
+    - The scans are mostly associated with those outside of the network trying to gain access but scanning inside the network is also needed. An attack from the inside is also very possible.
 
 - Static analysis
     - Scans for multiple vulnerabilities to help identify security flaws
@@ -174,8 +184,7 @@ enabled (COPE)
     - Not everything can be identified through analysis (i.e. authentication, security, insecure cryptography, etc.)
     - Requires verification of each finding to avoid false-positives
 
-- Dynamic analysis (Fuzzing)
-    - Sends random input to an application in order to see what the output might be (aka fault injecting, robustness testing, syntax testing, negative testing)
+- <u>Dynamic analysis (Fuzzing)</u>: sends random input to an application in order to see what the output might be (aka fault injecting, robustness testing, syntax testing, negative testing)
     - Looking for something out if the ordinary to occur (i.e. application crash, server error, exception)
 
 - Package monitoring
@@ -192,7 +201,7 @@ enabled (COPE)
     - Commercial data like maps, financials are also usable
 
 - Proprietary/third-party
-    - 3rd party organizations who analyze threats across multiple organizations simultaneously
+    - 3rd party organizations who analyze threats across multiple organizations simultaneously. They will provide this information to you for a fee.
 
 - Information-sharing organization
     - Can be private or public organizations
@@ -212,7 +221,7 @@ enabled (COPE)
 
 
 # Analyzing Vulnerabilities
-- <u>False positive</u>: vulnerability that doesn't really exist
+- <u>False positive</u>: vulnerability that is detected but doesn't really exist
 - <u>False negative</u>: vulnerability that does exist but wasn't detected
     - Update signatures to prevent false positives or negatives
 
@@ -225,13 +234,13 @@ enabled (COPE)
 
 - Vulnerability classification
     - Scanning most parts of a system but not everything. 
-    - The signatures are the key in that they have information related to the latest vulnerabilities
+    - The signatures are the key since they have information related to the latest vulnerabilities
         - Example: ![alt text](image-32.png)
     
-- <u>Exposure Factor (EF)</u>: determines how risky a vulnerability is as a percentage
+- <u>Exposure Factor (EF)</u>: determines how much damage an asset would take if a known vulnerability is leveraged
 
 - Environmental variables
-    - If a system is isolated it might not be a priority but if its on the public cloud that's used by many users it could be the number one priority. The environment a system is a part of determines how important it is.
+    - If a system is isolated it might not be a priority. If its on the public cloud that's used by many users, it could be the number one priority. The environment a system is a part of determines how important it is.
 
 - Industry/organizational impact
     - Who is affected by it should an attack happen. Some attacks have bigger affects on others
@@ -243,14 +252,19 @@ enabled (COPE)
 # Vulnerability Remediation
 - Patching
     - Most common mitigation technique
+    - Used when a known vulnerability exists and have the patch file to install
     - Schedule vulnerability/patches
 
 - Insurance
-    - Cybersecurity insurance after an attack helps to get lost money &  data and prevents lawsuits
+    - Cybersecurity insurance occurs after an attack. It helps to get lost money &  data to prevent lawsuits
     - It doesn't cover everything
+    - Ransomware is an example of where insurance is used
 
 - Segmentation
-    - Limit access by separating devices to their own network/VLANs
+    - Limit access by separating devices to their own networks/VLANs. It will limit the attacker to that segment part of the network keeping other areas of the network safe.
+        - Red customers can only communicate to red customers and same thing for blue  
+        - Can not communicate between VLANs w/o a Layer 3 device/router
+        ![alt text](image-34.png)
     - Patching isn't always possible
     - Use internal NGFW
 
@@ -275,14 +289,16 @@ enabled (COPE)
 - Computing resources 
     - Systems
         - Authentication from strange places and servers (i.e. backups, software versions, activity)
+        - Solutions: Server monitoring like service activity, backups, or software versions
     - Applications
         - Ensure availability and data transfers are working properly
     - Infrastructure
         - Remote access systems and firewalls
 
 - Log aggregation
-    - <u>Security Information and Event Manager (SIEM)</u>: a way to consolidate many different logs to a central database
-    - Correlation between systems
+    - <u>Security Information and Event Manager (SIEM)</u>: consolidates and analyzes data from different sources to a central database. It helps with detecting threats, responding to incidents, and meeting compliance requirements
+        - Centralized reporting
+        - View how information between systems is related (i.e. view authentication and access)
 
 - Scanning
 
