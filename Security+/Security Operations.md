@@ -334,7 +334,7 @@ enabled (COPE)
     - <u>Agent Based Solution</u>: specialized software installed directly onto a device (i.e. endpoint, server, or VM) in order to perform security related tasks and report data (i.e. antivirus, endpoint detection)
         - Agents can check if a device is compliant and provide additional details
         - Best used for real time security, in depth monitoring, and proactive actions
-        - It checks the system is working properly but it needs to be maintained updated
+        - It checks the system is working properly but it needs to be maintained
     - <u>Agentless Solution</u>: no software is installed. The monitoring system connects to the device or cloud service (via APIs, SNMP or cloud provider) to gather usage and security data
         - Best used for simple and broad visibility of a system
 
@@ -348,15 +348,20 @@ enabled (COPE)
 
 - <u>Data loss prevention (DLP)</u>: set of tools and processes used to ensure that sensitive data is not lost, misused, or accessed by unauthorized users
     - Stop the data before the attacker gets it
+    - Can stop information like SSN, credit cart numbers and medical records from being leaked
+    - Monitors in real time
 
 - Simple Network Management Protocol (SNMP) traps
-    - <u>SNMP</u>: protocol used for collecting and organizing information about managed devices on IP networks and for modifying that information to change device behavior
+    - <u>SNMP</u>: protocol used for collecting and organizing information about devices (i.e. printers, routers, etc.) over the network and can modify how the devices behave using that information
+    - Used for monitoring and managing devices
     - Can be leveraged to request statistics from a device
     - Poll devices at fixed intervals
+    - "How is the device itself doing?"
 
-- <u>NetFlow</u>: network protocol for collecting IP traffic and monitoring network flow
+- <u>NetFlow</u>: protocol used for collecting IP traffic and monitoring traffic on a network
     - Used to get a picture of network traffic flow and volume
     - Shared communication between devices
+    - "Whats happening through the device in terms of traffic?"
 
 - Vulnerability scanners
     - Can check if there are potential vulnerabilities
@@ -364,34 +369,40 @@ enabled (COPE)
 
 
 # Firewalls
-- Access lists
+- <u>Firewall</u>: appliance that sits inline in your network and makes decisions about whether traffic should be allowed or disallowed through the firewall
+    - Most firewalls can be on layer 3 devices (routers)
+
 - Ports/protocols
     - Helps make forwarding decisions based on protocol and port numbers
-    - web server = tcp/80 or tcp/443
-    - ssh = tcp/22
-    - Microsoft rdp = tcp/3389
-    - dns query = udp/53
-    - ntp = udp/123
-    - smtp = tcp/25
-    - ftp = tcp/21
+        - web server = tcp/80 or tcp/443
+        - ssh = tcp/22
+        - Microsoft rdp = tcp/3389
+        - dns query = udp/53
+        - ntp (Network Time Protocol) = udp/123
+        - smtp (Simple Mail Transfer Protocol) = tcp/25
+        - ftp (File Transfer Protocol)= tcp/21
 
 - Rules
-    - They're logical paths
-    - They can be generic or specific
-    - Can have a implicit deny  
+    - They're logical paths where the most specific firewall rules are at the top and the more generic rules are at the bottom
+    - Most firewall rules have a implicit deny at the bottom. So if there is no firewall rule the traffic is implicitly denied 
     - Examples:  
         ![alt text](image-29.png)
 
-- <u>Screened subnets:</u> small network placed between an internal trusted network and the internet. Its like a guarded courtyard between the street (internet) and your house (internal network). Visitors can access the courtyard but can't enter your house without permission.
+- <u>Screened subnets:</u> small network placed between an internal trusted network and the internet
+    - Its like a guarded courtyard between the street (internet) and your house (internal network). Visitors can access the courtyard but can't enter your house without permission.
     - Its an additional layer of security between you and the internet
         ![alt text](image-33.png)
 
 - IDS/IPS
+    - Usually integrated into an NGFW
     - Different ways to find malicious traffic
     - Can customize IPs rules. It can take time to configure rules (false positives can appear)
 
 
 # Web Filtering
+- <u>Web Filter</u>: control traffic based on data within content
+    - Can control inappropriate content like not safe for work websites. Can be seen as a form of parental controls
+    
 - Agent-based  
     - Software agents are installed on individual devices to monitor and filter web traffic  
     - Users can be located anywhere  
@@ -419,7 +430,7 @@ enabled (COPE)
 
 
 # Operating System Security
-- <u>Group Policy</u>: manage the computers or users
+- <u>Group Policy</u>: manage computers or users
 - <u>SELinux</u>: security feature in Linux that limits what programs can do using strict security policies to reduce damage from attacks
     - Adds mandatory access control to Linux
 
@@ -440,14 +451,13 @@ enabled (COPE)
 
 
 # Email Security
-- <u>Mail gateway</u>: verifies if an email was sent from a valid source. If it wasn't, it will be directed to Spam
+- <u>Mail gateway</u>: filters all emails inbound and outbound for malicious software (i.e. malware, phishing, spam, etc.)
 
-- <u>Sender Policy Framework (SPF)</u>: email authentication method that verifies that a mail server is authorized to send emails from a specific domain
+- <u>Sender Policy Framework (SPF)</u>: protocol that verifies a mail server is authorized to send emails on behalf of a domain. The recipient also checks if the email came from an approved mail server.
 
-- <u>Domain Keys Identified Mail (DKIM)</u>: uses digital signatures to verify sender's identity and ensure email integrity
-    - Validated by receiving mail servers
+- <u>Domain Keys Identified Mail (DKIM)</u>: uses a key to verify a digital signature which verifies email integrity and sender's domain
 
-- <u>Domain-based Message Authentication Reporting & Conformance (DMARC)</u>: tells mail servers what to do when DKIM or SPF fail, whether to mark failing emails as "spam", deliver it anyway or drop it altogether
+- <u>Domain-based Message Authentication Reporting & Conformance (DMARC)</u>: tells mail servers what to do when DKIM or SPF fail (i.e. reject, quarantine, or allow) and provides reports on spoofing attempts
 
 
 # Monitoring Data
@@ -483,19 +493,20 @@ enabled (COPE)
         - Could have malware infections/missing anti-malware
     - Perform a health check before connecting to the network
 
-- <u>Endpoint Detection and Response Solutions (EDR)</u>: monitors and protects individual devices (endpoints) like laptops, desktops, and servers
+- <u>Endpoint Detection and Response (EDR)</u>: monitors and protects individual endpoints like laptops, desktops, and servers. It can automatically respond such as quarantine files and isolate devices
+    - Takes it a step further that anti-malware/anti-virus software and determines root cause analysis
 
-- <u>Extended Detection and Response (XDR)</u>: expands on EDR and pulls together data from multiple sources like endpoints, email, cloud, and network systems
+- <u>Extended Detection and Response (XDR)</u>: expands on EDR and pulls data from multiple sources like endpoints, email, cloud, & network systems to connect how all the pieces of an incident are related. It also responds to threats to protect the devices.
 
 
 # Identity and Access Management
-- <u> Lightweight Directory Access Protocol (LDAP)</u>: protocol that allows applications to access and authenticate specific user information across directory services
+- <u> Lightweight Directory Access Protocol (LDAP)</u>: protocol that applications use to talk to AD to authenticate users & devices and check what access rights they have
     - It has a hierarchical structure
 
-- <u> Security Assertion Markup Language (SAML)</u>: language used in authenticating and authorizing data between an identity provider (i.e. Google) and service provider (i.e. AWS)
+- <u> Security Assertion Markup Language (SAML)</u>: XML-based protocol that allows SSO by passing authentication and authorization data between an Identity Provider (i.e. Active Directory) and a Service Provider (i.e. GitHub)
     - Not originally meant for mobile devices
 
-- <u>OAuth</u>: token based authorization used to grant users limited access to their resources without exposing credentials
+- <u>Open Authorization (OAuth)</u>: token-based authorization framework that lets apps or users get limited access to resources without sharing passwords or full credentials
     - Used with OpenID
         - OpenID handles authentication while OAuth handles authorization
 
@@ -512,7 +523,7 @@ enabled (COPE)
     - Every object gets a label (i.e. confidential, secret, top secret, etc.)
     - The admin decides who has what access
 
-- <u>Discretionary Access Control</u>: user decides who has what access to each data
+- <u>Discretionary Access Control</u>: user who creates the data decides who has what access
 
 - <u>Role Based Access Control (RBAC)</u>: access depends on the job role (i.e. admin, director, developer, etc.)
 
