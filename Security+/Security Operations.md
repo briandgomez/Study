@@ -595,27 +595,36 @@ enabled (COPE)
 # Incident Response
 - <u>National Institute of Standards and Technology (NIST) SP800-61</u>: document detailing how organizations handle incident responses
 
-- Preparing an incident
+1. Preparation
     - Communication methods like phones or contact info
     - Incident handling hardware and software
     - Resources with the necessary information needed for the incident (i.e. documentation, network diagrams)
     - Mitigation software
     - Set of procedures and policies 
 
-- Challenges detecting incidents
+2. Detection
     - Different detection sources
-    - Large amount of "volume"
-    - Incidents are almost always complex
+    - Large amount of "volume". Attacks happening all the time.
+    - Incidents are almost always complex. 
 
--  If there is an attacking happening:
+3. Analysis
+    - Web server log can contain information about the attack
+    - Stay up to date with patch releases that occur on a monthly basis
+    - Alerts will be sent when the attack is occurring
+    - The host based monitoring can detect a configuration change. This could be one indicator of an attack
+    - An increase in network traffic an indicate a potential attack 
+
+4. Eradication
+
+5. Containment
     - Use a sandbox to isolate the system being attacked. This limits the amount of damage the attacker can do but isolating could cause problems to the system (i.e. files can be lost due to lost of connectivity)
 
-- After an incident
+6. Recovery
     - Remove the malware 
     - Fix vulnerabilities
     - Restore backups, replace files, and rebuild what needs to be rebuild
 
-- Learn from an attack
+7. Lessons learned
     - Figure out how to protect against it next time and what were the weak points. This should be done in a post incident meeting
     - Ask questions that can help prevent the attack (i.e. what happened, how effective was our plan, what to do differently, etc.)
 
@@ -629,9 +638,11 @@ enabled (COPE)
     - It involves everyone sitting around a table and logistically stepping through the policies and procedures for these security events
 
 - Simulation (i.e. phishing attacks, password requests, data breaches)
+    - This involves simulating an attack and waiting to see what the results are
 
 - Root cause analysis 
     - The focus is to determine the ultimate cause of an incident
+    - Create a set of conclusions regarding the incident backed up by facts
     - Do not use tunnel vision. There can be multiple causes for the breach
 
 - <u>Threat hunting</u>: searching for threats that already exist before alerts or alarms go off
@@ -639,6 +650,7 @@ enabled (COPE)
 
 # Digital Forensics
 - <u>Legal hold</u>: a legal technique to preserve relevant information for a legal case, investigation, audit, etc.
+    - Initiated by legal counsel
 
 - Chain of Custody
     - Controlling evidence
@@ -677,4 +689,4 @@ enabled (COPE)
 
 - <u>metadata</u>: data that describes other data sources
 
-- <u>packet captures</u>: recording of network traffic. It saves the actual packets (the raw data being sent/received) to be analyzed later
+- <u>packet captures</u>: saving/recording the actual data moving through a network to be analyzed later
