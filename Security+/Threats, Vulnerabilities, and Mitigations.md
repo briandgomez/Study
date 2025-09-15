@@ -18,7 +18,7 @@
     - <u>Nation states</u>: external entity like government and national security
         - Can have multiple motivations
         - Can perform constant attacks because of their large amounts of resources
-        - Can be sophisticated attacks
+        - Can be highly sophisticated attacks
     
     - <u>Unskilled attackers</u>: runs pre-made scripts without any knowledge of what's really happening
         - Motivated by disruption or philosophical reasons
@@ -33,7 +33,8 @@
     
     - <u>Insider Threat</u>: someone within an organization taking advantage of their knowledge of the organization to perform attacks
         - Extensive resources since they use the organizations resources
-        - Medium level of sophistication since they know where the vulnerabilities are
+        - Medium level of sophistication. 
+        - They excel in knowing know where the vulnerabilities are
  
      - <u>Organized Crime</u>: professional criminals
         - Very sophisticated
@@ -41,6 +42,9 @@
         - Lots of funding
     
     - <u>Shadow IT</u>: an individual or department that works around the rules of a organization either knowingly or unknowingly (i.e. An employee storing sensitive data on their personal Google drive since its easier)
+        - This type involves building their own infrastructure
+        - Limited resources
+        - Medium level of sophistication
 
  ![alt text](image-6.png)
 
@@ -48,23 +52,39 @@
 # Common Threat Vectors
 - <u>Threat vectors</u>: method used by the attacker to gain access or infect a target
     1. Message Based
+        - I.E. Emails, SMS
         - Phishing attacks
+        - Social engineering can be done through this vector (i.e. invoice scams, crypto currency scam)
     2. Image based
-        - Embedding malicious code in an SVG, PNG, JPG, file 
+        - Embedding malicious code in an SVG, PNG, or JPG file. The code is used to describe an image which is how an HTML injection or JavaScript attack code occurs
+        - Browsers must provide input invalidation to prevent certain image type
     3. File based
+        - Files don't necessarily need to be executed to affect a system. The file can contain malicious code that will perform malicious actions without being executed
+        - Adobe PDF, ZIP or any compression type file can contain malicious code
     4. Voice call
         - Vishing
+        - Spamming over the phone is common attack
     5. Removable device
         - USBs
+        - Use air gapped networks
     6. Vulnerable software
+        - Software with vulnerabilities where patches haven't been used
+        - Need constant updates
+        - Agentless involves using the internet to connect to the resource (s) you need and the attacker infecting your host through that service provider (i.e. AWS)
     7. Unsupported systems
         - Outdated or old systems
+        - Check with the manufacturer about any patches
     8. Unsecure networks
+        - Ensure the latest and most secure tools are used to secure a network (i.e. 802.1x for authentication on a wired network)
     9. Open service ports
+        - An open port is an opportunity for an attacker
+        - Every app has their own open port
+        - Firewall rules can reduce the number of attacks to a system
     10. Default credentials
         - Basic and common credentials
+        - Change credentials often
     11. Supply chain
-        - 3rd party configuring hardware to access a system
+        - 3rd party hardware is tampered with
 
 
 # Phishing
@@ -73,6 +93,8 @@
 - <u>Vishing</u>: voice phishing involves attackers using phone calls to impersonate legitimate organizations or individuals to trick victims into providing personal information such as credit card numbers or social security numbers
 
 - <u>Smishing</u>: SMS phishing involves attackers sending fraudulent text messages that appear to come from reputable sources. These messages often contain links or phone numbers that lead to phishing websites or prompt the victim to provide personal information
+
+<u>Pretexting<u>: lying. The attacker creates a fake realistic scenario to lure a victim in
 
 # Impersonation
 - The goal is to extract information without the victim realizing it
@@ -89,9 +111,11 @@
 - <u>Water Hole Attack</u>: an attack where attackers compromise a specific website or set of websites that are frequently visited by a particular group, organization, or industry. The goal is to infect the visitors of these sites with malware
     
     #### Protection
-    - Defense in depth (Layers of security)
-        - Firewalls and IPS
-        - Anti-virus/Anti-malware signature updates
+    - Defense in depth
+        - You need to have layers of security
+    - Firewalls and IPS
+        - Stop the network traffic before things get bad
+    - Anti-virus/Anti-malware signature updates
 
 
 # Other Social Engineering Attacks
@@ -101,7 +125,7 @@
 
 # Memory Injections
 - <u>Memory Injection</u>: an attack that involves inserting malicious code into the memory space of a legitimate running process. This allows the malicious code to operate with the same privileges as the compromised process
-
+    - Examples: DLL Injection. Since a DLL is a type of process that runs on most computers, it can contain malicious code that's used by the host thus infecting the host
 
 # Buffer overflow
 - <u>Buffer Overflow</u>: an attack where the attacker sends more data to a buffer that it can handle which leads to overwriting adjacent memory locations. This potentially can allow the attacker to execute arbitrary code
@@ -120,6 +144,9 @@
     #### Best Practices
     - Always have a known good backup
     - Install from trusted sources
+    - Confirm the source
+    - Visit the developers site directly
+    - Many OS systems will only allow signed apps
 
 - Automatic updates include security checks/digital signatures. They are mostly trustworthy
 
@@ -141,7 +168,7 @@
 
 
 # Cross-site Scripting (XSS)
-- <u>Cross-site scripting</u>: an attack injecting malicious scripts into web pages to execute in the victim's browser
+- <u>Cross-site scripting</u>: an attack injecting malicious scripts into web pages to execute in the victim's browser so an attacker can steal or manipulate data
 
 - <u>Persistent (XSS)</u>: placing the malicious code on a popular website where every time a user clicks/uses the website the victim is affected
 
@@ -149,6 +176,7 @@
     - Be careful when clicking untrusted links
     - Consider disabling JavaScript
     - Keep your browser and applications updated
+    - Validate inputs
 
 
 # Hardware Vulnerabilities
