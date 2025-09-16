@@ -185,9 +185,10 @@
 
 
 # Virtualization Vulnerabilities
-- It is possible to escape a VM and interact with the host OS or hardware. Escaping a VM would mean you have access to the host and control other guest VMs (huge exploit)
+- VM Escape
+    - It is possible to escape a VM and interact with the host OS or hardware. Escaping a VM would mean you have access to the host and control other guest VMs (huge exploit)
 
-- A hypervisor manages the relationship between physical and virtual resources (i.e. RAM, storage space, CPU, availability, etc.). These resources can be reused between VMs (a hypervisor can support 3 VMs with 2 GB of RAM each). Data can accidently be shared between VMs and overwritten
+    - A hypervisor manages the relationship between physical and virtual resources (i.e. RAM, storage space, CPU, availability, etc.). These resources can be reused between VMs (a hypervisor can support 3 VMs with 2 GB of RAM each). Data can accidently be shared between VMs and overwritten
 
 - <u>Resource Reuse</u>: a vulnerability exploiting shared CPU resources to access or modify data between VMs
 
@@ -195,44 +196,56 @@
 # Cloud-specific Vulnerabilities
 - DDoS attacks
 - Weak or faulty authentications
-- Faulty configurations putting data at risk
+- Faulty configurations putting data at risk (directory traversal)
 - Taking advantaged of unpatched systems
 
-#### Common Attacks
-- Web app attacks
-- XSS
-- <u>Out of bounds write</u>: writing to unauthorized memory areas
-- SQL injections
+    #### Common Attacks
+    - Web app attacks
+    - XSS
+    - <u>Out of bounds write</u>: writing to unauthorized memory areas
+    - SQL injections
 
 
 # Supply Chain Vulnerabilities
 - These vulnerabilities are any weak points within the entire supply chain process. Either when getting raw materials, dealing with consumers and every step in between. 
 
-#### Vulnerabilities
-- Service providers
-    - Service providers can be network, utility, office cleaning, payroll/accounting, cloud services, system administration, etc.
-    - Audits should be conducted in order to ensure security
-- Hardware providers
-    - The hardware itself could be compromised
-    - Use small suppliers that you trust
-    - Have strict control over policies and procedures
-- Cisco products
-    - Since everything runs through switches and routers, Cisco products have been copied and sold. These products are counterfeit
-- Software providers
-    - Installing any type of software is risky
-    - Digital signatures should be confirmed during installation
-    - Even open source software isn't 100% safe
+    #### Vulnerabilities
+    - Service providers
+        - Service providers can be network, utility, office cleaning, payroll/accounting, cloud services, system administration, etc.
+            ### Protection
+            - Audits should be conducted often for protection
+    - Hardware providers
+        - The hardware itself could be compromised
+            ### Protection
+            - Use small suppliers that you trust and/or have strict control over policies and procedures
+    - Cisco products
+        - Since everything runs through switches and routers, Cisco products have been copied and sold. These products are counterfeit
+    - Software providers
+        - Installing any type of software is risky
+            ### Protection
+            - Digital signatures should be confirmed during installation
+            - Even open source software isn't 100% safe
 
 
 # Misconfiguration Vulnerabilities
-#### Vulnerabilities
-- Not configuring any or the right permissions (open permissions )
+- Not configuring any or the right permissions
+    - Not configuring a password when logging when using a service 
 - Unsecured admin accounts
     - Being able to access accounts easily
+        ### Protection
+        - Use sudo or su command to disable direct login to root accounts
+        - Ensure there few accounts with root account access
 - Insecure protocols
     - Using the insecure protocols (i.e. HTTP) and not the secure ones (i.e. HTTPS)
+        ### Protection
+        - Use packet captures to view everything sent over the network
+
 - Using default settings
+
 - Open ports and services
+    - When using a service on a network, it will open ports thus port management is important
+     ### Protection
+     - Always test and audit to limit number of open ports
 
 
 # Mobile Device Vulnerabilities
@@ -240,7 +253,6 @@
     - You don't have access to the OS
 - <u>Sideloading</u>: installing software or apps without using an app store
     - Prevent this by using the app store
-
 
 # Zero-day Vulnerabilities
 - <u>Zero-day</u>: a newly discovered vulnerability that has no solution or method to fix it
@@ -310,12 +322,16 @@
 # Other Malware Types
 - Keylogging
 - <u>Logic bomb</u>: malicious code of software program intentionally inserted into a system to execute a harmful action when certain conditions are met (i.e. If a user doesn't type anything for X minutes, delete all files on the system)
-    - Its difficult to fix a logic bomb but to prevent one you can:
+    ### Prevention
         - Have a set of processes and procedures
         - Have electronic monitoring
         - Constant auditing
 - <u>Rootkit</u>: malware designed to gain and maintain admin level access to a computer system while remaining hidden from users and security software. They operate at the OS level making them difficult to detect and remove.
     - You can use a remover specific to rootkits to remove one
+    ### Removing a Rootkit
+    - Anti-malware scans
+    - Use remover specific to the rootkit
+    - Secure boot with UEFI
 
 
 # Physical Attacks
@@ -327,17 +343,28 @@
 
 # Denial of Service
 - <u>Denial of Service</u>: an attack from a single source that tries to make a system, service, or network unavailable by overwhelming it
+
 - <u>DDOS</u>: an attack from many compromised computers (aka botnet) that tries to make a system, service, or network unavailable by overwhelming it
+
+- <u>Reflected DDOS</u>: when a attacker sends traffic to the server and spoofs the IP making it think the victim sent the request. The server then responds to the victim with a lot of unwanted traffic
+
+- <u>Amplified DDOS</u>:when a attacker sends traffic to the server and spoofs the IP making it think the victim sent the request. The server then responds with way more traffic then was originally sent. The victim now is receiving a significant increase in traffic
+    - All amplified attacks are reflected attacks but not all reflected attacks are amplified attacks 
 
 
 # DNS Attacks
 - <u>DNS Attacks</u>: An attack that targets DNS servers to redirect users, disrupt services or steal data
     - This is called domain poisoning/spoofing.
-    - <u>URL Hijacking</u>: taking over a URL since the fake URL is very similar to the real one
-
+    - <u>URL Hijacking</u>: registering a domain name that looks like a legitimate one to trick users into visiting it
+        - AKA typo squatting/ brandjacking
+    - <u>Domain Hijacking</u>: when an attacker takes control of an entire domain name by stealing credentials, exploiting vulnerabilities or tricking the registrar into transferring ownership 
 
 # Wireless Attacks
 - <u>DeAuthentication Attack</u>: A DOS attack that takes people that are working on the wireless network and disconnects them from any connectivity over that network
+    ### Prevention
+    - Enable/use 802.11w
+    - Use IPS/IDS
+    - Use WPA3 
 
 - <u>Radio frequency (RF) jamming</u>: transmitting interfering wireless signals preventing other nearby devices from connecting to access points
 
