@@ -388,7 +388,7 @@
 
 
 # Malicious Code
-- Attackers can insert malicious code into system that works fine and leverage it to get information
+- Attackers can insert malicious code into a system that works fine and leverage it to get information
     #### Examples
     - WannaCry ransomware
     - British Airways XSS
@@ -406,10 +406,10 @@
     - Randomize the locations of where data can be placed
     - Limit the locations data is able to be ran
 - <u>Cross-site requests</u>: when a web request is made from one origin (site) to another (i.e. loading a YouTube video on a page)
-    - <u>Cross-site request forgery</u>: an attack where a bad website tricks your browser into sending a request to another site where you're already logged in using credentials without your permission
+    - <u>Cross-site request forgery</u>: when a attacker tricks a victim's browser into sending a request to another site where the victim is already logged in. It exploits the trust a website has in a user's browser session to execute unintended actions
     ![alt text](image-10.png)  
 
-- <u>Directory Traversal</u>: a web server vulnerability that lets an attacker have access to files and directories outside the web root folder by manipulating file path inputs (i.e. " ../ " )    
+- <u>Directory Traversal</u>: a web server vulnerability that lets an attacker have access to files and directories outside the web root folder by manipulating file paths (i.e. " ../ " )    
     - Its not an attack but it is a web server vulnerability
 
 
@@ -432,16 +432,16 @@
 - <u>Brute force</u>: try every possible password combination until the hash is matched
 
 
-# Indicators of Compromise
+# Indicators of Compromise (IOC)
 - Account lockout
 - Session usage (i.e. using an app in different location at the same time)
 - Blocked Content
-- Authentication (i.e. login in/out in different locations within a short time period)
-- Resource consumption (i.e. transferring files)
-- Resource inaccessibility (i.e.server is down)
+- Impossible travel (i.e. login in/out in different locations within a short time period)
+- Resource consumption (i.e. firewall logs show outgoing transfers)
+- Resource inaccessibility (i.e.a server is down because a attacker tried to look for an exploit)
 - Out of cycle logging (i.e. logs contain events that happen outside of normal hours)
 - Missing logs (i.e. attackers delete log information to cover tracks)
-- Published documents
+- Published documents (i.e. posting PII online)
 
 
 # Segmentation and Access Control
@@ -460,22 +460,35 @@
 
 # Mitigation Techniques
 - Mitigation techniques limit the impact during or after an attack
-    - Prevent an attack from happening (i.e. Patching)
-    - Limit the amount of data files an attacker can get (i.e. Encryption)
+    - Prevent an attack from happening patching
+    - Limit the amount of data files an attacker can get using encryption
     - Constant monitoring
     - Practice least privilege
-    - Apply specific security settings to a system (i.e. configure so only admin can install software on company laptops)
-    - Dispose items properly (i.e. destroying a device)
+    - Apply specific security settings to a system (i.e. configure settings so only admins can install software on company laptops)
+    - Dispose items properly and follow proper procedures (i.e. destroying a device,)
 
 
 # Hardening Techniques
 - Harden techniques reduce the attack surface before an attack happens
     - <u>System Hardening</u>: securing OS software, apps, and network devices
+        - Constant updates
+        - Ensure user accounts are secured like having password policies
+        - Limit who has access to the network
+        - Use some anti-virus, anti-malware or endpoint detecting tool
     - Encryption
-    - Have multiple layers of security for all access points (endpoints)
+        - Use Full disk encryption (FDE) encrypts everything on a drive
+        - Use a VPN for communicating over the network
+    - Have multiple layers of security for all access points
+    - Use an EDR
     - Have host based firewalls
+        - Focuses on allowing and disallowing traffic 
+        - The firewall runs on each individual system but can managed from one location
     - Use Host-based Intrusion Prevention Systems to detect and block attacks
         - <u> Host-based Intrusion Prevention System (HIPS)</u>: tool installed on a computer (host) that monitors the system in real time for suspicious behavior. If it detects something it can block or stop it immediately
+        - Its usually built into a EDR or anti-malware software
     - Close or control open ports
+        - Use a NGFW to control access
     - Change default settings especially passwords
+        - Add MFA
     - Remove unnecessary software
+        - All apps have a different patch so removing unused software is the best and easiest solution
