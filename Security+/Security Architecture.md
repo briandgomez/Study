@@ -10,10 +10,15 @@
 # Network Infrastructure Concepts
 - <u>Switch</u>: connects devices within the same network and uses MAC addresses to send data only to the right device. It’s like a postal worker who sorts and delivers mail to the correct person in the same building.
     - Can be physically located in different locations
+    
 - <u>Router</u>: connects different networks and uses IP addresses to decide where data should go. It’s like a postal service , delivering mail between different buildings and choosing the best route to get it to the right place.
+
 - <u>Local Area Network (LAN) </u>: network of devices all connected to each other in the same physical area like a office floor (i.e. An office that has a printer, laptop, phone all connected to a Wifi router)
+
 - <u>Virtual Local Area Networks (VLAN)</u>: a way to split 1 physical LAN into separate, smaller networks using a switch. Devices in different VLANS can't talk to each other unless a router or Layer 3 device allows it.
     - Are separated logically but not physically (i.e. user A uses 1 portion of the device and user B uses a different portion)  
+    ![alt text](image-35.png)
+
 - <u>Software-defined Network (SDN)</u>: uses software to control how network devices behave rather than relying on their built in hardware logic.  
     - Can separate different planes of a network such as the control and data plane. The control plane handles incoming traffic while the data plane controls where to redirect the traffic.
 ![alt text](image-14.png)
@@ -34,19 +39,20 @@
 - Organizations are moving from VMs to containers because containers have better security and easier to manage
 ![alt text](image-15.png)
 
-- <u>Internet of Things (IoT)</u>: physical devices that are integrated with a network (i.e. sensors, Fitbit, etc.)
+- <u>Internet of Things (IoT)</u>:physical devices connected to a network that collect or share data and provide useful services, like sensors, smartwatches, or home automation devices. Isolating a device would protect that device in the case of an attack
 
-- <u>Supervisory Control and Data Acquisition</u>: lets technicians sit in a centralized control  room, monitor the status of the pieces of equipment and make changes and modification without having to physically visit every piece of equipment  
+- <u>Supervisory Control and Data Acquisition (SCADA/ICS)</u>: lets technicians sit in a centralized control room, monitor the status of the pieces of equipment and make changes & modification without having to physically visit every piece of equipment(i.e. power plants, refining, manufacturing equipment)  
 ![alt text](image-16.png)
 
 - <u>Real Time Operating System (RTOS)</u>: OS designed to process data immediately as it comes in with little delay (i.e. braking system in a car)
 
-- <u>Embedded Systems</u>: A device created to a very specific task within a larger mechanical or electrical system (i.e. smartwatches, medical devices)
+- <u>Embedded Systems</u>: a device created to a very specific task within a larger mechanical or electrical system (i.e. smartwatches, medical devices)
 
 
 # Infrastructure Considerations
 1. Availability
     - Its a factor since you want users to be able to access whatever they want whenever they want
+    - Ensure only those that need access have it 
 
 2. Resiliency 
     - Will be tested once something happens. Its referred to as mean time to repair
@@ -88,7 +94,7 @@
 
 
 # Secure Infrastructure
-- <u>Security Zone</u>: lets you logically separate devices by use or access type
+- <u>Security Zone</u>: different sections of a network where each section has a different level of security and access rules 
     - Each area is associated with a zone (i.e. trusted, internal, inside, servers, screened, etc.)
     - Makes it easier to simplify security policies (i.e. trusted to untrusted or untrusted to screened)  
     ![alt text](image-17.png)
@@ -148,8 +154,8 @@
  # Port Security
  - <u>Port Security</u>: security of the individual interfaces that are on a switch or connection to a wireless access point
      - <u>Extensible Authentication Protocol (EAP)</u>: a framework used for authentication. It allows different methods of verifying a user's identity over a network.
-     - <u>802.1X</u>: port based network access control system that uses EAP to authenticate users before allowing them on the network  
-        - EAP and 802.1X work together so that you can provide login credentials and have those credentials provide you with access to the network
+     - <u>802.1X</u>: IEEE port based network access control standard that uses EAP to authenticate users & devices before allowing them on the network  
+        - EAP and 802.1X work together so that you can provide login credentials and have those credentials give you access to the network
 
 
 # FireWall Types
