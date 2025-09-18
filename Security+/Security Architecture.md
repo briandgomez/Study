@@ -140,54 +140,91 @@
 ![alt text](image-21.png)
 
 - Proxies
-    - Simplest proxy = NAT
-    - Application proxies are the most common since they work with different protocols  
+    - Simplest proxy = Network-level proxy (NAT)
+    - Application proxies are the most common since they work with different protocols
+    - Forward Proxy (Internal Proxy) are proxies that are inside of a users network. The proxy makes the request and returns the results back to the user if all the traffic looks legitimate
+        - ![alt text](image-37.png)
+
+    - A Reverse proxy is a proxy that is part of a internal network but on the server side of the network. Users on the internet connect to the proxy and the proxy connects the user to the web server. The web server and proxy are in a internal network while the user is outside the network
+        - It limits the amount of load being sent to the web server since certain requests are cached on the proxy
+        - ![alt text](image-36.png)
+
+    - A open proxy is a proxy controlled by a 3rd party. They are not secure since the owner can ad anything they want as traffic moves like advertisement or malicious code
+        - ![alt text](image-38.png)
+    
 
 - <u>Load Balancers</u>: distributes loads to multiple services  
     - For large scale implementations and fault tolerance
+    - An active/active load balancer is a configuration where all the servers connected to the load balancer are all being used
+        - TCP Offload 
+            - It reuses the same protocol connection (i.e. TCP) for each connected server. This means the balancer does not need to create a new connection for each server that is added to it
+        - SSL Offload
+            - Instead of each server handling the decryption the load balancer can handle it for each server connected
+        - Cache
+            - Act as a proxy and store commonly requested data
+        - Prioritization
+            - Determine which data needs to be taken care of first
+        - Content switching
+            - It means the balancer can recognize certain content and redirect it to the correct server that handles that content
+        - ![alt text](image-39.png)
+    
+    - An active/passive load balancer is a configuration where some of the servers are working/active while other servers are not or on standby
+        - If an active server is no longer working, traffic is redirected to one of the standby servers
+        - ![alt text](image-40.png)
 
 - Sensors and collectors  
     - They compile information from network devices
-    - Sensors are IPS and use firewall logs, authentication logs, web server logs. This data is then sent to collectors. Collectors are proprietary consoles and consolidate the data being logged
+    - Sensors are IPS and use firewall logs, authentication logs, or web server logs. This data is then sent to collectors. Collectors are proprietary consoles and consolidate the data being logged
 
 
- # Port Security
+# Port Security
  - <u>Port Security</u>: security of the individual interfaces that are on a switch or connection to a wireless access point
-     - <u>Extensible Authentication Protocol (EAP)</u>: a framework used for authentication. It allows different methods of verifying a user's identity over a network.
-     - <u>802.1X</u>: IEEE port based network access control standard that uses EAP to authenticate users & devices before allowing them on the network  
-        - EAP and 802.1X work together so that you can provide login credentials and have those credentials give you access to the network
+     - <u>Extensible Authentication Protocol (EAP)</u>: a framework used for authentication. It supports different authentication methods like passwords, certificates, or tokens and different connection types like wireless or switches. It doesn't do the authentication but instead defines the rules and structure for how messages are authenticated
+        - EAP is like a post office, it accepts different types of mail(authentication methods) and delivers them correctly using its established system no matter the type of mail that comes in (wired or wireless)
+
+     - <u>802.1X</u>: port based NAC standard that uses EAP to authenticate users & devices before allowing them on the network  
+        - EAP is the framework that supports different authentication methods and devices while 802.1X is the standard that uses EAP to enforce authentication on specific network ports or connections
 
 
 # FireWall Types
-- Firewalls can filter traffic by port number or app (i.e. OSI layer 4 or OSI layer 7)
+- Firewalls can filter traffic by port number or app
     - Layer 4 = TCP or UDP ports
     - Layer 7 = Application layer
 - Firewalls encrypt traffic
-- Firewalls can act as routers
+- Firewalls can act as routers (Layer 3). They can sit at the ingress/egress of the network
 
-- <u>Unified Threat Management (UTM)</u>: When multiple security features or services are combined into a single device within your network  
+- <u>Unified Threat Management (UTM)</u>: when multiple security features or services are combined into a single device within your network  
     - Used as all in one firewall with antivirus and VPN
+    - Its like a basic tool kit, you have a bunch of common tools that you can use for most scenarios if something happens
 
-- <u>Next Generation Firewalls (NGFW)</u>: modern firewall that combines traditional firewall functions with advanced features like deep packet inspection, intrusion prevention, and application awareness
-    - Operates at layer 7
+- <u>Next Generation Firewalls (NGFW)</u>: modern firewall that combines traditional and advanced firewall features like deep packet inspection, intrusion prevention, and application awareness
+    - It operates at layer 7
+    - Its like a bigger tool box with more tools. You can do more with the tools compared to a UTM
 
-- <u>Web Application Firewall (WAF)</u>: monitors, filters, and blocks malicious traffic to and from web apps
+- <u>Web Application Firewall (WAF)</u>: monitors, filters, and blocks malicious traffic to and from web apps based on the expected input
+    - Its like a specialized tool box. It has tools specifically for working on a car (web app)
 
 # Secure Communication
 - <u>Virtual Private Network (VPN)</u>: encrypts all private data and sends it across the internet
-    - <u>Concentrator</u>: decrypts/encrypts data
+    - <u>VPN Concentrator</u>: device on a hardware device that terminates and  manages connections multiple VPN connections. It handles the encryption and decryption for all the incoming connections.
+        - Often integrated with a firewall
+        - ![alt text](image-41.png)
 
-- SSL/TLS VPN
-     - Used for remote access
-     - Uses protocol 443  
-     ![alt text](image-22.png)
 
-- <u>Software Defined Networking (SD-WAN)</u>: uses SDN principles to securely and efficiently manage connections between different physical locations. It involves integrating additional security services or device to enhance a network's defenses such as using a 3rd party cloud based service or specialized security device that works with the current SD-WAN technology  
-    - No need to connect to a central point (i.e. data center) before connecting to the cloud anymore  
+- Secure Socket Layer (SSL)/Transport Layer Security (TLS) VPN
+     - Used for remote access involving desktops or workstations
+     - Uses tcp/443
+     ![alt text](image-42.png)
+- 
+
+- <u>Software Defined Networking in a Wide Area Network (SD-WAN)</u>: uses SDN principles to securely and efficiently manage connections between users, applications, and data centers across different locations. It focuses on how efficiently and scalable a system can route a user to their desired destination
+    - If using AWS for storing data, a SD-WAN can find the fastest and secure route for the user to access the data
+    - No need to connect to a central point (i.e. data center) before connecting to the cloud anymore
+    - 
     ![alt text](image-23.png)
 
-- <u>Secure Access Service Edge (SASE)</u>: combines network security and WAN capabilities in a cloud-based service
-    - It replaces the the concentrator for security  
+- <u>Secure Access Service Edge (SASE)</u>: takes the same approach as SD-WAN and applies it to cloud architecture where networking and security are focused on
+    - It replaces the concentrator for security  
     ![alt text](image-24.png)
 
  #### Selection of effective controls
@@ -211,34 +248,41 @@
 
 
  # Data Types and Classifications
-- <u>Regulated</u>: 3rd party determines how the data should be protected
+ #### Data Types
+- <u>Regulated</u>: a 3rd party determines how the data should be protected
+    - Example: Storing credit card information will involve storing it so it complies with the Payment Card Industry Standards
+
 - <u>Trade secret</u>: secret formulas used by organizations
+
 - <u>Intellectual property</u>: may be publicly visible
+
 - <u>Legal information</u>: i.e court records and documents
+
 - <u>Financial information</u>: i.e customer financials, payment records, etc.
 
 - Human readable vs non-human readable (i.e. barcodes)
     - CSV, XML, JSON are hybrid of both
 
-1. Sensitive: should not be publicly exposed but not the most important (i.e. employee schedules, internal company memos)
-2. Confidential: specific to a group and could cause serious damage if exposed (i.e. customer data, employee records)
+#### Data Classifications
+1. Sensitive: intellectual property, PII, or PHI
+2. Confidential: very sensitive information where you must be approved before viewing
 3. Public: shared with everyone. No security required
 4. Restricted: very limited in access. Only available to specific people (i.e. system admin credentials)
-5. Private: PII and leaking it could result in privacy violations or identity theft (i.e. medical records, SSN)
-6. Critical: losing the data or access to the data will have severe impact (i.e. payment processing systems)
+5. Private/Classified/Restricted: restricted access and may require an NDA
+6. Critical: data that should always be available
 
 
 # States of Data
 - <u>Data at rest</u>: data stored on a storage device (i.e. hard drive, SSD, flash drive, etc.)
     - The data does not have to be encrypted in order for it to be called data at rest
-    - The whole disk can be encrypted, only the database is encrypted or the files/folder level is encrypted
     - Once encrypted, then permissions can be added
 
 - <u>Data in transit</u>: data being moved cross the network
-    - Use firewalls or IPS to secure data in motion
+    - Involves data moving through devices like switches, routers, etc.
+    - Use firewalls or IPS to secure this data
     - Use TLS or IPsec to encrypt the data
 
-- <u>Data in use</u>: data being processed in memory
+- <u>Data in use</u>: data in memory of a system or actively being processed
     - Data is almost always decrypted
 
 - <u>Data sovereignty</u>: when data is located in a country and is subject to the laws of that country
@@ -248,7 +292,7 @@
     - Can limit administrative tasks unless secure area is used
 
 
- # Protecting Data
+# Protecting Data
  1. <u>Geographic restrictions</u>: protecting data by making policies on where the data is located and where you are as a user
      - <u>Geofencing</u>: automatically allow or restrict access when the user is in a particular location
 
