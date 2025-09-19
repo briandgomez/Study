@@ -293,56 +293,65 @@
 
 
 # Protecting Data
- 1. <u>Geographic restrictions</u>: protecting data by making policies on where the data is located and where you are as a user
+- <u>Geographic restrictions</u>: protecting data by making policies on where the data is located and where you are as a user
      - <u>Geofencing</u>: automatically allow or restrict access when the user is in a particular location
 
 
- 2. Encrypting data means encoding information into unreadable data
+- Encrypting data means encoding information into unreadable data
     - Original form = plaintext
     - Encrypted form = ciphertext
     - <u>Confusion</u>: encrypted data that is drastically different than the plaintext
 
- 3. Hashing
-    - Hashing + digital signature means you can authenticate, non-repudiation, and have integrity 
+ 1. Hashing
+    - You can not recreate the original data using the hash just like how you can not recreate a person using only their fingerprint
+    - Hashing a document and comparing it with the hash that came with the document allows you to verify if the document was tampered with
 
- 4. Obfuscation
+ 2. Obfuscation
+    - Means making something normally understandable very difficult to understand
+    - The obfuscated code is given to someone while the developer keeps the non-obfuscated code. Both still worked the same
  
- 5. Masking (a type of obfuscation)
+ 3. Masking
+    - Its a type of obfuscation where it takes the original data and hides some of it
 
- 6. Tokenization
+ 4. Tokenization
+    - Replaces sensitive data with non-sensitive placeholders
 
- 7. <u>Segmentation</u>: separate data in smaller pieces and different locations
+ 5. <u>Segmentation</u>: separate data in smaller pieces and different locations
 
-  8. Permission restrictions
+ 6. Permission restrictions
+    - When granting access to a user, there are certain rights and permissions associated with the account
 
 
-  # Resiliency
-  - Redundancy doesn't always means always available
-  - High availability almost always means higher costs
-
-    - <u>Server clustering</u>: multiple servers configured to all work together as one big server. The users never see the configuration, they just see one server cluster
+# Resiliency
+ - Redundancy doesn't always means always available
+ - High availability almost always means higher costs
+ 
+ - <u>Server clustering</u>: multiple servers configured to all work together as one big server. The users never see the configuration, they just see one server cluster
+    - Is good for capacity and scalability by adding and removing servers as needed
         ![alt text](image-25.png)
     
-    - <u>Load balancing</u>: distributes load across all of the individual multiple devices
+ - <u>Load balancing</u>: distributes load across all of the individual multiple devices
+    - Distributes load across multiple devices
+        ![alt text](image-43.png)
 
-        - Load Balancing vs Server Clustering
-            - In load balancing, each of the servers have no idea that the other server even exists
-            - Server clustering involves sharing resources
-            - Server Clustering provides better redundancy than Load balancing since the servers are grouped together
-            - Load Balancing provides increase availability, better performance, and scalability while Server clustering provides high availability, fault tolerance and scalability
-            - They're similar in that you can add and remove devices from both
+    - Load Balancing vs Server Clustering
+        - In load balancing, each of the servers have no idea that the other server even exists
+        - Server clustering involves sharing resources
+        - Server Clustering provides better redundancy than Load balancing since the servers are grouped together
+        - Load Balancing provides increase availability, better performance, and scalability while Server clustering provides high availability, fault tolerance and scalability
+        - They're similar in that you can add and remove devices from both
   
-  - <u>Site resiliency</u>: recovery site is prepped and ready if something happens to the primary data site
-    - <u>Hot</u>: fully functional real time replica of the primary environment
-    - <u>Cold</u>: an empty building with basic infrastructure like power, cooling, and network connectivity
-    - <u>Warm</u>: big room with rack space where you bring the hardware
-    - <u>Geographic dispersion</u>: data center or recovery sites located at a sufficient different distance from the primary site 
+ - <u>Site resiliency</u>: recovery site is prepped and ready if something happens to the primary data site
+ - <u>Hot</u>: fully functional real time replica of the primary environment
+ - <u>Cold</u>: an empty building with basic infrastructure like power, cooling, and network connectivity
+ - <u>Warm</u>: big room with rack space where you bring the hardware
+ - <u>Geographic dispersion</u>: data center or recovery sites located at a sufficient different distance from the primary site 
 
-    - <u>Platform diversity</u>: using different OS' across a system to reduce attacks on the same vulnerability (having the same OS everywhere could mean they have the same vulnerability) 
+ - <u>Platform diversity</u>: using different OS' across a system to reduce attacks on the same vulnerability (having the same OS everywhere could mean they have the same vulnerability) 
 
-    - <u>Multi-cloud</u>: use different cloud providers
+ - <u>Multi-cloud</u>: use different cloud providers
 
-    - <u>Continuity Of Operations Planning (COOP)</u>: the plan set in place if there is a disruption. It outlines essential functions and services that will be maintained during and after the disruption to ensure operations continue as normally (i.e. the procedures to use hard copies)
+ - <u>Continuity Of Operations Planning (COOP)</u>: the plan set in place if there is a disruption. It outlines essential functions and services that will be maintained during and after the disruption to ensure operations continue as normally (i.e. the procedures to use hard copies)
 
 
 # Capacity Planning
@@ -356,12 +365,13 @@
 
 
 # Recovery Testing
-- <u>Table top exercise</u>: go through steps as if you were actually going through them
+- <u>Table top exercise</u>: discussion based scenario session where a team discusses their roles and responds during an emergency. The team walks through one or more example scenarios.
 
-- <u>Fail over test</u>: test if redundancy works  
+- <u>Fail over test</u>: test to see if redundancy setup works if there is a system failure  
 ![alt text](image-26.png)
 
 - <u>Simulation</u>: test with a simulated event
+    - Examples: Phishing attacks, password requests, data breaches
 
 - <u>Parallel processing</u>: split a process through multiple parallel CPUs
 
@@ -370,7 +380,7 @@
 - <u>Onsite/offsite</u>: 
     - Onsite 
         - Data and backups are at the same location 
-    - Offsite,
+    - Offsite
         - Data needs to be transferred over the internet somewhere else
     - Organizations can use both, onsite for short term and offsite for long term 
 
@@ -381,16 +391,17 @@
 
 - Encryption
 
-- <u>Snapshots (VM)</u>: instant backup of an entire system  
-![alt text](image-27.png)
+- <u>Snapshot</u>: instant backup of an entire system and current configurations of the data 
+    - Commonly used with virtual machines
+    - Common practice to take daily snapshots of a VM
 
 - <u>Recovery</u>: verify the backups can be restored and used
     
-- <u>Replication</u>: copy data to one or multiple locations at the same time
-    - The replicas are updated as the primary data is updated
+- <u>Replication</u>: copy data to one or multiple locations simultaneously
+    - The replicas/backups are updated in real time whenever the original data is updated
 
-- <u>Journaling</u>: writing data to a temporary journal, located on a drive, before writing to the database. If power is lost, the system can recover the last transaction
-    - Helps against power outages when updating/working on the data
+- <u>Journaling</u>: writing data to a temporary journal located on a drive before writing to the database. If power is lost, the system can recover all of or the needed data from the journal
+    - Its helps against the issue when writing to a database and there is an outage causing the data in the database to be corrupted
 
 
 # Power Resiliency
