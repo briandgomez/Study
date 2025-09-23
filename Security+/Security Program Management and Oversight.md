@@ -10,18 +10,21 @@
     - Includes topics like internet use, computers, mobile devices, etc.
     - Used by an organization for legal issues to protect themselves (if needed)
 
-- <u>Business continuity</u>: an alternative plan should the main process not working properly
+- <u>Business continuity</u>: an alternative plan should the main process not work properly
     - Needs to be created and tested before an issue occurs
 
+- <u>Recovery Disaster Plan</u>: backup plan that applies to an entire organization affected by the disaster
+    - Its a part of the business continuity plan
+
 - Incident Response Roles
-    - Incident response team
-    - IT security management (i.e. corporate support)
-    - Compliance officers (i.e. intricate knowledge of compliance rules)
-    - Technical staff (i.e. the team doing the fixing)
+    - Incident response team = specialized group trained and tested for any type of security event
+    - IT security management = corporate support
+    - Compliance officers = intricate knowledge of compliance rules
+    - Technical staff = the team doing the fixing
     - Users
 
 - Change Management
-    - This could be software upgrade, change firewall configurations, modify switch ports, etc.
+    - Every time there is a change, there needs to be a process associated with it. This could be software upgrades, change firewall configurations or modify switch ports
 
 
 # Security Standards
@@ -43,7 +46,7 @@
 
 
 # Security Procedures
-- <u>Playbook</u>: step by step processes and procedures for specific situations (i.e. investigate a data breach, recover from ransomware)
+- <u>Playbook</u>: step by step processes and procedures for specific situations (i.e. investigate a data breach or recover from ransomware)
 
 - Updating monitoring and revision processes since IT is always changing
     - Update security playbooks
@@ -86,10 +89,17 @@
 - Annualized Rate of Occurrence
     - It determines how often a risk will happen in 1 year
 
+- <u>Asset Value (AV)</u>: the value of the asset to the organization
+    - Includes the cost of the asset, the effect on company sales, potential regulatory fines, etc.
+
+- <u>Exposure Factor (EF)</u>: the percentage of an asset's value that would be lost if a event occurred
+    - Losing the entire asset is 1.0 while a quarter is .25
+
 - <u>Risk appetite</u>: an organization's overall willingness to accept a risk to achieve its goals (the mindset or amount of risk you're willing to take on)
+    - Example: A speed limit of 50 mph on a road
 
 - <u>Risk Tolerance</u>: the specific limits or boundaries of the risk appetite (the number or actual value of risk you're willing to take on)
-
+    - The acceptable range above the limit without getting a ticket is 55-60 mph
 
 - <u>Qualitative Risk Analysis</u>: method of assessing risk based on potential impact and likelihood without assigning a numerical value
 
@@ -109,10 +119,12 @@
     - Accept the risk
 
 - Accept with exemption
-    - i.e. A security policy can not be followed
+    - A security policy or regulation can not be followed
+    - The exemption may need an approval
 
 - Accept with exception
-    - i.e. Internal security policies are not applied
+    - Internal security policies are not applied yet
+    - i.e. The monthly updates cause a critical software package to crash
 
 - Risk reporting
     - Document with a list of all the risks the organization is tracking
@@ -121,13 +133,15 @@
 
 
 # Business Impact Analysis
-<u> Recovery Time Objective (RTO)</u>: the max acceptable amount of time to restore a system or process after a disaster or failure
+<u> Recovery Time Objective (RTO)</u>: the max acceptable amount of time to restore a system or process after a disaster
+    - The time to get a system backup and running at 100%
 
 <u> Recovery Point Objective (RPO)</u>: the max acceptable amount of data loss measured in time
+    - The point at which an organization can say they are able to operate as usual
 
 <u>Mean Time To Repair (MTTR)</u>: average time to repair a system or component. Includes diagnosing and everything related to the issue
 
-<u>Mean Time Between Failures (MTBF)</u>: the average time between failures of a system or component during operation
+<u>Mean Time Between Failures (MTBF)</u>: prediction of how long a system will be operational before a failure occurs
 
 
 # Third Party Risk Assessment
@@ -156,17 +170,17 @@
 
 
 # Agreement Types
-<u>Service Level Agreement</u>: standard of service a client can expect from a provider (i.e. uptime, response time agreement, etc.)  
+<u>Service Level Agreement</u>: a promise that explains what level of service the client will get from the provider (i.e. uptime, response time agreement)
     - A Contract with an internet provider would mean the SLA is no more than 4 hours of unscheduled downtime
 
-<u>Memorandum of Understanding (MOU)</u>: outlines a mutual agreement on project goals. Often the first step toward collaboration.
+<u>Memorandum of Understanding (MOU)</u>: a mutual agreement on project goals. Often the first step toward collaboration.
     - Its not a contract
     - It states common goals and nothing else
 
-<u>Memorandum of Agreement (MOA)</u>: document outlining specific responsibilities and roles of involved parties
-    - More details than a MOU
+<u>Memorandum of Agreement (MOA)</u>: formal binding document specifying the responsibilities and roles of all parties involved. 
+    - The next step after the MOU
 
-<u>Master Service Agreement (MSA)</u>: Legal contract that sets the terms and conditions for a long term relationship
+<u>Master Service Agreement (MSA)</u>: legal contract that sets the terms and conditions for a long term relationship
     - A broad framework to cover later transactions
     - Many detailed transactions happen here
     - Future projects will be based on this agreement
@@ -197,6 +211,8 @@
     - Many countries are working together for privacy
     - <u>General Data Protection Regulation (GDPR)</u>: data protection and privacy for individuals in the EU
         - Gives power back to the subject to decide how their data can be used ("A right to be forgotten")
+    - Data Subject
+        - Any information relating to an identified or identifiable natural person
         
 
 # Audit and Assessments
