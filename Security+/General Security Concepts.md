@@ -3,9 +3,9 @@
 #### Control Categories (TOMP)
 <u>Technical Controls</u>: controls implemented using systems (i.e. OS system controls, firewalls, antivirus)
 
-<u>Operational Controls</u>: controls implemented by people instead of systems (i.e. security guards, awareness programs)
+<u>Operational Controls</u>: controls implemented by people through day to day practices instead of systems (i.e. security guards, awareness programs)
 
-<u>Managerial Controls</u>: administrative controls associated with security design and implementation (i.e. security policies, SOPs)
+<u>Managerial Controls</u>: policies, procedures, and official documentation that guide how people should manage systems, data or computers (i.e. security policies, employee onboarding/offboarding, SOP)
 
 <u>Physical Controls</u>: controls that limit physical access (i.e. guard shack, fences, locks, badge readers)
 
@@ -15,23 +15,32 @@
 
 <u>Compensating</u>: security measures implemented to provide an alternative method of protecting assets when standard controls aren't enough (i.e. temporary access restrictions, additional monitoring when primary controls are down) 
 
-<u>Deterrent</u>: discourage attackers from attempting to compromise a system. Make and attacker think twice (i.e. warning signs, security guards, CCTV)
+<u>Deterrent</u>: discourage attackers from attempting to compromise a system. Make a attacker think twice (i.e. warning signs, security guards, CCTV)
 
 <u>Detective</u>: detect and alert on security incidents as the occur (i.e. Intrusion Detection Systems (IDS), Security Information and Event Management Systems (SIEM), Audit logs and monitoring, surveillance cameras) 
 
 <u>Directive</u>: directing a subject towards a security compliance (i.e. security policies and guidelines, employee handbooks, SOPs)
 
-<u>Preventive</u>: prevent security incidents from happening (i.e. firewalls, passwords, biometrics, IPS, security policies and procedures)
+<u>Preventive</u>: prevent access to a particular resource such as preventing a  security incident from happening (i.e. firewalls, passwords, biometrics, IPS, security policies and procedures)
 
 ![alt text](image.png)
 
 
 # CIA Triad
-<u>Confidentiality</u>: certain information should only be known to certain people. You prevent disclosure of information to unauthorized individuals 
+<u>Confidentiality</u>: certain information should only be known to certain people. You prevent disclosure of information to unauthorized individuals
+    - Can be done through encryption
+    - Using access controls will limit who has access to certain information
+    - 2FA also limits who can access information
 
 <u>Integrity</u>: data is stored and transferred as intended. Any modification to the data would be identified
+    - Hashing proves the data was not modified. If the original hash and the hash you create when receiving data are the same proves nothing has been done to it
+    - A digital signature confirms who sent the message and if it was tampered with
+    - Certificates combined with a digital signature verify an individual sent something
 
 <u>Availability</u>: information is accessible to authorized users
+    - Having redundancy in case of a failure ensures a system continues to run normally for users
+    - Patching system to prevent failures is the best solution to maintain availability
+    - A system that is fault tolerant will continue to run even when there is a failure
 
 
 # Non-repudiation
@@ -42,6 +51,12 @@
 - Prove the message was not changed = Integrity  
 - Prove the source of the message = Authentication  
 - Make sure the signature is not fake = Non-repudiation
+
+#### Creating a Digital Signature
+![alt text](image-44.png)
+
+#### Verifying a Digital Signature
+![alt text](image-45.png)
 
 
 # Authentication, Authorization, & Accounting
@@ -65,20 +80,21 @@
 <u>Zero Trust</u>: Assumes threats can exist inside or outside the network, requiring authentication for all entities. 
 
 - You can apply Zero Trust framework by splitting the network into functional components/planes
-    - <u>Data Plane</u>: responsible for forwarding and processing traffic in a network
-    - <u>Control Plane</u>: manages data plane actions (i.e define policies & rules, routing tables, session tables, NAT tables)
+    - <u>Data Plane</u>: performs the security processes like forwarding and processing traffic in a network
+    - <u>Control Plane</u>: manages and controls how the data plane operates (i.e define policies & rules, routing tables, session tables, NAT tables)
 
 - You can control trust within a network by:
-    1. <u>Adaptive Identity</u>: authentication method that adjusts based on factors like location, behavior, and context (i.e. 
-a user located in China requesting access to a resource located in the U.S.)
-    2. <u>Threat scope reduction</u>: decrease the number of entry points in a network
-    - Combining these 2 results in policy driven access control
+    1. <u>Adaptive Identity</u>: examining the identity of an individual and applying security controls based on not just what the user is telling us, but other information that we’re gathering about this authentication process
+        - Other factors like IP address, location, is the employee full time or not all determine whether to change the requirements for logging 
 
-<u>Policy Decision Point (PDP) </u>: makes authorization decisions based on predefined policies. It interprets rules and decides whether access requests should be allowed or denied
+    2. <u>Threat scope reduction</u>: decrease the number of entry points in a network
+        - Combining these 2 results in policy driven access control
+
+<u>Policy Decision Point (PDP) </u>: makes decisions based on predefined policies on whether to allow or deny connections to a network
 
 <u>Policy Administrator</u>: the role responsible for developing, implementing, and maintaining policies, standards, guidelines, and procedures 
 
-<u>Policy Enforcement Point</u>: enforces security policies by allowing and blocking traffic based on predefined rules
+<u>Policy Enforcement Point</u>: enforces security policies decided by the PDP
 
 #### Zero Trust Policy Plane
 ![alt text](image-1.png)
@@ -97,7 +113,7 @@ a user located in China requesting access to a resource located in the U.S.)
 # Deception and Disruption
 - <u>Honeypot</u>:  decoy system or resource designed to attract and trap cyber attackers. It looks like a legit part of a network but its isolated and monitored to gather information about attacker's tactics, technique, and motives
 
-- <u>Honeynet</u>: a network of honeypots that are interconnected  to simulate a larger and more realistic environment. It allows organizations to capture and analyze broader attacker patterns and behaviors
+- <u>Honeynet</u>: a network of honeypots that are interconnected to simulate a larger and more realistic environment
 
 - <u>Honeyfile</u>: a file or document created and placed in a network to act as bait. It contains seemingly valuable information that, if accessed or modified, triggers alerts and provides insights into unauthorized access attempts
 
