@@ -152,11 +152,15 @@
 
 - <u>Symmetric Encryption</u>: uses a single key for both encryption and decryption of data. 
     - The same key must be securely shared and kept secret between the communicating parties. This method is efficient and faster than asymmetric encryption
+
 - <u>Asymmetric</u>: 2 keys where one is for encryption and the other is for decryption
     - Private key = decrypts data
     - Public key (anyone can see this) = encrypts data
     - Anyone with the public key can encrypt and send data to you
     - You can not derive the private key from the public key
+
+- <u>Key Escrow</u>: decryption keys held by a 3rd party
+    - Can be done within your own organization
 
 
 # Encrypting Data
@@ -173,7 +177,7 @@
 - Keys can be sent to others either out-of-band or in band
     - Out-of-band exchanges involve sending keys not within your network (i.e. telephone, courier, in-person, etc.)
     - In-band exchanges involve sending keys within your network (i.e. asymmetric encryption to deliver symmetric keys)  
-        <u>Process of sharing a symmetric session key using asymmetric encryption</u>  
+        - Process of sharing a symmetric session key using asymmetric encryption 
             1. Client encrypts a random key (symmetric) with a server's public key  
             2. The server decrypts this shared key and uses it to encrypt data (this is the session key)  
     - Session keys are temporary and should be unpredictable
@@ -182,11 +186,11 @@
 # Encryption Technologies
 - <u>Trusted Platform Module (TPM)</u>: a security chip on a computer's motherboard designed to enhance security by securely storing cryptographic keys. It provides encryption for a single device
 
-- <u>Hardware Security Module (HSM)</u>: an external device used to store cryptographic keys. Its used for large amounts of data.
+- <u>Hardware Security Module (HSM)</u>: an external device used to store thousands of cryptographic keys
 
 - <u>Key Management System</u>: way to manage all keys in a centralized manager (i.e. AWS Key Management Service)
 
-- <u>Secure Enclave</u>: a physically isolated area within a device dedicated to storing and processing sensitive data securely 
+- <u>Secure Enclave</u>: a physically isolated area within a device dedicated to storing and processing sensitive data 
     - It uses cryptography and hardware level isolation to keep that data safe even if the main system is compromised
 
 
@@ -203,11 +207,11 @@
     - Example: SSN=266-12-1112 is now 691-61-8539
     - The token is temporary so an attacker can not use it later
     - There is no encryption or hashing since the sensitive information is replaced
-    ![alt text](image-2.png)
+    ![alt text](image-46.png)
 
 - <u>Data Masking</u>: technique used to protect sensitive data by replacing it with fictitious but realistic data. 
     - This ensures data can not be deciphered even if an attacker has gained access to the masked data 
-    - Example
+    - Example  
     ![alt text](image-3.png)
 
 
@@ -226,6 +230,7 @@
     - Proves the message was not changed (Integrity)
     - Proves the source of the message (Authentication)
     - Proves the signature is not fake (Non-repudiation)
+    - The process of creating a digital signature is almost opposite for encrypting data. The person signing the document will use their private key and the person receiving the document will verify using the public key.
 
 
 # Blockchain Technology
@@ -251,7 +256,7 @@
 
 - <u>Self-signed certificate</u>: digital certificate signed by the entity that created it
 
-- <u>Wildcard certificate</u>: certificate that can be configured to support many different domains
+- <u>Wildcard certificate</u>: certificate used to secure a domain and all its first level subdomains (i.e. *.example.com sub domains are www.example.com & mail.example.com)
     - A wildcard domain will apply to all server names in a domain
 
 - <u>Certificate Revocation List (CRL)</u>: list of revoked certificates kept on the CA
