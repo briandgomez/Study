@@ -4,8 +4,11 @@
 <u>Technical Controls</u>: controls implemented using systems (i.e. OS system controls, firewalls, antivirus)
 
 <u>Operational Controls</u>: controls implemented by people through day to day practices instead of systems (i.e. security guards, awareness programs)
+    - Directly addresses user behavior and da t day operations
 
 <u>Managerial Controls</u>: policies, procedures, and official documentation that guide how people should manage systems, data or computers (i.e. security policies, employee onboarding/offboarding, SOP)
+    - Addresses the organization's overall security posture and ensures compliance with legal and regulatory requirements
+    - Vulnerable to lack of leadership commitment
 
 <u>Physical Controls</u>: controls that limit physical access (i.e. guard shack, fences, locks, badge readers)
 
@@ -80,21 +83,26 @@
 <u>Zero Trust</u>: Assumes threats can exist inside or outside the network, requiring authentication for all entities. 
 
 - You can apply Zero Trust framework by splitting the network into functional components/planes
-    - <u>Data Plane</u>: performs the security processes like forwarding and processing traffic in a network
+    - <u>Data Plane</u>: performs the security processes like forwarding and processing traffic in a network  
+    
+        - <u>Policy Enforcement Point</u>: enforces security policies decided by the PDP
+
+
     - <u>Control Plane</u>: manages and controls how the data plane operates (i.e define policies & rules, routing tables, session tables, NAT tables)
+        - You can control trust within a network by:
+        1. <u>Adaptive Identity</u>: examining the identity of an individual and applying security controls based on not just what the user is telling us, but other information that we’re gathering about this authentication process
+            - Other factors like IP address, location, is the employee full time or not all determine whether to change the requirements for logging 
 
-- You can control trust within a network by:
-    1. <u>Adaptive Identity</u>: examining the identity of an individual and applying security controls based on not just what the user is telling us, but other information that we’re gathering about this authentication process
-        - Other factors like IP address, location, is the employee full time or not all determine whether to change the requirements for logging 
+        2. <u>Threat scope reduction</u>: decrease the number of entry points in a network
+            - Combining these 2 results in policy driven access control
+        
+        <u>Policy Administrator</u>: the role responsible for developing, implementing, and maintaining policies, standards, guidelines, and procedures 
 
-    2. <u>Threat scope reduction</u>: decrease the number of entry points in a network
-        - Combining these 2 results in policy driven access control
+        <u>Policy Engine</u>: processes and evaluates access request against set policies
+
 
 <u>Policy Decision Point (PDP) </u>: makes decisions based on predefined policies on whether to allow or deny connections to a network
 
-<u>Policy Administrator</u>: the role responsible for developing, implementing, and maintaining policies, standards, guidelines, and procedures 
-
-<u>Policy Enforcement Point</u>: enforces security policies decided by the PDP
 
 #### Zero Trust Policy Plane
 ![alt text](image-1.png)
@@ -164,6 +172,10 @@
 
 
 # Encrypting Data
+- <u>Full-disk</u>: encrypts an entire storage disk, protecting data if the physical device is lost or stolen
+- <u>Partition and Volume</u>: encrypts specific sections of a storage device
+- <u>File, Database, Record</u>: encrypts individual files, databases or records within
+
 - Its possible to encrypt databases specifically:
     - Encrypting all db information with a symmetric key
     - Encrypting individual columns 
@@ -184,9 +196,9 @@
     
 
 # Encryption Technologies
-- <u>Trusted Platform Module (TPM)</u>: a security chip on a computer's motherboard designed to enhance security by securely storing cryptographic keys. It provides encryption for a single device
+- <u>Trusted Platform Module (TPM)</u>: a security chip on a computer's motherboard designed to store keys, passwords, and digital certificates. It provides encryption for a single device
 
-- <u>Hardware Security Module (HSM)</u>: an external device used to store thousands of cryptographic keys
+- <u>Hardware Security Module (HSM)</u>: an external device used to safeguard and manage cryptographic keys, providing hardware level security
 
 - <u>Key Management System</u>: way to manage all keys in a centralized manager (i.e. AWS Key Management Service)
 
