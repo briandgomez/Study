@@ -9,8 +9,8 @@
     3. Service disruption
     4. Blackmail
     5. Financial gain
-    6. Philosophical/political beliefs
-    7. Ethical
+    6. Philosophical/political beliefs - acting based on personal or group beliefs commonly seen with hacktivists 
+    7. Ethical - acting on perceived ethical obligations, sometimes seen with whistleblowers or white hat hackers identifying vulnerabilities
     8. Revenge
     9. Disruption/chaos
     10. War
