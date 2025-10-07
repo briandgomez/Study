@@ -189,7 +189,9 @@
 # FireWall Types
 - Firewalls can filter traffic by port number or app
     - Layer 4 = TCP or UDP ports
+        - Involves packet filtering
     - Layer 7 = Application layer
+        - Involves app layer filtering
 - Firewalls encrypt traffic
 - Firewalls can act as routers (Layer 3). They can sit at the ingress/egress of the network
 
