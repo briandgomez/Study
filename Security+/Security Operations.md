@@ -32,12 +32,18 @@
     - Configure endpoint detection and response (EDR) to make sure that all devices accessing the cloud are secure
     - Always have backups
 
+- Switches/Routers
+    - Change default credentials
+    - Disable unused ports
+    - Use secure management protocols
+
 - Servers
     - Keep servers updated (i.e. system updates, service packs, security patches)
     - Follow good practices like complex passwords and minimum password lengths
     - Limit access each account has using least privilege and disable unused accounts
     - Limit network access
     - Monitor and secure using anti-virus/anti-malware
+    - Use IPS/IDS
 
 - ICS/SCADA
     - Its a combination of using the network and platforms that manage, monitor, and control industrial equipment
@@ -121,6 +127,7 @@ enabled (COPE)
 
 - <u>Static code analysis</u>: automatically scanning an application's source code for vulnerabilities before its executed
     - Static Application Security Testing (SAST) is the processing of finding these vulnerabilities
+    - Dynamic code analysis involves running the code to check for bugs
 
 - <u>Code signing</u>: digitally signing software to verify its authenticity and integrity to make sure it has not been tampered with
 
@@ -296,7 +303,7 @@ enabled (COPE)
         - Remote access systems and firewalls
 
 - Log aggregation
-    - <u>Security Information and Event Manager (SIEM)</u>: consolidates and analyzes data from different sources to a central database. It helps with detecting threats, responding to incidents, and meeting compliance requirements
+    - <u>Security Information and Event Manager (SIEM)</u>: consolidates and analyzes data from different sources to a central database. It helps with detecting threats, responding to incidents, and meeting compliance requirements like Splunk
         - Centralized reporting
         - View how information between systems is related (i.e. view authentication and access)
 
@@ -614,10 +621,10 @@ enabled (COPE)
     - The host based monitoring can detect a configuration change. This could be one indicator of an attack
     - An increase in network traffic an indicate a potential attack 
 
-4. Eradication
-
-5. Containment
+4. Containment
     - Use a sandbox to isolate the system being attacked. This limits the amount of damage the attacker can do but isolating could cause problems to the system (i.e. files can be lost due to lost of connectivity)
+
+5. Eradication
 
 6. Recovery
     - Remove the malware 
