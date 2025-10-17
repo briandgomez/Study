@@ -4,7 +4,7 @@
     - They can be funded or have no money with no/little resources
     - They can be sophisticated (knows exactly what they're doing) or know little (i.e. runs a script by accident)
     #### Motives for Actors
-    1. Data exfiltration
+    1. Data exfiltration - the unauthorized transfer of data from a computer
     2. Espionage
     3. Service disruption
     4. Blackmail
@@ -19,6 +19,8 @@
         - Can have multiple motivations
         - Can perform constant attacks because of their large amounts of resources
         - Can be highly sophisticated attacks
+
+    - <u>Advanced Persistent Threat (APT)</u>: a prolonged attack that is trying to gain unauthorized access to a network in order to monitor or steal data without being detected
     
     - <u>Unskilled attackers</u>: runs pre-made scripts without any knowledge of what's really happening
         - Motivated by disruption or philosophical reasons
@@ -26,7 +28,9 @@
         - Not really sophisticated attacks
         - Not a lot of funding
     
-    - <u>Hacktivist</u>: hacker with a purpose
+    - <u>Hacktivist</u>: individual or group that uses their technical skills to promote a cause or drive social change instead of for personal gain
+         - Use attacks like defacement, DDOS or Doxing
+            - Doxing - releasing public info about a person or group with hopes of someone else taking action against them
         - Usually external but could be internal
         - Attacks can be really sophisticated
         - Limited funding
@@ -94,6 +98,11 @@
 
 - <u>Smishing</u>: SMS phishing involves attackers sending fraudulent text messages that appear to come from reputable sources. These messages often contain links or phone numbers that lead to phishing websites or prompt the victim to provide personal information
 
+- <u>Spear Phishing</u>: phishing attack directed at a specific group of individuals or organizations
+    - More targeted attack
+
+- <u>Whaling</u>: spear phishing attack that specifically targets high profile individuals like CEOs or CFOs
+
 <u>Pretexting<u>: lying. The attacker creates a fake realistic scenario to lure a victim in
 
 # Impersonation
@@ -119,8 +128,15 @@
 
 
 # Other Social Engineering Attacks
+- <u>Misinformation</u>: inaccurate information shared unintentionally (i.e. spreading incorrect info about COVID 19 "solutions" like gargling chlorine)
+
+- <u>Disinformation</u>: intentional spread of false information to deceive or mislead (i.e. spread of lies to divide people for the 2016 election)
+
 - Spreading misinformation through advertisements, social media, etc. in order to cause confusion and division
+
 - Brand impersonation can be used through pop ups (i.e. "You Won!" message), ads, etc.
+
+- Tailgating involves an attacker following a authorized user through a access control vestibule without the victim aware of it. Piggybacking is deliberately letting a unauthorized person access to a building or vestibule (i.e. using your access card to open the door for a delivery person)
 
 
 # Memory Injections
@@ -165,6 +181,9 @@
 - <u>SQL Injection</u>: vulnerability where attackers execute malicious SQL statements by manipulating input data
     - It can allow you to view all db information, delete db information, add users, denial of service, etc.
     - Seeing '1=1' is common indication of a SQL injection
+    ### Prevention
+    - Input validation
+    - Sanitize data from users
 
 
 # Cross-site Scripting (XSS)
@@ -260,6 +279,8 @@
 
 
 # An Overview of Malware
+- A threat vector is who or what can cause harm (Think whats at stake). A attack vector is the way the attacker does it
+
 - <u>Malware</u>: software that is performing bad things on a system
     - Malware can
         - Gather information using keystrokes
@@ -289,6 +310,7 @@
     - Keep everything up to date
 
 <u>Trojan</u>: type of malware that disguises itself as legitimate software to deceive users into installing it. Once installed it will perform malicious actions
+    - Remote Access Trojan (RAT) provides an attacker with remote control of a victim's machine
 
 # Viruses and Worms
 - <u>Virus</u>: malware that needs to be attached to a legitimate file or program in order to spread and replicate itself. Replication requires user interaction (i.e. opening an infected file)
@@ -301,11 +323,10 @@
 
 
 # Spyware and Bloatware
-- <u>Spyware</u>: malware that spies on you
+- <u>Spyware</u>: malicious software that is designed to gather and send information about a user or organization
     - It can trick you into installing malicious software
     - The browser will monitor you
     - A keylogger captures your keystrokes
-
     #### Prevention
     - Maintain anti-virus/anti-malware
     - Always know what you're installing
@@ -320,7 +341,16 @@
 
 
 # Other Malware Types
-- Keylogging
+- <u>Keylogger</u>: pieces of software or hardware that records every single keystroke that is made on a computer or mobile device
+    ### Prevention
+    - Update and patch systems
+    - Use anti-virus or anti-malware solutions
+    - Conduct regular phishing awareness training for end users
+    - Use MFA
+    - Encrypt keystrokes sent to a system
+    - Conduct physical checks to see if a hardware keylogger is being used
+
+
 - <u>Logic bomb</u>: malicious code of software program intentionally inserted into a system to execute a harmful action when certain conditions are met (i.e. If a user doesn't type anything for X minutes, delete all files on the system)
     ### Prevention
         - Have a set of processes and procedures
@@ -345,6 +375,11 @@
 - <u>Denial of Service</u>: an attack from a single source that tries to make a system, service, or network unavailable by overwhelming it
 
 - <u>DDOS</u>: an attack from many compromised computers (aka botnet) that tries to make a system, service, or network unavailable by overwhelming it
+    - A Zombie is a single compromised computer that eventually becomes a part of a botnet
+    ### Prevention
+    - Blackhole/Sinkhole
+    - IPS
+    - Elastic Cloud Infrastructure
 
 - <u>Reflected DDOS</u>: when a attacker sends traffic to the server and spoofs the IP making it think the victim sent the request. The server then responds to the victim with a lot of unwanted traffic
 
@@ -411,6 +446,8 @@
 
 - <u>Directory Traversal</u>: a web server vulnerability that lets an attacker have access to files and directories outside the web root folder by manipulating file paths (i.e. " ../ " )    
     - Its not an attack but it is a web server vulnerability
+    - Attackers may hide directory traversal attempts by using 52e%2e%2f to represent ../
+    - File Inclusion is a type of traversal where an attacker can download files or upload an executable or script to open a backdoor
 
 
 # Cryptographic Attacks
@@ -433,15 +470,15 @@
 
 
 # Indicators of Compromise (IOC)
-- Account lockout
-- Session usage (i.e. using an app in different location at the same time)
-- Blocked Content
-- Impossible travel (i.e. login in/out in different locations within a short time period)
-- Resource consumption (i.e. firewall logs show outgoing transfers)
-- Resource inaccessibility (i.e.a server is down because a attacker tried to look for an exploit)
-- Out of cycle logging (i.e. logs contain events that happen outside of normal hours)
-- Missing logs (i.e. attackers delete log information to cover tracks)
-- Published documents (i.e. posting PII online)
+1. Account lockout
+2. Concurrent session usage (i.e. using an app in different location at the same time)
+3. Blocked Content
+4. Impossible travel (i.e. login in/out in different locations within a short time period)
+5. Resource consumption (i.e. firewall logs show outgoing transfers)
+6. Resource inaccessibility (i.e.a server is down because a attacker tried to look for an exploit)
+7. Out of cycle logging (i.e. logs contain events that happen outside of normal hours)
+8. Missing logs (i.e. attackers delete log information to cover tracks)
+9. Published documents (i.e. posting PII online)
 
 
 # Segmentation and Access Control
