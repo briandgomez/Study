@@ -40,6 +40,7 @@
 ![alt text](image-15.png)
 
 - <u>Internet of Things (IoT)</u>:physical devices connected to a network that collect or share data and provide useful services, like sensors, smartwatches, or home automation devices. Isolating a device would protect that device in the case of an attack
+    - All IoT are embedded systems but not all embedded systems are IoT (i.e. smart watches don't need the internet so they're embedded systems and not IoT. A ring door camera is both)
 
 - <u>Supervisory Control and Data Acquisition (SCADA/ICS)</u>: lets technicians sit in a centralized control room, monitor the status of the pieces of equipment and make changes & modification without having to physically visit every piece of equipment(i.e. power plants, refining, manufacturing equipment)  
 ![alt text](image-16.png)
@@ -234,7 +235,7 @@
     - Uses TLS encryption to protect data
     - Its secure, flexible, and app level access. Its best used for individual remote users 
     - Use case example: employees working from home
- 2. IPsec (site to site network link)
+ 2. EI (site to site network link)
     - Works at the Network Layer (Layer 3)
     - Encrypts all IP traffic
     - Used in site to site VPNs 
