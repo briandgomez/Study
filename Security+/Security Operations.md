@@ -102,18 +102,20 @@ enabled (COPE)
         - Includes data confidentiality feature using AES, Message Integrity Check (MIC), and Galois Message Authentication Code (GMAC)
     - <u>Simultaneous Authentication of Equals (SAE)</u>: new more secure password key exchange that replaced the Pre-Shared Key (PSK) system used in WPA2. With this new system, everyone uses a different session key even with the same PSK
 
-- <u>AAA/Remote Authentication</u>: framework used to determine how access to computers works
-    - A = Authentication
-    - A = Authorization
-    - A = Accounting
+- <u>AAA/Remote Authentication</u>: centralized framework that determines how users are authenticated, authorized, and accounted for
+    1. <u>Remote Authentication Dial-In User Service (RADIUS)</u>: Protocol that implements the AAA framework whenever a user tries to connect to a network
+        - Used for remote logins or WIFI authentication
+        - Uses TCP port 1645 or 1646
+        - Common AAA protocol
+        - Used not only for dial ins
+
+    2. <u>Terminal Access Controller Access-Control System Plus (TACACS+)</u>: Another protocol that implements AAA by separating the functions of AAA to allow for a more granular control over processes
+        - Mainly used for granting administrative access to network devices
+        - TACACS uses AAA to handle devices while RADIUS uses AAA to handle users connecting to the network
 
 - <u>IEEE 802.1X</u>: port based network access control (NAC)
     - You don't get access to the network until you authenticate
     - Uses EAP
-
-- <u>Remote Authentication Dial-In User Service (RADIUS)</u>: authentication protocol that uses the AAA framework
-    - Common AAA protocol
-    - Used not only for dial ins
 
 
 # Application Security
@@ -323,7 +325,7 @@ enabled (COPE)
     -  Quarantine
         - Isolate the system from the rest of the network to prevent further attacks
     - Alert tuning
-        - Make sure alerts are working properly and prevent false negatives
+        - Make sure alerts are working properly, adjust parameters to reduce errors and reduce false positives
 
 
 # Security Tools
@@ -381,13 +383,26 @@ enabled (COPE)
 
 - Ports/protocols
     - Helps make forwarding decisions based on protocol and port numbers
-        - web server = tcp/80 or tcp/443
-        - ssh = tcp/22
-        - Microsoft rdp = tcp/3389
-        - dns query = udp/53
-        - ntp (Network Time Protocol) = udp/123
-        - smtp (Simple Mail Transfer Protocol) = tcp/25
-        - ftp (File Transfer Protocol)= tcp/21
+        1. Port 21 = TCP | FTP (File Transfer Protocol)
+        2. Port 22 = TCP | SSH (Secure Shell) / SCP (Secure Copy Protocol) / SFTP (Secure File Transfer Protocol)
+        3. Port 23 = TCP | Telnet: remote command line access
+        4. Port 25 = TCP | SMTP (Simple Mail Transfer Protocol)
+        5. Port 53 = UDP | DNS Query
+        6. Port 80 = TCP | HTTP (Hyper Transfer Protocol)
+        7. Port 88 = UDP | Kerberos: ticket based authentication
+        8. Port 110 = TCP | POP3 (Post Office Protocol): receive emails from mail server
+        9. Port 123 = UDP | NTP (Network Time Protocol)
+        10. Port 143 = TCP | IMAP (Internet Message Access Protocol): read emails from mail server
+        11. Port 161/162 = UDP | SNMP (Simple Network Management Protocol)
+        12. Port 389 = TCP | LDAP (Lightweight Directory Access Protocol)
+        13. Port 443 = TCP | HTTPS (Hyper Secure Transfer Protocol)
+        14. Port 445 = TCP | SMB (Server Message Block): file & printer sharing
+        15. Port 514 = UDP | Syslog (System Logs)
+        16. Port 636 = TCP | LDAPS (LDAP Secure)
+        17. Port 993 = TCP | IMAPS (IMAP over SSL/TLS)
+        18. Port 995 = TCP | POP3S (POP3 over SSL/TLS)
+        19. Port 3389 = TCP | RDP (Remote Desktop Protocol)
+        20. Port 6514 = TCP | Syslog over TLS
 
 - Rules
     - They're logical paths where the most specific firewall rules are at the top and the more generic rules are at the bottom
@@ -407,40 +422,43 @@ enabled (COPE)
 
 
 # Web Filtering
-- <u>Web Filter</u>: control traffic based on data within content
-    - Can control inappropriate content like not safe for work websites. Can be seen as a form of parental controls
+- <u>Web Filter</u>: Technique used to restrict or control the content a user can access on the internet
+    - Can control inappropriate content like not safe for work websites
+    - Can be seen as a form of parental controls
     
-- Agent-based  
+- <u>Agent-based</u>: Installing a small piece of software known as an agent on each device that will require web filtering
     - Software agents are installed on individual devices to monitor and filter web traffic  
     - Users can be located anywhere  
     - Updates need to be done to all agents  
 
-- Centralized proxy  
+- <u>Centralized proxy</u>: server that acts as an intermediary between an organization's end users and the internet
     - Proxy is sitting in between internet and devices. It can be useful for caching, access controls, URL filtering, and content scanning  
     ![alt text](image-30.png)
 
-- Universal Resource Locator (URL) scanning aka URI  
+- <u>Universal Resource Locator (URL) scanning</u>: Used to analyze a website's URL to determine if its safe or not to access
+    - AKA URI
     - Can be managed by categories  
     - Can have limited control  
     - Integrated with NGFW  
 
-- Block rules
+- <u>Block rules</u>: Specific guidelines set by an organization to prevent access to certain websites or categories of websites
     - Can be applied for specific URLs (i.e. *.professormesser.com: Allow)
     - Categorize by site content
     
-- Reputation
+- <u>Reputation-based Filtering</u>: Blocking or allowing websites based on their reputation score
     - Filter based on whats perceived  (i.e. Trustworthy, Low risk, Medium risk, Suspicious, High risk)
     - The reputations can be assigned automatically or manually after a scan
 
-- DNS Filtering
+- <u>DNS Filtering</u>: Technique used to block access to certain websites by preventing the translation of specific domain names to their corresponding IP addresses
+    - Alternate filtering method to Web filtering
     - Before connecting to a website get the IP address. Do a DNS lookup.
 
 
 # Operating System Security
 - <u>Group Policy</u>: manage computers or users
-- <u>SELinux</u>: security feature in Linux that limits what programs can do using strict security policies to reduce damage from attacks
-    - Adds mandatory access control to Linux
-
+- <u>SELinux</u>: feature in Linux that uses MAC to control what programs can do. It enforces polices and rules even if a system is compromised to prevent and limit the spread of malicious software
+    - Limits access by using labels and policies instead of user groups and permissions
+    - Its like security guard inside a Linux Kernel. If a program gets hacked it can limit what the malware is able to access
 
 # Secure Protocols
 - Protocol selection
@@ -460,11 +478,17 @@ enabled (COPE)
 # Email Security
 - <u>Mail gateway</u>: filters all emails inbound and outbound for malicious software (i.e. malware, phishing, spam, etc.)
 
-- <u>Sender Policy Framework (SPF)</u>: protocol that verifies a mail server is authorized to send emails on behalf of a domain. The recipient also checks if the email came from an approved mail server.
+- <u>Sender Policy Framework (SPF)</u>: Protocol that verifies a mail server is authorized to send emails on behalf of a domain. The recipient also checks if the email came from an approved mail server
+    - Example: You own coolstore.com. You only send emails through Gmail. Without SPF, scammers could use a random server to send fake emails that look like they're from sales@coolstore.com. With SPF, you publish a record saying "Only Gmail’s servers can send email for coolstore.com. Reject everything else."
 
-- <u>Domain Keys Identified Mail (DKIM)</u>: uses a key to verify a digital signature which verifies email integrity and sender's domain
+- <u>Domain Keys Identified Mail (DKIM)</u>: Allows the receiver to check if the email was actually sent by the domain it claims to be sent from and if the content was tampered with during transit
+    - Uses a key to verify a digital signature which verifies email integrity and sender's domain
+    - Helps with email authentication, protection against email spoofing, improves email deliverability, and enhances reputation score
+    - Example: When newsletter@coolstore.com sends an email, the outgoing server signs it with a private key. When the user receives it, their mail server checks the public key published in DNS. If it matches, the email is clean which means there was no tampering.
 
-- <u>Domain-based Message Authentication Reporting & Conformance (DMARC)</u>: tells mail servers what to do when DKIM or SPF fail (i.e. reject, quarantine, or allow) and provides reports on spoofing attempts
+- <u>Domain-based Message Authentication Reporting & Conformance (DMARC)</u>: tells mail servers what to do when DKIM or SPF fail (i.e. reject, quarantine, or allow) and provides security for email spoofing
+    - Protects against email compromised attacks, phishing emails, or email scams
+    - "If an email fails SPF or DKIM, reject it, and send me a report about who’s trying to spoof me." So if someone tries to fake billing@coolstore.com, the mail server follows your instructions (quarantine/reject).
 
 
 # Monitoring Data
@@ -500,7 +524,8 @@ enabled (COPE)
         - Could have malware infections/missing anti-malware
     - Perform a health check before connecting to the network
 
-- <u>Endpoint Detection and Response (EDR)</u>: monitors and protects individual endpoints like laptops, desktops, and servers. It can automatically respond such as quarantine files and isolate devices
+- <u>Endpoint Detection and Response (EDR)</u>: Tools that monitor and protect individual endpoints like laptops, desktops, and servers. It can automatically respond such as quarantine files and isolate devices
+    - Continuously gathers data from these endpoints
     - Takes it a step further that anti-malware/anti-virus software and determines root cause analysis
 
 - <u>Extended Detection and Response (XDR)</u>: expands on EDR and pulls data from multiple sources like endpoints, email, cloud, & network systems to connect how all the pieces of an incident are related. It also responds to threats to protect the devices.
@@ -568,6 +593,10 @@ enabled (COPE)
 
 
 # Scripting and Automation
+- Orchestration vs Automation
+    - Automation is performing a task or tasks over and over again without the need for a human intervention. Orchestration is taking all the automated tasks and having them work together in some sort of process or workflow.
+        - Example: 
+            - A user's account is locked after 5 incorrect password attempts. This is automation. After this happens, a alert is sent to the system admin about the event. Then a ticket is created in the ticket tracking system. Finally a SOC team receives instructions to follow up. These 3 events would be orchestration since they work together and are produced automatically.
 - Automation 
     - It can enforce baselines. If there is an important security patch, it can be automatically installed when identified
     - It can be used for standard infrastructure configurations (i.e. add firewalls to a appliance, Ip configurations, security rules)
@@ -652,7 +681,7 @@ enabled (COPE)
     - Create a set of conclusions regarding the incident backed up by facts
     - Do not use tunnel vision. There can be multiple causes for the breach
 
-- <u>Threat hunting</u>: searching for threats that already exist before alerts or alarms go off
+- <u>Threat hunting</u>: searching for threats not caught by regular security monitoring
 
 
 # Digital Forensics
@@ -664,7 +693,7 @@ enabled (COPE)
     - Everyone whose been in contact with the evidence
 
 - Acquisition 
-    - Obtain data
+    - Its the method and tools used to create a forensically sound copy of the data from a source device such as system memory or a hard disk
     - Some of the data may not be on a single system
 
 - Reporting
